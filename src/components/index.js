@@ -1,9 +1,11 @@
-import Group from './group';
-import GroupItem from './group-item';
+import Group from './Group';
+import GroupItem from './GroupItem';
+import GroupTitle from './GroupTitle';
 
 const components = {
 	Group,
-	GroupItem
+	GroupItem,
+	GroupTitle
 };
 
 module.exports = components;
