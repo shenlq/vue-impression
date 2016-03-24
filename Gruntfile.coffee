@@ -18,6 +18,18 @@ module.exports = (grunt) ->
                 src: ["build/**/*"]
             }
         }
+        copy: {
+            font: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/styles/font-awesome'
+                    src: [
+                        'fonts/*'
+                    ]
+                    dest: 'build/styles/'
+                }]
+            }
+        }
         sass: {
             dist: {
                 options: {
@@ -35,6 +47,12 @@ module.exports = (grunt) ->
                     src: 'index.scss'
                     dest: 'build/styles/'
                     ext: '.css'
+                },{
+                    expand: true,
+                    cwd: 'src/styles'
+                    src: 'font-awesome/index.scss'
+                    dest: 'build/styles/'
+                    ext: '.css'
                 }]
             }
         }
@@ -47,5 +65,5 @@ module.exports = (grunt) ->
     }
 
     # 浏览器开发
-    grunt.registerTask 'default', ['clean', 'sass', 'execute']
+    grunt.registerTask 'default', ['clean', 'copy:font', 'sass', 'execute']
     return

@@ -1,0 +1,15 @@
+
+//== display:flex
+@mixin display-flex() {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin flex($value: 1){
+    -webkit-box-flex: $value;
+    -webkit-flex: $value;
+    -ms-flex: $value;
+    flex: $value ;
+}

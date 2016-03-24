@@ -40,6 +40,7 @@
     "file-loader": "^0.8.5",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-execute": "^0.2.2",

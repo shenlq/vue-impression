@@ -1,10 +1,20 @@
 <template>
-	<div class="group">h哈哈哈哈</div>
+	<group>
+		<group-item>
+		ddd
+		</group-item>
+	</group>
+	<i class="fa fa-bluetooth-b"></i>
 </template>
 
 
 <script>
-	export default {
+	import { Group, GroupItem } from '../components/index.js';
 
+	export default {
+		  components: {
+		    Group,
+		    GroupItem
+		  }
 	};
 </script>

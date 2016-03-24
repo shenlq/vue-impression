@@ -1,7 +1,5 @@
 <template>
     <div class="group">
-        <div class="group-item">
-            <slot></slot>
-        </div>
+        <slot></slot>
     </div>
 </template>
