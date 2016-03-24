@@ -1,10 +1,11 @@
 <template>
 	<group>
-		<group-item>
-		ddd
+		<group-item link="#">
+			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
+			<span slot="body">Group</span>
+			<span slot="desc">0.1.0</span>
 		</group-item>
 	</group>
-	<i class="fa fa-bluetooth-b"></i>
 </template>
 
 

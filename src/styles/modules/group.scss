@@ -7,5 +7,48 @@
 	position: relative;
 	border-top: 1px solid $border-color;
 	border-bottom: 1px solid $border-color;
+}
+
+
+
+
+
+//== .group-item
+.group-item{
+	color: inherit;
+	padding: $group-item-padding;
     @include display-flex();
+	text-decoration: none;
+	&:hover, &:focus{
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.groupt-item-icon{
+	padding-right: $group-item-icon-padding;
+}
+
+.groupt-item-arrow{
+	color: $group-item-desc-color;
+	padding-left: $group-item-icon-padding;
+	&:after{
+		display: inline-block;
+		content: " ";
+		height: 8px;
+    	width: 8px;
+		transform: rotate(45deg);
+		border-width: 2px 2px 0 0;
+    	border-color: #C8C8CD;
+    	border-style: solid;
+	}
+}
+
+
+.group-item-body{
+    @include flex();
+}
+
+.group-item-desc{
+	color: $group-item-desc-color;
 }

@@ -1,14 +1,37 @@
 <template>
-	<div class="group-item">
-  	<div class="group-item-body">
-    	<p>
-        哈哈哈哈
-      </p>
+  	<div class="group-item" v-if="!link">
+  	    <div class="groupt-item-icon" v-if="_slotContents.icon">
+            <slot name="icon"></slot>
+       	</div>
+      	<div class="group-item-body">
+            <slot name="body"></slot>
+      	</div>
+      	<div class="group-item-desc">
+            <slot name="desc"></slot>
+        </div>
   	</div>
 
-  	<div class="group-item-">
-      123
-      <slot name="value"></slot>
-    </div>
-	</div>
+    <a class="group-item" v-if="link" v-link="link">
+        <div class="groupt-item-icon" v-if="_slotContents.icon">
+            <slot name="icon"></slot>
+        </div>
+        <div class="group-item-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="group-item-desc">
+            <slot name="desc"></slot>
+        </div>
+        <div class="groupt-item-arrow"></div>
+    </a>
 </template>
+
+<script>
+  export default {
+
+    props: {
+      link: {
+        type: String
+      }
+    }
+  }
+</script>
