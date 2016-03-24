@@ -26,9 +26,9 @@ $font-family-base:           "Microsoft YaHei","WenQuanYi Micro Hei","Open Sans"
 $line-height:                1.5 !default;
 
 //==base
-$margin-base-vertical:       15px;
-$padding-base-vertical:      10px;
-$padding-base-horizontal:    15px;
+$margin-base-vertical:       1rem;
+$padding-base-vertical:      0.8rem;
+$padding-base-horizontal:    0.8rem;
 
 
 //== Body
@@ -42,11 +42,11 @@ $link-hover-color:           darken($link-color, 15%) !default;
 
 //== Group
 $group-item-padding:         $padding-base-vertical $padding-base-horizontal;
-$group-item-icon-padding:    10px;
+$group-item-icon-padding:    0.6rem;
 $group-item-desc-color:      $gray-light;
 
 // Tables
 //
-$table-cell-padding:            .75rem !default;
-$table-sm-cell-padding:         .3rem !default;
+$table-cell-padding:            0.75rem !default;
+$table-sm-cell-padding:         0.3rem !default;
 
