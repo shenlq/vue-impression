@@ -9,6 +9,17 @@
 	border-bottom: 1px solid $border-color;
 }
 
+.group-title{
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: .8rem;
+	margin-bottom: .4rem;
+
+	& + .group{
+		margin-top: 0;
+	}
+}
+
 //== .group-item
 .group-item{
 	color: inherit;
