@@ -19,12 +19,34 @@ module.exports = function(grunt) {
         src: ["build/**/*"]
       }
     },
+    sass: {
+      dist: {
+        options: {
+          sourcemap: 'auto',
+          trace: true,
+          quiet: false,
+          debugInfo: true,
+          lineNumbers: true,
+          update: true,
+          style: 'compressed'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/styles/',
+            src: 'index.scss',
+            dest: 'build/styles/',
+            ext: '.css'
+          }
+        ]
+      }
+    },
     watch: {
       less: {
-        files: 'src/styles/**/*.less',
-        tasks: ['less']
+        files: 'src/styles/**/*.scss',
+        tasks: ['sass']
       }
     }
   });
-  grunt.registerTask('default', ['execute']);
+  grunt.registerTask('default', ['clean', 'sass', 'execute']);
 };

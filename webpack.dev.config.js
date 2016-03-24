@@ -11,10 +11,10 @@ module.exports = {
         app: [
         	'webpack-dev-server/client?http://localhost:' + PORT,
         	"webpack/hot/dev-server",
-        	'./src/scripts/main.js']
+        	'./src/main.js']
     },
     output: {
-        path: path.join(__dirname, 'build'),
+        path: __dirname,
         filename: '[name].js',
         publicPath: '/'
     },
@@ -30,6 +30,9 @@ module.exports = {
 	        loader: 'babel',
 	        include: projectRoot,
 	        exclude: /node_modules/
+	    },{
+	    	test: /\.scss$/,
+        	loaders: ["style", "css", "scss"]
 	    },{
 	        test: /\.json$/,
 	        loader: 'json'
@@ -50,8 +53,8 @@ module.exports = {
     	new webpack.HotModuleReplacementPlugin(),
     	new webpack.NoErrorsPlugin(),
 	    new HtmlWebpackPlugin({
-	      	filename: './index.html',
-	      	template: './index.html',
+	      	filename: 'index.html',
+	      	template: 'src/index.html',
 	      	inject: true
 	    })
 	    ]

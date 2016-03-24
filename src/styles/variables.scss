@@ -1,0 +1,45 @@
+
+//== Colors
+$gray-dark:                 #333 !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+$gray-end:                  #fff !default;
+
+$brand-primary:             #0275d8 !default;
+$brand-success:             #5cb85c !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #f0ad4e !default;
+$brand-danger:              #d9534f !default;
+
+
+$text-muted:                  $gray-light !default;
+
+
+//== Typography
+$font-size-root:             14px !default;
+$font-size-base:             1rem !default;
+
+$font-family-base:           "Microsoft YaHei","WenQuanYi Micro Hei","Open Sans","Hiragino Sans GB",Arial,Verdana,Tahoma,sans-serif !default;
+
+$line-height:                1.5 !default;
+
+//==base
+$margin-base-vertical:       15px;
+
+
+//== Body
+$body-bg:                    $gray-end !default;
+$body-color:                 $gray-dark !default;
+
+//== Links
+$link-color:                 $brand-primary !default;
+$link-hover-color:           darken($link-color, 15%) !default;
+
+
+// Tables
+//
+$table-cell-padding:            .75rem !default;
+$table-sm-cell-padding:         .3rem !default;
+
