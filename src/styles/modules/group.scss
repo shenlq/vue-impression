@@ -5,4 +5,7 @@
 	background: $gray-end;
 	overflow: hidden;
 	position: relative;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+    @include display-flex();
 }

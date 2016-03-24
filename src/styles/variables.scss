@@ -4,7 +4,7 @@ $gray-dark:                 #333 !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-lightest:             #f2f2f2 !default;
 $gray-end:                  #fff !default;
 
 $brand-primary:             #0275d8 !default;
@@ -14,8 +14,8 @@ $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 
 
-$text-muted:                  $gray-light !default;
-
+$text-muted:                 $gray-light !default;
+$border-color:               $gray-lighter;
 
 //== Typography
 $font-size-root:             14px !default;
@@ -30,7 +30,7 @@ $margin-base-vertical:       15px;
 
 
 //== Body
-$body-bg:                    $gray-end !default;
+$body-bg:                    $gray-lightest !default;
 $body-color:                 $gray-dark !default;
 
 //== Links
