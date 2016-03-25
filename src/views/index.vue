@@ -1,40 +1,29 @@
 <template>
-	<div class="text-center">
-		<i class="fa fa-5x fa-connectdevelop"></i>
-	</div>
+	<h3 class="text-center">
+		<i class="fa fa-5x fa-connectdevelop"></i><br>
+		<small>Dui Beta 0.1</small>
+	</h3>
 	<group>
-		<group-item>
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
-			<span slot="desc">0.1.0</span>
+		<group-item v-link="demo">
+			<i class="fa fa-lg fa-drupal text-success" slot="icon"></i>
+			<span slot="body">Demo</span>
 		</group-item>
 		<group-item>
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
-			<span slot="desc">0.1.0</span>
-		</group-item>
-		<group-item>
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
+			<i class="fa fa-lg fa-clock-o text-warning" slot="icon"></i>
+			<span slot="body">History</span>
 			<span slot="desc">0.1.0</span>
 		</group-item>
 	</group>
-	<group-title>标题</group-title>
 	<group>
-		<group-item link="#">
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
-			<span slot="desc">0.1.0</span>
+		<group-item v-link="https://github.com/shenlq/vue-dui">
+			<i class="fa fa-lg fa-github" slot="icon"></i>
+			<span slot="body">Star</span>
+			<span slot="desc">998</span>
 		</group-item>
-				<group-item link="#">
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
-			<span slot="desc">0.1.0</span>
-		</group-item>
-				<group-item link="#">
-			<i class="fa fa-lg fa-bluetooth-b" slot="icon"></i>
-			<span slot="body">Group</span>
-			<span slot="desc">0.1.0</span>
+		<group-item v-link="https://github.com/shenlq/vue-dui">
+			<i class="fa fa-lg fa-github" slot="icon"></i>
+			<span slot="body">Fork</span>
+			<span slot="desc">336</span>
 		</group-item>
 	</group>
 </template>

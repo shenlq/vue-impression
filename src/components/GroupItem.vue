@@ -1,5 +1,5 @@
 <template>
-  	<div class="group-item" v-if="!link">
+  	<div class="group-item" v-if="!vLink">
   	    <div class="groupt-item-icon" v-if="_slotContents.icon">
             <slot name="icon"></slot>
        	</div>
@@ -11,7 +11,7 @@
         </div>
   	</div>
 
-    <a class="group-item" v-if="link" v-link="link">
+    <a class="group-item" v-if="vLink" v-link="vLink" :href="vLink">
         <div class="groupt-item-icon" v-if="_slotContents.icon">
             <slot name="icon"></slot>
         </div>
@@ -27,11 +27,13 @@
 
 <script>
   export default {
-
     props: {
-      link: {
+      vLink: {
         type: String
       }
+    },
+    created(){
+      console.log(this);
     }
   }
 </script>

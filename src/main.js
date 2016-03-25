@@ -14,6 +14,14 @@ let router = new VueRouter({
 router.map({
 	'*': {
     	component: require('./views/index.vue')
-  	}
+  	},
+	'/demo': {
+    	name: "demo",
+        component: require('./views/demo.vue')
+    },
+    '/button': {
+    	name: "button",
+        component: require('./views/button.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

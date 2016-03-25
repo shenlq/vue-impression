@@ -7,11 +7,11 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f3f3f3 !default;
 $gray-end:                  #fff !default;
 
-$brand-primary:             #0275d8 !default;
-$brand-success:             #5cb85c !default;
-$brand-info:                #5bc0de !default;
-$brand-warning:             #f0ad4e !default;
-$brand-danger:              #d9534f !default;
+$brand-primary:             #2196F3 !default;
+$brand-success:             #009688 !default;
+$brand-info:                #00BCD4 !default;
+$brand-warning:             #FFC107 !default;
+$brand-danger:              #F44336 !default;
 
 
 $text-muted:                 $gray-light !default;
@@ -35,6 +35,10 @@ $padding-base-horizontal:    0.8rem;
 $body-bg:                    $gray-lightest !default;
 $body-color:                 $gray-dark !default;
 
+//== Cursor
+$cursor-default:                pointer !default;
+$cursor-disabled:                not-allowed !default;
+
 //== Links
 $link-color:                 $brand-primary !default;
 $link-hover-color:           darken($link-color, 15%) !default;
@@ -44,6 +48,23 @@ $link-hover-color:           darken($link-color, 15%) !default;
 $group-item-padding:         $padding-base-vertical $padding-base-horizontal;
 $group-item-icon-padding:    0.6rem;
 $group-item-desc-color:      $gray-light;
+
+//== Button
+$btn-padding:                    0.7rem 1.2rem;
+$btn-border-radius:              2px;
+$btn-block-padding:              1rem;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
+
+$btn-secondary-color:            #fff !default;
+$btn-secondary-bg:               $brand-danger !default;
+$btn-secondary-border:           $brand-danger !default;
+
+$btn-default-color:              $gray-dark !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
 
 // Tables
 //

@@ -1,4 +1,27 @@
 
+
+//== Text colors
+.text-primary{
+	color: $brand-primary;
+}
+
+.text-danger{
+	color: $brand-danger;
+}
+
+.text-success{
+	color: $brand-success;
+}
+
+.text-warning{
+	color: $brand-warning;
+}
+
+.text-muted{
+	color: $gray-light;
+}
+
+
 .text-center{
 	text-align: center;
 }
