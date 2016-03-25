@@ -15,13 +15,20 @@ router.map({
 	'*': {
     	component: require('./views/index.vue')
   	},
+    // demo首页
 	'/demo': {
     	name: "demo",
         component: require('./views/demo.vue')
     },
+    // 按钮页
     '/button': {
-    	name: "button",
+        name: "button",
         component: require('./views/button.vue')
+    },
+    // 输入框页
+    '/input': {
+    	name: "input",
+        component: require('./views/input.vue')
     },
 });
 router.start(Vue.extend({}), 'body');

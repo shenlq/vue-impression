@@ -12,6 +12,7 @@ $brand-success:             #009688 !default;
 $brand-info:                #00BCD4 !default;
 $brand-warning:             #FFC107 !default;
 $brand-danger:              #F44336 !default;
+$brand-plq:                 #f86c2e !default;
 
 
 $text-muted:                 $gray-light !default;
@@ -23,12 +24,12 @@ $font-size-base:             1rem !default;
 
 $font-family-base:           "Microsoft YaHei","WenQuanYi Micro Hei","Open Sans","Hiragino Sans GB",Arial,Verdana,Tahoma,sans-serif !default;
 
-$line-height:                1.5 !default;
+$line-height:                1.2 !default;
 
 //==base
 $margin-base-vertical:       1rem;
-$padding-base-vertical:      0.8rem;
-$padding-base-horizontal:    0.8rem;
+$padding-base-vertical:      0.7rem;
+$padding-base-horizontal:    0.7rem;
 
 
 //== Body
@@ -45,9 +46,9 @@ $link-hover-color:           darken($link-color, 15%) !default;
 
 
 //== Group
-$group-item-padding:         $padding-base-vertical $padding-base-horizontal;
-$group-item-icon-padding:    0.6rem;
-$group-item-desc-color:      $gray-light;
+$group-item-padding:            $padding-base-vertical $padding-base-horizontal;
+$group-item-heading-padding:    0.6rem;
+$group-item-footer-color:       $gray-light;
 
 //== Button
 $btn-padding:                    0.7rem 1.2rem;
@@ -59,8 +60,8 @@ $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
 $btn-secondary-color:            #fff !default;
-$btn-secondary-bg:               $brand-danger !default;
-$btn-secondary-border:           $brand-danger !default;
+$btn-secondary-bg:               $brand-plq !default;
+$btn-secondary-border:           $brand-plq !default;
 
 $btn-default-color:              $gray-dark !default;
 $btn-default-bg:                 #fff !default;
