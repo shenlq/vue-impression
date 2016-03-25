@@ -13,6 +13,10 @@
 			<i class="fa fa-file-text-o" slot="heading"></i>
 			<span slot="body">Textarea</span>
 		</group-item>
+		<group-item v-link="switch">
+			<i class="fa fa-lg fa-toggle-on text-success" slot="heading"></i>
+			<span slot="body">Switch</span>
+		</group-item>
 	</group>
 </template>
 

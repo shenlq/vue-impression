@@ -47,3 +47,47 @@
 	color: $textarea-counter-color;
 	padding: $textarea-counter-padding;
 }
+
+//== Switch
+.switch{
+	width: 3rem;
+	white-space: nowrap;
+	position: relative;
+
+	> input{
+		position: absolute;
+		left: 0;
+		top: 0;
+		visibility: hidden;
+	}
+}
+
+.switch-toggle{
+	display: inline-block;
+	width: 100%;
+	background: #ccc;
+	padding: 2px;
+	border-radius: 4rem;
+	text-align: left;
+	transition: all .3s;
+
+	&:after{
+		content: " ";
+		display: inline-block;
+		width: 1.2rem;
+		height: 1.2rem;
+		background: #fdfdfd;
+		border-radius: 100%;
+		transition: transform .3s,-webkit-transform .3s;
+	}
+
+	input:checked + & {
+		border-color: green;
+		background: green;
+		&:after{
+			transform: translateX(1.5rem);
+		}
+
+	}
+}
+

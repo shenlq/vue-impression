@@ -32,8 +32,14 @@ router.map({
     },
     // Textarea页
     '/textarea': {
-    	name: "textarea",
+        name: "textarea",
         component: require('./views/textarea.vue')
     },
+    // Switch页
+    '/switch': {
+    	name: "textarea",
+        component: require('./views/switch.vue')
+    },
+
 });
 router.start(Vue.extend({}), 'body');
