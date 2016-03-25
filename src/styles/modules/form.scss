@@ -1,3 +1,20 @@
+//== Form
+.input-item{
+	position: relative;
+	padding: $input-item-padding;
+    @include display-flex();
+	background: $input-item-bg;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+
+	> input{
+		flex: 1;
+	}
+
+	+ .input-item{
+		border-top: 0;
+	}
+}
 
 .input {
 	width: 100%;
