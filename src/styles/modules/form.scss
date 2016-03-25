@@ -23,3 +23,27 @@
 	-webkit-appearance: none;
 	background: transparent;
 }
+
+//== Textarea
+.textarea{
+	background: $textarea-item-bg;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+
+    > textarea{
+    	border: 0;
+    	resize: none;
+    	color: inherit;
+    	outline: 0;
+		display: block;
+    	width: 100%;
+		padding: $textarea-padding;
+    }
+}
+
+.textarea-counter{
+	font-size: $textarea-counter-font-size;
+	text-align: right;
+	color: $textarea-counter-color;
+	padding: $textarea-counter-padding;
+}

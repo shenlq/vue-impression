@@ -9,6 +9,10 @@
 			<i class="fa fa-l fa-text-height text-warning" slot="heading"></i>
 			<span slot="body">Input</span>
 		</group-item>
+		<group-item v-link="textarea">
+			<i class="fa fa-file-text-o" slot="heading"></i>
+			<span slot="body">Textarea</span>
+		</group-item>
 	</group>
 </template>
 

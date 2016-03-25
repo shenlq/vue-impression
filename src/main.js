@@ -27,8 +27,13 @@ router.map({
     },
     // 输入框页
     '/input': {
-    	name: "input",
+        name: "input",
         component: require('./views/input.vue')
+    },
+    // Textarea页
+    '/textarea': {
+    	name: "textarea",
+        component: require('./views/textarea.vue')
     },
 });
 router.start(Vue.extend({}), 'body');
