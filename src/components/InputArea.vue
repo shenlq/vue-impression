@@ -1,7 +1,7 @@
 <template>
 	<div class="textarea">
-		<textarea rows="3" v-model="value"></textarea>
-		<div class="textarea-counter" v-if="isCount">
+		<textarea rows="3" v-model="value" :placeholder="placeholder"></textarea>
+		<div class="textarea-counter" v-if="isCounter">
 			{{count}}/{{max}}
 		</div>
 	</div>
@@ -10,12 +10,15 @@
 <script>
 	export default {
 		props: {
+			placeholder: {
+				type: String
+			},
 			value: {
 		      	type: String,
 		      	default: '',
 		      	twoWay: true
 		    },
-            isCount: {
+            isCounter: {
                 type: Boolean
             },
             max: {

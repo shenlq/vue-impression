@@ -1,16 +1,16 @@
 <template>
 	<group-title>Input default</group-title>
-	<input-text>
+	<input-text value="peter">
 		<label slot>username:</label>
 	</input-text>
 
 	<group-title>Input password</group-title>
-	<input-text dtype="password">
+	<input-text type="password" placeholder="请输入密码">
 		<label slot>password:</label>
 	</input-text>
 
 	<group-title>With clear icon</group-title>
-	<input-text clear>
+	<input-text placeholder="可以清除内容" clear>
 		<label slot>clear:</label>
 	</input-text>
 
