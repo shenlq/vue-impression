@@ -97,11 +97,16 @@
 
 
 //== Checkbox
-.checkbox{
+.checkbox, .radio{
   	display: inline-block;
 	position: relative;
 	height: $checkbox-height;
 	line-height: $checkbox-height;
+
+	+ .checkbox,
+	+ .radio{
+		margin-left: 5px;
+	}
 
 	> input{
 		position: absolute;
@@ -110,6 +115,7 @@
 		visibility: hidden;
 	}
 }
+
 .checkbox-addon{
 	float: left;
   	display: inline-block;
@@ -153,7 +159,7 @@
 	}
 }
 
-.checkbox-label{
+.checkbox-label, .radio-label{
 	padding-left: 0.3rem;
 	float: left;
 }
@@ -167,5 +173,51 @@
 			top: 0.3rem;
 			border-color: $brand-primary;
   		}
+	}
+}
+
+
+//== Checkbox
+.radio-addon{
+	float: left;
+  	display: inline-block;
+	cursor: $cursor-default;
+  	width: $checkbox-width;
+	height: 100%;
+  	background: transparent;
+  	border: 3px solid $border-color;
+  	border-radius: 50%;
+	position: relative;
+	transition: all .2s;
+
+	&:before {
+	  	content: "";
+		display: inline-block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: $brand-primary;
+		border-radius: 50%;
+
+	}
+
+
+  	input:checked + & {
+  		border-color: $brand-primary;
+
+  		&:before{
+			width: 6px;
+			height: 6px;
+  		}
+  	}
+
+  	input:disabled + &{
+		cursor: $cursor-disabled;
+		opacity: .6;
 	}
 }

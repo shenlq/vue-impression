@@ -91,8 +91,8 @@ $switch-toggle-addon-width:     1.2rem;
 $switch-toggle-addon-height:    $switch-toggle-addon-width;
 $switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.3rem;
 
-$checkbox-height:                1.5rem;
-$checkbox-width:                 1.5rem;
+$checkbox-height:                round(1.4 * $font-size-root);
+$checkbox-width:                 round(1.4 * $font-size-root);
 
 // Tables
 //

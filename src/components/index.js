@@ -5,6 +5,7 @@ import InputText from './InputText';
 import InputArea from './InputArea';
 import Switch from './Switch';
 import Checkbox from './Checkbox';
+import Radio from './Radio';
 
 const components = {
 	Group,
@@ -13,7 +14,8 @@ const components = {
 	InputText,
 	InputArea,
 	Switch,
-	Checkbox
+	Checkbox,
+	Radio
 };
 
 module.exports = components;
