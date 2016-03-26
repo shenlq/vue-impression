@@ -1,0 +1,25 @@
+//== Tab
+.tab{
+    @include display-flex();
+    padding: $tab-padding;
+  	background: #fff;
+  	position: relative;
+}
+
+.tab-item{
+	position: $cursor-default;
+	@include flex();
+	text-align: center;
+
+	&.active{
+		color: $brand-primary;
+	}
+}
+
+.tab-bar{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border-bottom: $tab-bar-height solid $brand-primary;
+	transition: all .3s;
+}

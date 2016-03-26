@@ -50,5 +50,10 @@ router.map({
         name: "radio",
         component: require('./views/radio.vue')
     },
+    // Tab页
+    '/tab': {
+        name: "tab",
+        component: require('./views/tab.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

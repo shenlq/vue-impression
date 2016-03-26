@@ -94,6 +94,10 @@ $switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.
 $checkbox-height:                round(1.4 * $font-size-root);
 $checkbox-width:                 round(1.4 * $font-size-root);
 
+//== Tab
+$tab-padding:            		$padding-base-vertical $padding-base-horizontal;
+$tab-bar-height:        		2px;
+
 // Tables
 //
 $table-cell-padding:            0.75rem !default;

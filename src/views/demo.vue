@@ -25,6 +25,10 @@
 			<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
 			<span slot="body">Radio</span>
 		</group-item>
+		<group-item v-link="tab">
+			<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
+			<span slot="body">Tab</span>
+		</group-item>
 	</group>
 </template>
 
