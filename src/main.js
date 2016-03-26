@@ -55,5 +55,10 @@ router.map({
         name: "tab",
         component: require('./views/tab.vue')
     },
+    // Drawer页
+    '/drawer': {
+        name: "drawer",
+        component: require('./views/drawer.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

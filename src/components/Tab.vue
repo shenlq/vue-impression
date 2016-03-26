@@ -27,7 +27,7 @@
 		},
 		events: {
 			//选中事件
-		    'selected':  function(index){
+		    selected(index){
 		      	this.selectedIndex = index;
 
 		      	this.$children.forEach(child => {
@@ -37,7 +37,7 @@
 		    }
 	  	},
 	  	computed: {
-	  		barLeft: function(){
+	  		barLeft(){
 	  			return `${(this.selectedIndex - 1) * (100 / this.tabItemCount)}%`;
 	  		}
 	  	}

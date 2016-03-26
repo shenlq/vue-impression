@@ -25,9 +25,15 @@
 			<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
 			<span slot="body">Radio</span>
 		</group-item>
+	</group>
+	<group>
 		<group-item v-link="tab">
-			<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
+			<i class="fa fa-lg fa-indent text-danger" slot="heading"></i>
 			<span slot="body">Tab</span>
+		</group-item>
+		<group-item v-link="drawer">
+			<i class="fa fa-lg fa-briefcase text-muted" slot="heading"></i>
+			<span slot="body">Drawer</span>
 		</group-item>
 	</group>
 </template>
@@ -37,10 +43,10 @@
 	import { Group, GroupItem, GroupTitle } from '../components/index.js';
 
 	export default {
-		  components: {
+		components: {
 		    Group,
 		    GroupItem,
 		    GroupTitle
-		  }
+		}
 	};
 </script>

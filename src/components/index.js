@@ -8,6 +8,8 @@ import Checkbox from './Checkbox';
 import Radio from './Radio';
 import Tab from './Tab';
 import TabItem from './TabItem';
+import Drawer from './Drawer';
+import DrawerItem from './DrawerItem';
 
 const components = {
 	Group,
@@ -19,7 +21,9 @@ const components = {
 	Checkbox,
 	Radio,
 	Tab,
-	TabItem
+	TabItem,
+	Drawer,
+	DrawerItem
 };
 
 module.exports = components;
