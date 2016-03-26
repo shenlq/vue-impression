@@ -46,6 +46,7 @@ $link-hover-color:           darken($link-color, 15%) !default;
 
 
 //== Group
+$group-title-padding:           $padding-base-vertical $padding-base-horizontal;
 $group-item-padding:            $padding-base-vertical $padding-base-horizontal;
 $group-item-heading-padding:    0.6rem;
 $group-item-footer-color:       $gray-light;
@@ -77,7 +78,15 @@ $textarea-counter-color:        $gray-light !default;
 $textarea-counter-padding:      0.3rem !default;
 $textarea-counter-font-size:    0.8rem !default;
 
+$switch-width:                  3rem !default;
+$switch-toggle-bg:              #ccc !default;
+$switch-toggle-active-bg:       $brand-success;
+$switch-toggle-padding:         2px !default;
 
+$switch-toggle-addon-bg:        #fdfdfd;
+$switch-toggle-addon-width:     1.2rem;
+$switch-toggle-addon-height:    $switch-toggle-addon-width;
+$switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.3rem;
 
 // Tables
 //

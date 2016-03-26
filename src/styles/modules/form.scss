@@ -50,7 +50,7 @@
 
 //== Switch
 .switch{
-	width: 3rem;
+	width: $switch-width;
 	white-space: nowrap;
 	position: relative;
 
@@ -65,29 +65,32 @@
 .switch-toggle{
 	display: inline-block;
 	width: 100%;
-	background: #ccc;
-	padding: 2px;
-	border-radius: 4rem;
+	background: $switch-toggle-bg;
+	padding: $switch-toggle-padding;
+	border-radius: $switch-width;
 	text-align: left;
 	transition: all .3s;
 
 	&:after{
 		content: " ";
 		display: inline-block;
-		width: 1.2rem;
-		height: 1.2rem;
-		background: #fdfdfd;
+		width: $switch-toggle-addon-width;
+		height: $switch-toggle-addon-height;
+		background:$switch-toggle-addon-bg;
 		border-radius: 100%;
 		transition: transform .3s,-webkit-transform .3s;
 	}
 
 	input:checked + & {
-		border-color: green;
-		background: green;
+		border-color: $switch-toggle-active-bg;
+		background: $switch-toggle-active-bg;
 		&:after{
-			transform: translateX(1.5rem);
+			transform: translateX($switch-toggle-addon-translateX);
 		}
+	}
 
+	input:disabled + &{
+		opacity: .6;
 	}
 }
 

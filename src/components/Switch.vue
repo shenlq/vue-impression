@@ -1,6 +1,6 @@
 <template>
 	<label class="switch">
-		<input type="checkbox" :checked="checked">
+		<input type="checkbox" :checked="checked" :disabled="disabled">
 		<span class="switch-toggle"></span>
 	</label>
 </template>
@@ -11,6 +11,9 @@
 			checked: {
 				type: Boolean
 			},
+			disabled: {
+				type: Boolean
+			}
         }
 	};
 </script>
