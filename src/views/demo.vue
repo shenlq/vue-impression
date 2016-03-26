@@ -12,10 +12,20 @@
 		<i class="fa fa-file-text-o" slot="heading"></i>
 		<span slot="body">Textarea</span>
 	</group-item>
-	<group-item v-link="switch">
-		<i class="fa fa-lg fa-toggle-on text-success" slot="heading"></i>
-		<span slot="body">Switch</span>
-	</group-item>
+	<group>
+		<group-item v-link="switch">
+			<i class="fa fa-lg fa-toggle-on text-success" slot="heading"></i>
+			<span slot="body">Switch</span>
+		</group-item>
+		<group-item v-link="checkbox">
+			<i class="fa fa-lg fa-check-square text-primary" slot="heading"></i>
+			<span slot="body">Checkbox</span>
+		</group-item>
+		<group-item v-link="radio">
+			<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
+			<span slot="body">Radio</span>
+		</group-item>
+	</group>
 </template>
 
 

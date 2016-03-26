@@ -37,9 +37,18 @@ router.map({
     },
     // Switch页
     '/switch': {
-    	name: "textarea",
+    	name: "switch",
         component: require('./views/switch.vue')
     },
-
+    // Checkbox页
+    '/checkbox': {
+        name: "checkbox",
+        component: require('./views/checkbox.vue')
+    },
+    // Radio页
+    '/radio': {
+        name: "radio",
+        component: require('./views/radio.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

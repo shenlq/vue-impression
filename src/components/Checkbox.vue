@@ -1,7 +1,7 @@
 <template>
-	<label class="switch">
+	<label class="checkbox">
 		<input type="checkbox" :checked="checked" :disabled="disabled">
-		<span class="switch-addon"></span>
+		<span class="checkbox-addon"></span>
 	</label>
 </template>
 
