@@ -1,7 +1,7 @@
 <template>
 	<h3 class="text-center">
-		<i class="fa fa-5x fa-connectdevelop"></i><br>
-		<small>Dui Beta 0.1</small>
+		<img src="../images/logo.png" width="100px" :style="{marginTop: '20px', marginBottom: '10px'}">
+		<div><small>Vue-dui beta 0.1</small></div>
 	</h3>
 	<group>
 		<group-item v-link="demo">

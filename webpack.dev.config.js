@@ -40,12 +40,11 @@ module.exports = {
 	        test: /\.html$/,
 	        loader: 'vue-html'
 	    },{
-	        test: /\.(png|jpg|gif|svg)$/,
-	        loader: 'url',
-	        query: {
-	          	limit: 10000,
-	          	name: '[name].[ext]?[hash:7]'
-	        }
+	        test: /\.(jpe?g|png|gif|svg)$/i,
+	        loaders: [
+	            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+	            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+	        ]
 	    }]
     },
     plugins: [
