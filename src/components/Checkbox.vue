@@ -1,7 +1,11 @@
 <template>
 	<label class="checkbox">
 		<input type="checkbox" :checked="checked" :disabled="disabled">
-		<span class="checkbox-addon"></span>
+		<span :class="['checkbox-addon', circle?'shape-circle':'', outline?'checkbox-addon-outline':'']">
+		</span>
+		<span class="checkbox-label" v-if="_slotContents && _slotContents.default">
+			<slot></slot>
+		</span>
 	</label>
 </template>
 
@@ -12,6 +16,12 @@
 				type: Boolean
 			},
 			disabled: {
+				type: Boolean
+			},
+			circle: {
+				type: Boolean
+			},
+			outline: {
 				type: Boolean
 			}
         }
