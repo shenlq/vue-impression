@@ -28,12 +28,16 @@ $line-height:                1.2 !default;
 
 //==base
 $margin-base-vertical:       1rem;
-$padding-base-vertical:      0.7rem;
-$padding-base-horizontal:    0.7rem;
+$padding-base-vertical:      0.8rem;
+$padding-base-horizontal:    0.8rem;
 
 //== z-index
 $navbar-zindex:             1100;
 $tab-bottom-zindex:         1100;
+
+$mask-zindex:               1200;
+$toast-zindex:         		1210;
+$confirm-zindex:            1210;
 
 //== Body
 $body-bg:                    $gray-lightest !default;
@@ -55,12 +59,13 @@ $split-margin:               0 $padding-base-horizontal;
 //== Navbar
 $navbar-height:                 40px;
 $navbar-padding:				0 $padding-base-horizontal;
+$navbar-font-size:              floor($font-size-root * 1.1);
 
 //== Container
 $container-content-top:         $navbar-height;
 
 //== Group
-$group-title-padding:           $padding-base-vertical $padding-base-horizontal;
+$group-title-padding:           0.4rem $padding-base-horizontal;
 $group-item-padding:            $padding-base-vertical $padding-base-horizontal;
 $group-item-heading-padding:    0.6rem;
 $group-item-footer-color:       $gray-light;

@@ -14,6 +14,7 @@ import Tab from './Tab';
 import TabItem from './TabItem';
 import Drawer from './Drawer';
 import DrawerItem from './DrawerItem';
+import Toast from './Toast';
 
 const components = {
 	Container,
@@ -31,7 +32,8 @@ const components = {
 	Tab,
 	TabItem,
 	Drawer,
-	DrawerItem
+	DrawerItem,
+	Toast
 };
 
 module.exports = components;

@@ -1,0 +1,36 @@
+//== Toast
+.toast{
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.42);
+    border-radius: 8px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    @include display-flex();
+    font-size: 1.1rem;
+    z-index: $toast-zindex;
+}
+
+.toast-success{
+	i{
+		border-top: 4px solid #fff;
+		border-right: 4px solid #fff;
+		transform: rotate(130deg);
+		display: block;
+		width: 30%;
+		height: 16%;
+		color: #fff;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+}
+
+.toast-body{
+	@include flex();
+}

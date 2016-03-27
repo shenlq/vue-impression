@@ -70,5 +70,10 @@ router.map({
         name: "drawer",
         component: require('./views/drawer.vue')
     },
+    // Toast页
+    '/toast': {
+        name: "toast",
+        component: require('./views/toast.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

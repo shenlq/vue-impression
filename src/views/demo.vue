@@ -16,6 +16,14 @@
 					<i class="fa fa-lg fa-inbox text-muted" slot="heading"></i>
 					<span slot="body">Footer</span>
 				</group-item>
+				<group-item v-link="tab">
+					<i class="fa fa-lg fa-indent text-danger" slot="heading"></i>
+					<span slot="body">Tab</span>
+				</group-item>
+				<group-item v-link="drawer">
+					<i class="fa fa-lg fa-briefcase text-muted" slot="heading"></i>
+					<span slot="body">Drawer</span>
+				</group-item>
 			</group>
 			<group-title>Form</group-title>
 			<group-item v-link="button">
@@ -44,16 +52,14 @@
 					<span slot="body">Radio</span>
 				</group-item>
 			</group>
+			<group-title>Tips</group-title>
 			<group>
-				<group-item v-link="tab">
-					<i class="fa fa-lg fa-indent text-danger" slot="heading"></i>
-					<span slot="body">Tab</span>
-				</group-item>
-				<group-item v-link="drawer">
-					<i class="fa fa-lg fa-briefcase text-muted" slot="heading"></i>
-					<span slot="body">Drawer</span>
+				<group-item v-link="toast">
+					<i class="fa fa-lg fa-bolt text-warning" slot="heading"></i>
+					<span slot="body">Toast</span>
 				</group-item>
 			</group>
+
 		</container-body>
 	</container>
 </template>

@@ -51,10 +51,7 @@
 					top: '70px'
 				},
 				style2: {
-					top: '130px'
-				},
-				style3: {
-					top: '190px'
+					top: '175px'
 				}
 			}
 		}
