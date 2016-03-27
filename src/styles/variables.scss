@@ -118,8 +118,16 @@ $tab-padding:            		$padding-base-vertical $padding-base-horizontal;
 $tab-bar-height:        		2px;
 
 $tab-bottom-height:             $navbar-height;
+
 //== Drawer
 $drawer-padding:            	$padding-base-vertical $padding-base-horizontal;
+
+//== Toast
+$toast-width:           		8rem;
+$toast-height:          		8rem;
+$toast-bg: 						rgba(0, 0, 0, 0.42);
+$toast-border-radius:           8px;
+$toast-addon-margin-bottom:     1rem;
 
 
 // Tables

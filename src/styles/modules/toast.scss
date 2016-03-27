@@ -1,10 +1,10 @@
 //== Toast
 .toast{
-    height: 100px;
-    width: 100px;
+    height: $toast-width;
+    width: $toast-height;
     color: #fff;
-    background: rgba(0, 0, 0, 0.42);
-    border-radius: 8px;
+    background: $toast-bg;
+    border-radius: $toast-border-radius;
     position: fixed;
     left: 0;
     right: 0;
@@ -13,13 +13,12 @@
     margin: auto;
     text-align: center;
     @include display-flex();
-    font-size: 1.1rem;
     z-index: $toast-zindex;
 }
 
 .toast-addon{
     display: block !important;
-    margin-bottom: 1rem;
+    margin-bottom: $toast-addon-margin-bottom;
 }
 
 .toast-body{
