@@ -1,5 +1,5 @@
 <template>
-    <div class="tab tab-bottom">
+    <div :class="['tab','tab-bottom',class]" :style="style">
         <slot></slot>
     </div>
 </template>

@@ -43,3 +43,15 @@
 		}
 	}
 }
+
+.tab-bottom-cascade{
+	> * {
+		transform: scale(0.8);
+		> *{
+			display: block !important;
+			&:first-child{
+				padding-bottom: 0.3rem;
+			}
+		}
+	}
+}
