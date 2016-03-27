@@ -33,15 +33,6 @@
 	color: $text-muted;
 	height: $tab-bottom-height;
 	border-top: 1px solid $border-color;
-
-	> * {
-		text-align: center;
-		@include flex();
-
-		&.active{
-			color: $brand-primary;
-		}
-	}
 }
 
 .tab-bottom-cascade{
@@ -50,7 +41,7 @@
 		> *{
 			display: block !important;
 			&:first-child{
-				padding-bottom: 0.3rem;
+				padding-bottom: 0.5rem;
 			}
 		}
 	}

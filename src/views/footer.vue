@@ -5,48 +5,45 @@
 		<span>Tab bottom</span>
 	</navbar>
 	<tab-bottom :style="style1">
-		<i class="fa fa-lg fa-phone"></i>
-		<i class="fa fa-lg fa-comment"></i>
-		<i class="fa fa-lg fa-user"></i>
-		<i class="fa fa-lg fa-camera"></i>
+		<tab-item><i class="fa fa-lg fa-phone"></i></tab-item>
+		<tab-item><i class="fa fa-lg fa-comment"></i></tab-item>
+		<tab-item><i class="fa fa-lg fa-user"></i></tab-item>
+		<tab-item><i class="fa fa-lg fa-camera"></i></tab-item>
 	</tab-bottom>
 
 	<tab-bottom :style="style2">
-		<i class="fa fa-lg fa-phone"></i>
-		<i class="fa fa-lg fa-comment"></i>
-		<i class="fa fa-lg fa-user active"></i>
-		<i class="fa fa-lg fa-camera"></i>
+		<tab-item><i class="fa fa-lg fa-phone"></i></tab-item>
+		<tab-item><i class="fa fa-lg fa-comment"></i></tab-item>
+		<tab-item selected><i class="fa fa-lg fa-user"></i></tab-item>
+		<tab-item><i class="fa fa-lg fa-camera"></i></tab-item>
 	</tab-bottom>
 
 	<tab-bottom :style="style" class="tab-bottom-cascade">
-		<div>
-			<i class="fa fa-lg fa-phone"></i>
-			电话
-		</div>
-		<div class="active">
-			<i class="fa fa-lg fa-comment"></i>
-			短信
-		</div>
-		<div>
-			<i class="fa fa-lg fa-user"></i>
-			我
-		</div>
-		<div>
-			<i class="fa fa-lg fa-camera"></i>
-			照相
-		</div>
+		<tab-item>
+			<i class="fa fa-lg fa-phone"></i>电话
+		</tab-item>
+		<tab-item selected>
+			<i class="fa fa-lg fa-comment"></i>短信
+		</tab-item>
+		<tab-item>
+			<i class="fa fa-lg fa-user"></i>我
+		</tab-item>
+		<tab-item>
+			<i class="fa fa-lg fa-camera"></i>照相
+		</tab-item>
 	</tab-bottom>
 </template>
 
 
 <script>
-	import { GroupTitle, Navbar, TabBottom } from '../components/index.js';
+	import { GroupTitle, Navbar, TabBottom, TabItem } from '../components/index.js';
 
 	export default {
 		components: {
 		    GroupTitle,
 		    Navbar,
-		    TabBottom
+		    TabBottom,
+		    TabItem
 		},
 		data(){
 			return {
