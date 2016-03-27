@@ -61,8 +61,11 @@ $navbar-height:                 40px;
 $navbar-padding:				0 $padding-base-horizontal;
 $navbar-font-size:              floor($font-size-root * 1.1);
 
+$tab-bottom-height:             $navbar-height;
+
 //== Container
 $container-content-top:         $navbar-height;
+$container-content-bottom:      ($tab-bottom-height + 1);
 
 //== Group
 $group-title-padding:           0.4rem $padding-base-horizontal;
@@ -116,8 +119,6 @@ $radio-width:                 	round(1.5 * $font-size-root);
 //== Tab
 $tab-padding:            		$padding-base-vertical $padding-base-horizontal;
 $tab-bar-height:        		2px;
-
-$tab-bottom-height:             $navbar-height;
 
 //== Drawer
 $drawer-padding:            	$padding-base-vertical $padding-base-horizontal;

@@ -12,7 +12,7 @@
         <span class="groupt-item-arrow" v-if="click"></span>
   	</div>
 
-    <a class="group-item" v-if="vLink" v-link="vLink" :href="vLink">
+    <a class="group-item" v-if="vLink" v-link="vLink">
         <span class="groupt-item-heading" v-if="_slotContents.heading">
             <slot name="heading"></slot>
         </span>
@@ -30,7 +30,9 @@
     export default {
         props: {
             vLink: {
-                type: String
+                coerce(val) {
+                    return val ? JSON.parse(val): "";
+              }
             },
             click: {
                 type: Function

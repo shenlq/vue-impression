@@ -1,7 +1,7 @@
 <template>
 	<container>
 		<navbar>
-			<i class="fa fa-arrow-left"></i>
+			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Toast</span>
 		</navbar>

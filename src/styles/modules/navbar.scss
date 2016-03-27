@@ -5,7 +5,6 @@
     top: 0;
     z-index: $navbar-zindex;
     width: 100%;
-    color: #fff;
     font-size: $navbar-font-size;
     background: $brand-primary;
     height: $navbar-height;
@@ -13,6 +12,9 @@
     padding: $navbar-padding;
     @include display-flex();
 
+    * {
+        color: #fff;
+    }
 	> .pull-left{
     	@include flex();
 	}
@@ -31,9 +33,12 @@
 }
 
 .navbar-default{
-	color: $text-muted;
 	background: #fff;
 	border-bottom: 1px solid $border-color;
+
+    * {
+        color: $text-muted;
+    }
 
 	.split {
     	border-color: $border-color;

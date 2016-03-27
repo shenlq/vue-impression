@@ -1,6 +1,10 @@
 //== Container
 .container{
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 
 .container-body{
@@ -8,5 +12,6 @@
 	left: 0;
 	right: 0;
 	top: $container-content-top;
-	bottom: 0;
+	bottom: $container-content-bottom;
+	overflow: scroll;
 }

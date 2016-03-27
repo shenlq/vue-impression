@@ -4,7 +4,7 @@
 		<div><small>Vue-dui beta 0.1</small></div>
 	</h3>
 	<group>
-		<group-item v-link="demo">
+		<group-item v-link='{name: "demo"}'>
 			<i class="fa fa-lg fa-drupal text-success" slot="heading"></i>
 			<span slot="body">Demo</span>
 		</group-item>
@@ -15,12 +15,12 @@
 		</group-item>
 	</group>
 	<group>
-		<group-item v-link="https://github.com/shenlq/vue-dui">
+		<group-item>
 			<i class="fa fa-lg fa-github" slot="heading"></i>
 			<span slot="body">Star</span>
 			<span slot="footer">998</span>
 		</group-item>
-		<group-item v-link="https://github.com/shenlq/vue-dui">
+		<group-item>
 			<i class="fa fa-lg fa-github" slot="heading"></i>
 			<span slot="body">Fork</span>
 			<span slot="footer">336</span>

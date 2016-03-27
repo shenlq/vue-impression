@@ -1,13 +1,12 @@
 <template>
-	<group-title>Navbar</group-title>
 	<navbar :style="style">
-		<i class="fa fa-arrow-left"></i>
+		<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
-		<span>城市服务</span>
+		<span>Navbar</span>
 		<span class="pull-right">分享</span>
 	</navbar>
 	<navbar :style="style">
-		<i class="fa fa-arrow-left"></i>
+		<a v-link="{name:'demo'}"><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>转账</span>
 		<span class="pull-right">
@@ -16,9 +15,8 @@
 			<i class="fa fa-ellipsis-v"></i>
 		</span>
 	</navbar>
-	<group-title>Navbar type</group-title>
 	<navbar :style="style" class="navbar-default">
-		<i class="fa fa-arrow-left"></i>
+		<a v-link="{name:'demo'}"><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>设置</span>
 		<span class="pull-right">
