@@ -17,18 +17,9 @@
     z-index: $toast-zindex;
 }
 
-.toast-success{
-	i{
-		border-top: 4px solid #fff;
-		border-right: 4px solid #fff;
-		transform: rotate(130deg);
-		display: block;
-		width: 30%;
-		height: 16%;
-		color: #fff;
-		margin: auto;
-		margin-bottom: 2rem;
-	}
+.toast-addon{
+    display: block !important;
+    margin-bottom: 1rem;
 }
 
 .toast-body{

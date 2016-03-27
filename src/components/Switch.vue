@@ -13,7 +13,7 @@
 			},
 			disabled: {
 				type: Boolean
-			}
+			},
         }
 	};
 </script>
