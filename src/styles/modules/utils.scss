@@ -21,11 +21,35 @@
 	color: $gray-light;
 }
 
-
+//== Text align
 .text-center{
 	text-align: center;
 }
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
 
+//== float
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+//== Shape
 .shape-circle{
 	border-radius: 50%;
+}
+
+//== split
+.split{
+	height: 1rem;
+	margin: $split-margin;
+	display: inline-block;
+	border-right: 1px solid $border-color;
 }

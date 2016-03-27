@@ -1,3 +1,4 @@
+import Navbar from './Navbar';
 import Group from './Group';
 import GroupItem from './GroupItem';
 import GroupTitle from './GroupTitle';
@@ -12,6 +13,7 @@ import Drawer from './Drawer';
 import DrawerItem from './DrawerItem';
 
 const components = {
+	Navbar,
 	Group,
 	GroupItem,
 	GroupTitle,

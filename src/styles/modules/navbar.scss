@@ -1,0 +1,41 @@
+//== Nav
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: $brand-primary;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: $navbar-padding;
+    @include display-flex();
+    font-size: 1.1rem;
+
+	> .pull-left{
+    	@include flex();
+	}
+
+    > .pull-right{
+    	text-align: right;
+    	@include flex();
+        > *{
+            margin-left: 1rem;
+        }
+    }
+
+    .split {
+    	border-color: darken($brand-primary, 6%);
+    }
+}
+
+.navbar-default{
+	color: $text-muted;
+	background: #fff;
+	border-bottom: 1px solid $border-color;
+
+	.split {
+    	border-color: $border-color;
+    }
+}
+

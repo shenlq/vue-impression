@@ -20,6 +20,11 @@ router.map({
     	name: "demo",
         component: require('./views/demo.vue')
     },
+    // Header页
+    '/navbar': {
+        name: "navbar",
+        component: require('./views/navbar.vue')
+    },
     // 按钮页
     '/button': {
         name: "button",
