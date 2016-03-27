@@ -1,10 +1,10 @@
 <template>
 	<h3 class="text-center">
 		<img src="../images/logo.png" width="100px" :style="{marginTop: '20px', marginBottom: '10px'}">
-		<div><small>Vue-dui beta 0.1</small></div>
+		<div><small>beta 0.1</small></div>
 	</h3>
 	<group>
-		<group-item v-link='{name: "demo"}'>
+		<group-item v-link='{"name": "demo"}'>
 			<i class="fa fa-lg fa-drupal text-success" slot="heading"></i>
 			<span slot="body">Demo</span>
 		</group-item>

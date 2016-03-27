@@ -13,8 +13,13 @@ let router = new VueRouter({
 //路由配置
 router.map({
 	'*': {
+        name: "home",
     	component: require('./views/index.vue')
   	},
+    '/index': {
+        name: "index",
+        component: require('./views/index.vue')
+    },
     // demo首页
 	'/demo': {
     	name: "demo",

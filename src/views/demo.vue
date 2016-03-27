@@ -1,9 +1,9 @@
 <template>
 	<container>
 		<navbar>
-			<i class="fa fa-arrow-left"></i>
+			<a v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
-			<span>demo</span>
+			<span>组件</span>
 			<span class="pull-right">分享</span>
 		</navbar>
 		<container-body>
@@ -17,7 +17,7 @@
 					<span slot="body">Footer</span>
 				</group-item>
 				<group-item v-link='{"name": "tab"}'>
-					<i class="fa fa-lg fa-indent text-danger" slot="heading"></i>
+					<i class="fa fa-lg fa-indent text-muted" slot="heading"></i>
 					<span slot="body">Tab</span>
 				</group-item>
 				<group-item v-link='{"name": "drawer"}'>
