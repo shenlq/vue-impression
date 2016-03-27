@@ -7,9 +7,11 @@
 }
 
 .tab-item{
-	position: $cursor-default;
 	@include flex();
 	text-align: center;
+	position: $cursor-default;
+	transition: all .2s;
+
 
 	&.active{
 		color: $brand-primary;
@@ -29,6 +31,7 @@
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	z-index: $tab-bottom-zindex;
 	width: 100%;
 	color: $text-muted;
 	height: $tab-bottom-height;

@@ -9,25 +9,25 @@
 		<container-body>
 			<group>
 				<group-item v-link="navbar">
-					<i class="fa fa- fa-home text-primary" slot="heading"></i>
+					<i class="fa fa-lg fa-home text-primary" slot="heading"></i>
 					<span slot="body">Navbar</span>
 				</group-item>
 				<group-item v-link="footer">
-					<i class="fa fa- fa-inbox text-muted" slot="heading"></i>
+					<i class="fa fa-lg fa-inbox text-muted" slot="heading"></i>
 					<span slot="body">Footer</span>
 				</group-item>
 			</group>
 			<group-title>Form</group-title>
 			<group-item v-link="button">
-				<i class="fa fa- fa-hand-pointer-o text-primary" slot="heading"></i>
+				<i class="fa fa-lg fa-hand-pointer-o text-primary" slot="heading"></i>
 				<span slot="body">Button</span>
 			</group-item>
 			<group-item v-link="input">
-				<i class="fa fa-l fa-text-height text-warning" slot="heading"></i>
+				<i class="fa fa-lg fa-text-height text-warning" slot="heading"></i>
 				<span slot="body">Input</span>
 			</group-item>
 			<group-item v-link="textarea">
-				<i class="fa fa-file-text-o" slot="heading"></i>
+				<i class="fa fa-lg fa-file-text-o" slot="heading"></i>
 				<span slot="body">Textarea</span>
 			</group-item>
 			<group>

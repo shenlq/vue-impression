@@ -3,14 +3,15 @@
     position: fixed;
     left: 0;
     top: 0;
+    z-index: $navbar-zindex;
     width: 100%;
-    background: $brand-primary;
     color: #fff;
+    font-size: 1.1rem;
+    background: $brand-primary;
     height: $navbar-height;
     line-height: $navbar-height;
     padding: $navbar-padding;
     @include display-flex();
-    font-size: 1.1rem;
 
 	> .pull-left{
     	@include flex();

@@ -31,6 +31,9 @@ $margin-base-vertical:       1rem;
 $padding-base-vertical:      0.7rem;
 $padding-base-horizontal:    0.7rem;
 
+//== z-index
+$navbar-zindex:             1100;
+$tab-bottom-zindex:         1100;
 
 //== Body
 $body-bg:                    $gray-lightest !default;
@@ -95,12 +98,15 @@ $switch-toggle-active-bg:       $brand-success;
 $switch-toggle-padding:         2px !default;
 
 $switch-toggle-addon-bg:        #fdfdfd;
-$switch-toggle-addon-width:     1.2rem;
+$switch-toggle-addon-width:     1rem;
 $switch-toggle-addon-height:    $switch-toggle-addon-width;
-$switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.3rem;
+$switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.4rem;
 
-$checkbox-height:                round(1.4 * $font-size-root);
-$checkbox-width:                 round(1.4 * $font-size-root);
+$checkbox-height:               round(1.4 * $font-size-root);
+$checkbox-width:                round(1.4 * $font-size-root);
+
+$radio-height:                	round(1.5 * $font-size-root);
+$radio-width:                 	round(1.5 * $font-size-root);
 
 //== Tab
 $tab-padding:            		$padding-base-vertical $padding-base-horizontal;
