@@ -1,4 +1,6 @@
 import Navbar from './Navbar';
+import Container from './Container';
+import ContainerBody from './ContainerBody';
 import Group from './Group';
 import GroupItem from './GroupItem';
 import GroupTitle from './GroupTitle';
@@ -13,6 +15,8 @@ import Drawer from './Drawer';
 import DrawerItem from './DrawerItem';
 
 const components = {
+	Container,
+	ContainerBody,
 	Navbar,
 	Group,
 	GroupItem,

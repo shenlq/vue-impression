@@ -6,8 +6,8 @@
     width: 100%;
     background: $brand-primary;
     color: #fff;
-    height: 40px;
-    line-height: 40px;
+    height: $navbar-height;
+    line-height: $navbar-height;
     padding: $navbar-padding;
     @include display-flex();
     font-size: 1.1rem;

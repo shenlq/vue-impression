@@ -104,7 +104,11 @@ $tab-bar-height:        		2px;
 $drawer-padding:            	$padding-base-vertical $padding-base-horizontal;
 
 //== Navbar
+$navbar-height:                 40px;
 $navbar-padding:				0 $padding-base-horizontal;
+
+//== Container
+$container-content-top:         $navbar-height;
 
 // Tables
 //

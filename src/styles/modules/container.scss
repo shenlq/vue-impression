@@ -1,0 +1,12 @@
+//== Container
+.container{
+	position: relative;
+}
+
+.container-body{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: $container-content-top;
+	bottom: 0;
+}
