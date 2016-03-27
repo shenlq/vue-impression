@@ -49,6 +49,12 @@ $border-radius-default:      2px;
 
 $split-margin:               0 $padding-base-horizontal;
 
+//== Navbar
+$navbar-height:                 40px;
+$navbar-padding:				0 $padding-base-horizontal;
+
+//== Container
+$container-content-top:         $navbar-height;
 
 //== Group
 $group-title-padding:           $padding-base-vertical $padding-base-horizontal;
@@ -100,15 +106,10 @@ $checkbox-width:                 round(1.4 * $font-size-root);
 $tab-padding:            		$padding-base-vertical $padding-base-horizontal;
 $tab-bar-height:        		2px;
 
+$tab-bottom-height:             $navbar-height;
 //== Drawer
 $drawer-padding:            	$padding-base-vertical $padding-base-horizontal;
 
-//== Navbar
-$navbar-height:                 40px;
-$navbar-padding:				0 $padding-base-horizontal;
-
-//== Container
-$container-content-top:         $navbar-height;
 
 // Tables
 //

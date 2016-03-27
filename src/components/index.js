@@ -1,6 +1,7 @@
-import Navbar from './Navbar';
 import Container from './Container';
 import ContainerBody from './ContainerBody';
+import Navbar from './Navbar';
+import TabBottom from './TabBottom';
 import Group from './Group';
 import GroupItem from './GroupItem';
 import GroupTitle from './GroupTitle';
@@ -18,6 +19,7 @@ const components = {
 	Container,
 	ContainerBody,
 	Navbar,
+	TabBottom,
 	Group,
 	GroupItem,
 	GroupTitle,

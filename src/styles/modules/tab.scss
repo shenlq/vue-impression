@@ -23,3 +23,23 @@
 	border-bottom: $tab-bar-height solid $brand-primary;
 	transition: all .3s;
 }
+
+//== Tab bottom
+.tab-bottom{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: $text-muted;
+	height: $tab-bottom-height;
+	border-top: 1px solid $border-color;
+
+	> * {
+		text-align: center;
+		@include flex();
+
+		&.active{
+			color: $brand-primary;
+		}
+	}
+}

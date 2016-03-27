@@ -7,14 +7,16 @@
 			<span class="pull-right">分享</span>
 		</navbar>
 		<container-body>
-			<group-item v-link="navbar">
-				<i class="fa fa- fa-home text-primary" slot="heading"></i>
-				<span slot="body">Navbar</span>
-			</group-item>
-			<group-item v-link="footer">
-				<i class="fa fa- fa-inbox text-muted" slot="heading"></i>
-				<span slot="body">Footer</span>
-			</group-item>
+			<group>
+				<group-item v-link="navbar">
+					<i class="fa fa- fa-home text-primary" slot="heading"></i>
+					<span slot="body">Navbar</span>
+				</group-item>
+				<group-item v-link="footer">
+					<i class="fa fa- fa-inbox text-muted" slot="heading"></i>
+					<span slot="body">Footer</span>
+				</group-item>
+			</group>
 			<group-title>Form</group-title>
 			<group-item v-link="button">
 				<i class="fa fa- fa-hand-pointer-o text-primary" slot="heading"></i>

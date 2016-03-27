@@ -25,6 +25,11 @@ router.map({
         name: "navbar",
         component: require('./views/navbar.vue')
     },
+    // Footer页
+    '/footer': {
+        name: "footer",
+        component: require('./views/footer.vue')
+    },
     // 按钮页
     '/button': {
         name: "button",
