@@ -85,5 +85,10 @@ router.map({
         name: "alert",
         component: require('./views/alert.vue')
     },
+    // Confirm页
+    '/confirm': {
+        name: "confirm",
+        component: require('./views/confirm.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

@@ -35,9 +35,36 @@
 }
 
 .alert-footer{
+	position: relative;
+	@include display-flex();
 	font-size: 1.1rem;
 	cursor: $cursor-default;
 	color: $brand-primary;
-	padding: 1rem;
-	border-top: 1px solid #ddd;
+	line-height: 3.2rem;
+	border-radius: 0 0 4px 4px;
+	background: #f6f6f6;
+
+	&:before{
+		content: " ";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		border-top: 1px solid #ccc;
+		transform: scaleY(0.3);
+	}
+
+	> *{
+		position: relative;
+		&:not(:first-child):before{
+			content: " ";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			transform: scaleX(0.3);
+			border-left: 1px solid #ccc;
+		}
+		@include flex();
+	}
 }

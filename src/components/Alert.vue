@@ -8,7 +8,9 @@
 			<div class="alert-body" v-else>{{message}}</div>
 
 			<slot name="footer" v-if="_slotContents && _slotContents.footer"></slot>
-			<div class="alert-footer" @click="hide" v-else>{{button}}</div>
+			<div class="alert-footer" @click="hide" v-else>
+				<a href="javascript:void(0);">{{button}}</a>
+			</div>
 		</div>
 	</div>
 </template>

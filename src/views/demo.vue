@@ -62,7 +62,7 @@
 					<i class="fa fa-lg fa-bolt text-warning" slot="heading"></i>
 					<span slot="body">Alert</span>
 				</group-item>
-				<group-item v-link='{"name": "toast"}'>
+				<group-item v-link='{"name": "confirm"}'>
 					<i class="fa fa-lg fa-question-circle text-muted" slot="heading"></i>
 					<span slot="body">Confirm</span>
 				</group-item>
