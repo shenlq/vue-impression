@@ -90,5 +90,10 @@ router.map({
         name: "confirm",
         component: require('./views/confirm.vue')
     },
+    // Loading页
+    '/loading': {
+        name: "loading",
+        component: require('./views/loading.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

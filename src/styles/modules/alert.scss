@@ -42,7 +42,6 @@
 	color: $brand-primary;
 	line-height: 3.2rem;
 	border-radius: 0 0 4px 4px;
-	background: #f8f8f8;
 
 	&:before{
 		content: " ";
@@ -52,6 +51,7 @@
 		top: 0;
 		border-top: 1px solid #ccc;
 		transform: scaleY(0.3);
+		transform-origin: 0 0;
 	}
 
 	> *{
@@ -64,6 +64,7 @@
 			bottom: 0;
 			transform: scaleX(0.3);
 			border-left: 1px solid #ccc;
+			transform-origin: 0 0;
 		}
 		@include flex();
 	}

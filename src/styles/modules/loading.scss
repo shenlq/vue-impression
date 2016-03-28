@@ -1,0 +1,96 @@
+//== Loading
+
+
+.loading{
+	position: relative;
+	width: 100%;
+	height: 40%;
+	opacity: 0.6;
+
+	> * {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: 0.3rem;
+		height: 2.8rem;
+
+		&:nth-child(1){
+		 	-webkit-animation: tick 1.2s linear infinite;
+			transform: rotate(0deg);
+		}
+		&:nth-child(2){
+		 -webkit-animation: tick2 1.2s linear infinite;
+			transform: rotate(30deg);
+		}
+		&:nth-child(3){
+		 -webkit-animation: tick3 1.2s linear infinite;
+
+			transform: rotate(60deg);
+		}
+		&:nth-child(4){
+		 -webkit-animation: tick4 1.2s linear infinite;
+
+			transform: rotate(90deg);
+		}
+		&:nth-child(5){
+		 -webkit-animation: tick5 1.2s linear infinite;
+
+			transform: rotate(120deg);
+		}
+		&:nth-child(6){
+		 -webkit-animation: tick6 1.2s linear infinite;
+
+			transform: rotate(150deg);
+		}
+		&:before, &:after{
+			content: "";
+			width: 4px;
+			height: 12px;
+			position: absolute;
+			left: 0;
+			background: #fff;
+			transform: scale(0.6);
+		}
+
+		&:before{
+			top: 0;
+		}
+
+		&:after{
+			bottom: 0;
+
+		}
+	}
+}
+
+
+@-webkit-keyframes tick{
+  0%{transform: rotate(0deg) }
+  100%{transform: rotate(360deg)};
+}
+
+@-webkit-keyframes tick2{
+  0%{transform: rotate(30deg) }
+  100%{transform: rotate(390deg)};
+}
+
+@-webkit-keyframes tick3{
+  0%{transform: rotate(60deg) }
+  100%{transform: rotate(420deg)};
+}
+
+@-webkit-keyframes tick4{
+  0%{transform: rotate(90deg) }
+  100%{transform: rotate(450deg)};
+}
+
+@-webkit-keyframes tick5{
+  0%{transform: rotate(120deg) }
+  100%{transform: rotate(480deg)};
+}
+
+@-webkit-keyframes tick6{
+  0%{transform: rotate(150deg) }
+  100%{transform: rotate(510deg)};
+}
+

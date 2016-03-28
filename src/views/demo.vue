@@ -66,7 +66,7 @@
 					<i class="fa fa-lg fa-question-circle text-muted" slot="heading"></i>
 					<span slot="body">Confirm</span>
 				</group-item>
-				<group-item v-link='{"name": "toast"}'>
+				<group-item v-link='{"name": "loading"}'>
 					<i class="fa fa-lg fa-spinner text-warning" slot="heading"></i>
 					<span slot="body">Loading</span>
 				</group-item>
