@@ -16,6 +16,7 @@ import Drawer from './Drawer';
 import DrawerItem from './DrawerItem';
 import Toast from './Toast';
 import Alert from './Alert';
+import Confirm from './Confirm';
 
 const components = {
 	Container,
@@ -35,7 +36,8 @@ const components = {
 	Drawer,
 	DrawerItem,
 	Toast,
-	Alert
+	Alert,
+	Confirm
 };
 
 module.exports = components;

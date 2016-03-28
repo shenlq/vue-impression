@@ -7,30 +7,17 @@
 		</navbar>
 		<container-body>
 			<group>
-				<group-item :click="defaultAlertHandle">
-					<span slot="body">默认</span>
-				</group-item>
-				<group-item :click="customAlertHandle">
-					<span slot="body">自定义</span>
+				<group-item :click="showConfirmHandle">
+					<span slot="body">删除记录</span>
 				</group-item>
 			</group>
-			<div class="mask">
-				<div class="alert">
-					<div class="alert-heading">删除该记录将不可恢复</div>
-					<div class="alert-body">确认删除？</div>
-					<div class="alert-footer">
-						<a>确认</a>
-						<a>取消</a>
-					</div>
-				</div>
-			</div>
+			<confirm title="删除该记录将不可恢复" message="确认删除？" :show.sync="show"></confirm>
 		</container-body>
 	</container>
 </template>
 
-
 <script>
-	import { Container, ContainerBody, Group, GroupItem, Navbar, Alert } from '../components/index.js';
+	import { Container, ContainerBody, Group, GroupItem, Navbar, Confirm } from '../components/index.js';
 
 	export default {
 		components: {
@@ -39,23 +26,18 @@
 		    Group,
 		    GroupItem,
 		    Navbar,
-		    Alert,
+		    Confirm,
 		},
 		data(){
 			return {
-				showDefault: false,
-				showCustom: false
+				show: false
 			}
 		},
 		methods: {
 			//显示默认
-			defaultAlertHandle(event){
-				this.showDefault = true;
+			showConfirmHandle(event){
+				this.show = true;
 			},
-			//显示默认
-			customAlertHandle(event){
-				this.showCustom = true;
-			}
 		}
 	};
 </script>
