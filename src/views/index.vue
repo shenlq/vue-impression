@@ -6,7 +6,7 @@
 	<group>
 		<group-item v-link='{"name": "demo"}'>
 			<i class="fa fa-lg fa-drupal text-success" slot="heading"></i>
-			<span slot="body">Demo</span>
+			<span slot="body">组件库</span>
 		</group-item>
 		<group-item>
 			<i class="fa fa-lg fa-clock-o text-warning" slot="heading"></i>

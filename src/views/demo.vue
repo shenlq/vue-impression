@@ -13,7 +13,7 @@
 					<span slot="body">Navbar</span>
 				</group-item>
 				<group-item v-link='{"name": "footer"}'>
-					<i class="fa fa-lg fa-inbox text-muted" slot="heading"></i>
+					<i class="fa fa-lg fa-hdd-o text-muted" slot="heading"></i>
 					<span slot="body">Footer</span>
 				</group-item>
 				<group-item v-link='{"name": "tab"}'>
@@ -21,7 +21,7 @@
 					<span slot="body">Tab</span>
 				</group-item>
 				<group-item v-link='{"name": "drawer"}'>
-					<i class="fa fa-lg fa-briefcase text-muted" slot="heading"></i>
+					<i class="fa fa-lg fa-inbox text-muted" slot="heading"></i>
 					<span slot="body">Drawer</span>
 				</group-item>
 			</group>
@@ -55,8 +55,20 @@
 			<group-title>Tips</group-title>
 			<group>
 				<group-item v-link='{"name": "toast"}'>
-					<i class="fa fa-lg fa-bolt text-warning" slot="heading"></i>
+					<i class="fa fa-lg fa-exclamation-circle text-danger" slot="heading"></i>
 					<span slot="body">Toast</span>
+				</group-item>
+				<group-item v-link='{"name": "alert"}'>
+					<i class="fa fa-lg fa-bolt text-warning" slot="heading"></i>
+					<span slot="body">Alert</span>
+				</group-item>
+				<group-item v-link='{"name": "toast"}'>
+					<i class="fa fa-lg fa-question-circle text-muted" slot="heading"></i>
+					<span slot="body">Confirm</span>
+				</group-item>
+				<group-item v-link='{"name": "toast"}'>
+					<i class="fa fa-lg fa-spinner text-warning" slot="heading"></i>
+					<span slot="body">Loading</span>
 				</group-item>
 			</group>
 		</container-body>

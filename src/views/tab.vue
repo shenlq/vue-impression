@@ -20,9 +20,9 @@
 			</tab>
 			<group-title>Icon tab</group-title>
 			<tab>
-				<tab-item><i class="fa fa-qq text-primary"></i></tab-item>
-				<tab-item><i class="fa fa-weixin text-success"></i></tab-item>
-				<tab-item selected><i class="fa fa-weibo text-warning"></i></tab-item>
+				<tab-item><i class="fa fa-lg fa-qq text-primary"></i></tab-item>
+				<tab-item><i class="fa fa-lg fa-weixin text-success"></i></tab-item>
+				<tab-item selected><i class="fa fa-lg fa-weibo text-warning"></i></tab-item>
 			</tab>
 		</container-body>
 	</container>

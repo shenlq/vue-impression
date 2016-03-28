@@ -80,5 +80,10 @@ router.map({
         name: "toast",
         component: require('./views/toast.vue')
     },
+    // Alert页
+    '/alert': {
+        name: "alert",
+        component: require('./views/alert.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');
