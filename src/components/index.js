@@ -1,6 +1,9 @@
 import Container from './Container';
 import ContainerBody from './ContainerBody';
 import Navbar from './Navbar';
+import Dropdown from './Dropdown';
+import DropdownMenu from './DropdownMenu';
+import DropdownMenuItem from './DropdownMenuItem';
 import TabBottom from './TabBottom';
 import Group from './Group';
 import GroupItem from './GroupItem';
@@ -23,6 +26,9 @@ const components = {
 	Container,
 	ContainerBody,
 	Navbar,
+	Dropdown,
+	DropdownMenu,
+	DropdownMenuItem,
 	TabBottom,
 	Group,
 	GroupItem,

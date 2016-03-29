@@ -55,7 +55,7 @@
 			<group-title>Tips</group-title>
 			<group>
 				<group-item v-link='{"name": "toast"}'>
-					<i class="fa fa-lg fa-exclamation-circle text-danger" slot="heading"></i>
+					<i class="fa fa-lg fa-exclamation-circle text-muted" slot="heading"></i>
 					<span slot="body">Toast</span>
 				</group-item>
 				<group-item v-link='{"name": "alert"}'>
@@ -63,12 +63,18 @@
 					<span slot="body">Alert</span>
 				</group-item>
 				<group-item v-link='{"name": "confirm"}'>
-					<i class="fa fa-lg fa-question-circle text-muted" slot="heading"></i>
+					<i class="fa fa-lg fa-question-circle text-primary" slot="heading"></i>
 					<span slot="body">Confirm</span>
 				</group-item>
 				<group-item v-link='{"name": "loading"}'>
-					<i class="fa fa-lg fa-spinner text-warning" slot="heading"></i>
+					<i class="fa fa-lg fa-spinner text-muted" slot="heading"></i>
 					<span slot="body">Loading</span>
+				</group-item>
+			</group>
+			<group>
+				<group-item v-link='{"name": "menu"}'>
+					<i class="fa fa-lg fa-list-ol" slot="heading"></i>
+					<span slot="body">Menu</span>
 				</group-item>
 			</group>
 		</container-body>

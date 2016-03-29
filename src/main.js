@@ -95,5 +95,10 @@ router.map({
         name: "loading",
         component: require('./views/loading.vue')
     },
+    // Menu页
+    '/menu': {
+        name: "menu",
+        component: require('./views/menu.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

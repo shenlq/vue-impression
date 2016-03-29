@@ -1,5 +1,6 @@
 //== Nav
 .navbar{
+    color: #fff;
     position: fixed;
     left: 0;
     top: 0;
@@ -12,9 +13,10 @@
     padding: $navbar-padding;
     @include display-flex();
 
-    * {
+    a{
         color: #fff;
     }
+
 	> .pull-left{
     	@include flex();
 	}
