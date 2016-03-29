@@ -3,16 +3,12 @@
 	position: relative;
 	padding: $input-item-padding;
     @include display-flex();
+	@include border-top-variant();
+	@include border-bottom-variant();
 	background: $input-item-bg;
-	border-top: 1px solid $border-color;
-	border-bottom: 1px solid $border-color;
 
 	> input{
 		flex: 1;
-	}
-
-	+ .input-item{
-		border-top: 0;
 	}
 }
 
@@ -26,9 +22,10 @@
 
 //== Textarea
 .textarea{
+	position: relative;
 	background: $textarea-item-bg;
-	border-top: 1px solid $border-color;
-	border-bottom: 1px solid $border-color;
+	@include border-top-variant();
+	@include border-bottom-variant();
 
     > textarea{
     	border: 0;

@@ -8,8 +8,8 @@
 			<dropdown>
 				<i class="fa fa-lg fa-ellipsis-v"></i>
 				<dropdown-menu>
-					<dropdown-menu-item :click="test">设置</dropdown-menu-item>
-					<dropdown-menu-item :click="test">关于</dropdown-menu-item>
+					<dropdown-menu-item :click="callback">设置</dropdown-menu-item>
+					<dropdown-menu-item :click="callback">关于</dropdown-menu-item>
 				</dropdown-menu>
 			</dropdown>
 			</span>
@@ -39,8 +39,8 @@
 			}
 		},
 		methods: {
-			test(){
-				alert("设置");
+			callback(){
+				alert("菜单点击了！");
 			}
 		}
 	};

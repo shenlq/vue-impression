@@ -42,29 +42,12 @@
 	color: $brand-primary;
 	line-height: 3.2rem;
 	border-radius: 0 0 4px 4px;
-
-	&:before{
-		content: " ";
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		border-top: 1px solid #ccc;
-		transform: scaleY(0.3);
-		transform-origin: 0 0;
-	}
+	@include border-top-variant();
 
 	> *{
 		position: relative;
-		&:not(:first-child):before{
-			content: " ";
-			position: absolute;
-			left: 0;
-			top: 0;
-			bottom: 0;
-			transform: scaleX(0.3);
-			border-left: 1px solid #ccc;
-			transform-origin: 0 0;
+		&:not(:first-child){
+			@include border-left-variant();
 		}
 		@include flex();
 	}

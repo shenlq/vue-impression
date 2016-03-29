@@ -35,7 +35,7 @@
 	width: 100%;
 	color: $text-muted;
 	height: $tab-bottom-height;
-	border-top: 1px solid $border-color;
+	@include border-top-variant();
 }
 
 .tab-bottom-cascade{

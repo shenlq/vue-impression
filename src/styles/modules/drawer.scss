@@ -4,7 +4,7 @@
     padding: $drawer-padding;
   	background: #fff;
   	position: relative;
-  	border-bottom: 1px solid $border-color;
+	@include border-bottom-variant();
 }
 
 .drawer-item{

@@ -36,7 +36,7 @@
 
 .navbar-default{
 	background: #fff;
-	border-bottom: 1px solid $border-color;
+	@include border-bottom-variant();
 
     * {
         color: $text-muted;
