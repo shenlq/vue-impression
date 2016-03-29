@@ -15,6 +15,7 @@ import TabItem from './TabItem';
 import Drawer from './Drawer';
 import DrawerItem from './DrawerItem';
 import Toast from './Toast';
+import Loading from './Loading';
 import Alert from './Alert';
 import Confirm from './Confirm';
 
@@ -36,6 +37,7 @@ const components = {
 	Drawer,
 	DrawerItem,
 	Toast,
+	Loading,
 	Alert,
 	Confirm
 };

@@ -7,32 +7,21 @@
 		</navbar>
 		<container-body>
 			<group>
-				<group-item :click="defaultChangeHandle">
-					<span slot="body">显示</span>
+				<group-item :click="defaultLoadingHandle">
+					<span slot="body">{{show?'隐藏':'显示'}}</span>
+				</group-item>
+				<group-item :click="customLoadingHandle">
+					<span slot="body">自定义信息</span>
 				</group-item>
 			</group>
-		<div class="mask">
-			<div class="toast">
-				<div class="toast-body">
-					<div class="loading">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div>加载中...</div>
-				</div>
-			</div>
-		</div>
+			<loading :show.sync="show" :message="message"></loading>
 		</container-body>
 	</container>
 </template>
 
 
 <script>
-	import { Container, ContainerBody, Group, GroupItem, Navbar } from '../components/index.js';
+	import { Container, ContainerBody, Group, GroupItem, Navbar, Loading } from '../components/index.js';
 
 	export default {
 		components: {
@@ -41,16 +30,25 @@
 		    Group,
 		    GroupItem,
 		    Navbar,
+		    Loading
 		},
 		data(){
 			return {
 				show: false,
+				message: '加载中'
 			}
 		},
 		methods: {
 			//显示默认
-			defaultChangeHandle(event){
-				this.show = true;
+			defaultLoadingHandle(){
+				this.show = !this.show;
+				this.message = "加载中";
+
+			},
+			//自定义
+			customLoadingHandle(){
+				this.show = !this.show;
+				this.message = "loading";
 			},
 		}
 	};
