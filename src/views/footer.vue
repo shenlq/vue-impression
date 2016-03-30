@@ -5,10 +5,10 @@
 		<span>Tab bottom</span>
 	</navbar>
 	<tab-bottom :style="style1">
-		<tab-item><i class="fa fa-lg fa-phone"></i></tab-item>
-		<tab-item><i class="fa fa-lg fa-comment"></i></tab-item>
-		<tab-item><i class="fa fa-lg fa-user"></i></tab-item>
-		<tab-item><i class="fa fa-lg fa-camera"></i></tab-item>
+		<tab-item>电话</tab-item>
+		<tab-item>短信</tab-item>
+		<tab-item>我</tab-item>
+		<tab-item>照相</tab-item>
 	</tab-bottom>
 
 	<tab-bottom :style="style2">

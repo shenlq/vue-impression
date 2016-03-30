@@ -100,5 +100,10 @@ router.map({
         name: "menu",
         component: require('./views/menu.vue')
     },
+    // Image页
+    '/image': {
+        name: "image",
+        component: require('./views/image.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

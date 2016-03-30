@@ -21,6 +21,7 @@ import Toast from './Toast';
 import Loading from './Loading';
 import Alert from './Alert';
 import Confirm from './Confirm';
+import ImageLazy from './ImageLazy';
 
 const components = {
 	Container,
@@ -45,7 +46,8 @@ const components = {
 	Toast,
 	Loading,
 	Alert,
-	Confirm
+	Confirm,
+	ImageLazy
 };
 
 module.exports = components;

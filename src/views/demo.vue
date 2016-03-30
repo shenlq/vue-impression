@@ -78,6 +78,10 @@
 					<i class="fa fa-lg fa-list-ol" slot="heading"></i>
 					<span slot="body">Menu</span>
 				</group-item>
+				<group-item v-link='{"name": "image"}'>
+					<i class="fa fa-lg fa-picture-o text-warning" slot="heading"></i>
+					<span slot="body">LazyImage</span>
+				</group-item>
 			</group>
 		</container-body>
 		<tab-bottom :style="style" class="tab-bottom-cascade">
