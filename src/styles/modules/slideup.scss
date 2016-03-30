@@ -1,0 +1,21 @@
+//== slideUp
+.slideup{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+}
+
+.slideup-heading{
+	position: relative;
+	padding: $slideup-title-padding;
+	font-weight: bold;
+	@include border-bottom-variant();
+}
+
+.slideup-item{
+	position: relative;
+	padding: $slideup-item-padding;
+	@include border-bottom-variant();
+}

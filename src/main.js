@@ -35,6 +35,11 @@ router.map({
         name: "footer",
         component: require('./views/footer.vue')
     },
+    // Group页
+    '/group': {
+        name: "group",
+        component: require('./views/group.vue')
+    },
     // 按钮页
     '/button': {
         name: "button",
@@ -104,6 +109,16 @@ router.map({
     '/image': {
         name: "image",
         component: require('./views/image.vue')
+    },
+    // RadioList页
+    '/radioList': {
+        name: "radioList",
+        component: require('./views/radioList.vue')
+    },
+    // SlideUp页
+    '/slideup': {
+        name: "slideup",
+        component: require('./views/slideup.vue')
     },
 });
 router.start(Vue.extend({}), 'body');

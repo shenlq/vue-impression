@@ -16,6 +16,10 @@
 					<i class="fa fa-lg fa-hdd-o text-muted" slot="heading"></i>
 					<span slot="body">Footer</span>
 				</group-item>
+				<group-item v-link='{"name": "group"}'>
+					<i class="fa fa-lg fa-sitemap text-muted" slot="heading"></i>
+					<span slot="body">Group</span>
+				</group-item>
 				<group-item v-link='{"name": "tab"}'>
 					<i class="fa fa-lg fa-indent text-muted" slot="heading"></i>
 					<span slot="body">Tab</span>
@@ -53,6 +57,10 @@
 					<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
 					<span slot="body">Radio</span>
 				</group-item>
+				<group-item v-link='{"name": "radioList"}'>
+					<i class="fa fa-lg fa-check text-success" slot="heading"></i>
+					<span slot="body">RadioList</span>
+				</group-item>
 			</group>
 			<group-title>Tips</group-title>
 			<group>
@@ -78,8 +86,12 @@
 					<i class="fa fa-lg fa-list-ol" slot="heading"></i>
 					<span slot="body">Menu</span>
 				</group-item>
+				<group-item v-link='{"name": "slideup"}'>
+					<i class="fa fa-lg fa-bars text-primary" slot="heading"></i>
+					<span slot="body">SlideUp</span>
+				</group-item>
 				<group-item v-link='{"name": "image"}'>
-					<i class="fa fa-lg fa-picture-o text-warning" slot="heading"></i>
+					<i class="fa fa-lg fa-picture-o" slot="heading"></i>
 					<span slot="body">LazyImage</span>
 				</group-item>
 			</group>

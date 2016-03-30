@@ -1,0 +1,33 @@
+//== radio-list
+.radio-list{
+	position: relative;
+    @include border-bottom-variant();
+}
+
+.radio-list-item{
+	position: relative;
+	background: $gray-end;
+	padding: $radio-list-item-padding;
+	@include border-top-variant();
+
+	&, &:hover, &:focus{
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.radio-list-item-body{
+	float: left;
+}
+
+.radio-list-item-addon{
+	.active > &{
+		float: right;
+		width: 1.2rem;
+		height: 0.7rem;
+		border-top: 2px solid green;
+		border-right: 2px solid green;
+		border-radius: 2px;
+		transform: rotate(130deg);
+	}
+}
