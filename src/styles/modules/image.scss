@@ -1,3 +1,45 @@
+//Image
+
 .image-laze{
-	min-height: 200px;
+	position: relative;
+	color: #cdced0;
+	min-height: 100px;
+	background: #e8e9eb;
+	margin-bottom: 20px;
+
+	img{
+		z-index: 2;
+		width: 100%;
+	}
+}
+
+.image-laze-bg{
+	text-align: center;
+	line-height: 100px;
+
+	img:not([src]) + &{
+		&:before{
+			content: '图片加载中...';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			font-size: 1.1rem;
+			margin-top: -1rem;
+		}
+
+		&:after{
+			content: 'github.com/shenlq';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			font-style: italic;
+			margin-top: 1rem;
+		}
+	}
 }

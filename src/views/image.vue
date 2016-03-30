@@ -7,9 +7,11 @@
 			<span class="pull-right">
 			</span>
 		</navbar>
-		<image-lazy src="https://img.alicdn.com/tps/i4/TB1_uKKMXXXXXbuXFXXc8PZ9XXX-130-200.png"></image-lazy>
-		<image-lazy src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2006014851/TB2O62ZlpXXXXbdXXXXXXXXXXXX_!!2006014851.jpg_200x200.jpg_.webp"></image-lazy>
-		<image-lazy src="https://img.alicdn.com/tps/i2/TB19UIZLXXXXXa0aXXXTYW_VFXX-100-80.jpeg_150x150.jpg_.webp"></image-lazy>
+		<container-body>
+			<image-lazy src="https://img20.360buyimg.com/da/jfs/t2014/58/2249644362/95186/7bc5fc19/56fa4036Ne056d298.jpg"></image-lazy>
+			<image-lazy src="https://img12.360buyimg.com/da/jfs/t2254/46/2217660072/428039/66579e60/56fa5806N92152b28.jpg"></image-lazy>
+			<image-lazy src="https://img20.360buyimg.com/da/jfs/t2419/182/2842019597/81156/dda1b8fe/56f4e39fN5f51a1c0.jpg"></image-lazy>
+		</container-body>
 	</container>
 </template>
 
