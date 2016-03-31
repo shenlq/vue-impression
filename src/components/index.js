@@ -23,6 +23,7 @@ import Loading from './Loading';
 import Alert from './Alert';
 import Confirm from './Confirm';
 import ImageLazy from './ImageLazy';
+import Slideup from './Slideup';
 
 const components = {
 	Container,
@@ -49,7 +50,8 @@ const components = {
 	Loading,
 	Alert,
 	Confirm,
-	ImageLazy
+	ImageLazy,
+	Slideup
 };
 
 module.exports = components;

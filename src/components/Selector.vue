@@ -20,6 +20,9 @@
 			},
 			value: {
 				twoWay: true
+			},
+			dispatch: {
+				type: String
 			}
 		},
 		data(){
@@ -77,6 +80,8 @@
 				}else{
 					this.selectedIndexs = [index];
 					this.value = {...this.items[index]};
+					//派发事件
+        			this.dispatch && this.$dispatch(this.dispatch);
 				}
 			}
 		}
