@@ -1,6 +1,6 @@
 <template>
 	<div class="radio-list">
-		<div @click="selected(index)" :class="['radio-list-item','clearfix',index==selectedIndex?'active':'']" v-for="(index, item) in items">
+		<div @click="selected(index)" :class="['radio-list-item','clearfix',selectedIndexs.includes(index)?'active':'']" v-for="(index, item) in items">
 			<div class="radio-list-item-body">{{item.name}}</div>
 			<div class="radio-list-item-addon"></div>
 		</div>
@@ -16,11 +16,19 @@
 			},
 			value: {
 				type: String
+			},
+			multiple: {
+				type: Boolean,
+				default: false
+			},
+			value: {
+				type: Object,
+				twoWay: true
 			}
 		},
 		data(){
 			return {
-				selectedIndex: 1,
+				selectedIndexs: [],
 			};
 		},
 		computed: {
@@ -46,7 +54,19 @@
 		methods: {
 			//选择
 			selected(index){
-				this.selectedIndex = index;
+				//多选
+				if(this.multiple){
+					//去掉选中
+					if(this.selectedIndexs.includes(index)){
+						this.selectedIndexs = this.selectedIndexs.filter(item => item != index);
+					}else{
+						this.selectedIndexs.push(index);
+					}
+					this.value = this.items.filter((item, _index) => this.selectedIndexs.includes(_index));
+				}else{
+					this.selectedIndexs = [index];
+					this.value = {...this.items[index]};
+				}
 			}
 		}
 	}
