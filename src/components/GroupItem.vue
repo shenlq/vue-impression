@@ -39,9 +39,6 @@
             click: {
                 type: Function
             }
-        },
-        created(){
-          console.log(this);
         }
     }
 </script>

@@ -28,7 +28,7 @@
 		methods: {
 			//设置侦听容器
 			initView(){
-				let containers = document.body.querySelectorAll('.container-body');
+				let containers = document.body.querySelectorAll('.container');
 				this.listenView = containers.length ? containers[0]: document.body;
 			},
 			//判断元素是否隐藏（隐藏就不显示）
@@ -51,9 +51,9 @@
 				if(!this.inView()){
 					return false;
 				}
-				this.isRender = true;
 				let imgs = this.$el.querySelectorAll("img");
 				imgs[0].src = this.src;
+				this.isRender = true;
 			},
 			//添加侦听
 			addListener(){
