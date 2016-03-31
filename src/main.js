@@ -55,6 +55,11 @@ router.map({
         name: "textarea",
         component: require('./views/textarea.vue')
     },
+    // Number页
+    '/number': {
+        name: "number",
+        component: require('./views/number.vue')
+    },
     // Switch页
     '/switch': {
     	name: "switch",

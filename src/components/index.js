@@ -9,6 +9,7 @@ import GroupItem from './GroupItem';
 import GroupTitle from './GroupTitle';
 import InputText from './InputText';
 import InputArea from './InputArea';
+import InputNumber from './InputNumber';
 import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
@@ -36,6 +37,7 @@ const components = {
 	GroupTitle,
 	InputText,
 	InputArea,
+	InputNumber,
 	Switch,
 	Checkbox,
 	Radio,

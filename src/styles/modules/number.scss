@@ -1,0 +1,47 @@
+//Number
+.number{
+	display: inline-block;
+}
+
+.input-number{
+	background: #fff;
+	display: inline-block;
+	border: 1px solid $border-color;
+	padding: 0.3rem 0.6rem;
+
+	&.disabled{
+		background: #ddd;
+	}
+}
+
+.circle{
+	text-align: center;
+	font-size: 1.2rem;
+	border-radius: 50%;
+	display: inline-block;
+	cursor: $cursor-default;
+	&:after{
+		display: inline-block;
+		width: 1.5rem;
+	    height: 1.5rem;
+	    line-height: 1.5rem;
+	}
+}
+
+.plus-circle{
+	background: $brand-primary;
+    border: 1px solid $brand-primary;
+	color: #fff;
+	&:after{
+		content: "+";
+	}
+}
+
+.minus-circle{
+	background: #fff;
+    border: 1px solid $brand-primary;
+	color: $brand-primary;
+    &:after{
+		content: "-";
+	}
+}

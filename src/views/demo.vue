@@ -39,6 +39,10 @@
 				<i class="fa fa-lg fa-text-height text-warning" slot="heading"></i>
 				<span>Input</span>
 			</group-item>
+			<group-item v-link='{"name": "number"}'>
+				<i class="fa fa-lg fa-plus-circle text-primary" slot="heading"></i>
+				<span>Number</span>
+			</group-item>
 			<group-item v-link='{"name": "textarea"}'>
 				<i class="fa fa-lg fa-file-text-o" slot="heading"></i>
 				<span>Textarea</span>
