@@ -65,7 +65,7 @@ $tab-bottom-height:             $navbar-height;
 
 //== Container
 $container-content-top:         $navbar-height;
-$container-content-bottom:      ($tab-bottom-height + 1);
+$container-content-bottom:      ($tab-bottom-height + 2);
 
 //== Group
 $group-title-padding:           0.4rem $padding-base-horizontal;
@@ -89,6 +89,8 @@ $btn-secondary-border:           $brand-plq !default;
 $btn-default-color:              $gray-dark !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
+
+$btn-sm-padding:                 0.4rem 0.8rem;
 
 //== Form
 $input-item-bg:                 #fff !default;

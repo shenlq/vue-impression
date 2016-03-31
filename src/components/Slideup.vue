@@ -1,9 +1,13 @@
 <template>
 	<div :class="['mask', show?'':'hidden']" @click.self="hide">
 		<div class="slideup">
-			<div class="slideup-heading">
-				请选择取货地点：
+			<div class="slideup-heading" v-if="title">
+				{{title}}
 			</div>
+			<div class="slideup-heading" v-if="!title">
+				<slot name="heading"></slot>
+			</div>
+
 			<div class="slideup-body">
 				<slot></slot>
 			</div>
@@ -14,6 +18,9 @@
 <script>
 	export default {
 		props: {
+			title: {
+				type: String
+			},
 			show: {
 				type: Boolean,
 				default: false,

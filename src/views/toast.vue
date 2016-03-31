@@ -1,35 +1,33 @@
 <template>
+	<navbar>
+		<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+		<span class="split"></span>
+		<span>Toast</span>
+	</navbar>
 	<container>
-		<navbar>
-			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
-			<span class="split"></span>
-			<span>Toast</span>
-		</navbar>
-		<container-body>
-			<group>
-				<group-item :click="defaultChangeHandle">
-					<span slot="body">默认（1s）</span>
-				</group-item>
-				<group-item :click="customChangeHandle">
-					<span slot="body">自定义（3s）</span>
-				</group-item>
-			</group>
-			<group>
-				<group-item :click="successTypeHandle">
-					<i class="fa fa-lg fa-check text-success" slot="heading"></i>
-					<span slot="body">成功</span>
-				</group-item>
-				<group-item :click="warningTypeHandle">
-					<i class="fa fa-lg fa-exclamation-triangle text-warning" slot="heading"></i>
-					<span slot="body">警告</span>
-				</group-item>
-				<group-item :click="errorTypeHandle">
-					<i class="fa fa-lg fa-exclamation-circle text-danger" slot="heading"></i>
-					<span slot="body">失败</span>
-				</group-item>
-			</group>
-			<toast :type="totastType" :show.sync="showToast" :duration="duration">{{totastMsg}}</toast>
-		</container-body>
+		<group>
+			<group-item :click="defaultChangeHandle">
+				<span>默认（1s）</span>
+			</group-item>
+			<group-item :click="customChangeHandle">
+				<span>自定义（3s）</span>
+			</group-item>
+		</group>
+		<group>
+			<group-item :click="successTypeHandle">
+				<i class="fa fa-lg fa-check text-success" slot="heading"></i>
+				<span>成功</span>
+			</group-item>
+			<group-item :click="warningTypeHandle">
+				<i class="fa fa-lg fa-exclamation-triangle text-warning" slot="heading"></i>
+				<span>警告</span>
+			</group-item>
+			<group-item :click="errorTypeHandle">
+				<i class="fa fa-lg fa-exclamation-circle text-danger" slot="heading"></i>
+				<span>失败</span>
+			</group-item>
+		</group>
+		<toast :type="totastType" :show.sync="showToast" :duration="duration">{{totastMsg}}</toast>
 	</container>
 </template>
 

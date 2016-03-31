@@ -39,6 +39,11 @@
   }
 }
 
+//== Button size
+.btn-sm{
+    padding: $btn-sm-padding;
+}
+
 //== Block button
 .btn-block{
 	display: block;

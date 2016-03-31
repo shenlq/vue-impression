@@ -4,8 +4,12 @@
 			<slot name="heading" v-if="_slotContents && _slotContents.heading"></slot>
 			<div class="alert-heading" v-else>{{title}}</div>
 
-			<slot name="body" v-if="_slotContents && _slotContents.body"></slot>
-			<div class="alert-body" v-else>{{message}}</div>
+			<div class="alert-body" v-if="!message">
+				<slot></slot>
+			</div>
+			<div class="alert-body" v-else>
+				{{message}}
+			</div>
 
 			<slot name="footer" v-if="_slotContents && _slotContents.footer"></slot>
 			<div class="alert-footer" @click="hide" v-else>

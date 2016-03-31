@@ -3,15 +3,12 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: $container-content-top;
 	bottom: 0;
+	overflow: scroll;
+	padding-bottom: 2px;
 }
 
-.container-body{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: $container-content-top;
+.container-sm{
 	bottom: $container-content-bottom;
-	overflow: scroll;
 }
