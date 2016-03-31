@@ -57,9 +57,9 @@
 					<i class="fa fa-lg fa-dot-circle-o text-primary" slot="heading"></i>
 					<span slot="body">Radio</span>
 				</group-item>
-				<group-item v-link='{"name": "radioList"}'>
+				<group-item v-link='{"name": "selector"}'>
 					<i class="fa fa-lg fa-check text-success" slot="heading"></i>
-					<span slot="body">RadioList</span>
+					<span slot="body">Selector</span>
 				</group-item>
 			</group>
 			<group-title>Tips</group-title>

@@ -111,9 +111,9 @@ router.map({
         component: require('./views/image.vue')
     },
     // RadioList页
-    '/radioList': {
-        name: "radioList",
-        component: require('./views/radioList.vue')
+    '/selector': {
+        name: "selector",
+        component: require('./views/selector.vue')
     },
     // SlideUp页
     '/slideup': {

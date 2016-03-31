@@ -1,13 +1,14 @@
 //== radio-list
-.radio-list{
+.selector{
 	position: relative;
     @include border-bottom-variant();
 }
 
-.radio-list-item{
+.selector-item{
+	cursor: $cursor-default;
 	position: relative;
 	background: $gray-end;
-	padding: $radio-list-item-padding;
+	padding: $selector-item-padding;
 	@include border-top-variant();
 
 	&, &:hover, &:focus{
@@ -16,11 +17,11 @@
 	}
 }
 
-.radio-list-item-body{
+.selector-item-body{
 	float: left;
 }
 
-.radio-list-item-addon{
+.selector-item-addon{
 	.active > &{
 		float: right;
 		width: 1.2rem;

@@ -13,7 +13,7 @@ import InputArea from './InputArea';
 import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
-import RadioList from './RadioList';
+import Selector from './Selector';
 import Tab from './Tab';
 import TabItem from './TabItem';
 import Drawer from './Drawer';
@@ -40,7 +40,7 @@ const components = {
 	Switch,
 	Checkbox,
 	Radio,
-	RadioList,
+	Selector,
 	Tab,
 	TabItem,
 	Drawer,
