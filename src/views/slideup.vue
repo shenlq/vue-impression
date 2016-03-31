@@ -8,8 +8,13 @@
 			</span>
 		</navbar>
 		<container-body>
-			<slideup show>
-				<selector :options="zones" dispatch="slideup:hide1"></selector>
+			<group>
+				<group-item :click="showSlideup">
+					选择收货地址
+				</group-item>
+			</group>
+			<slideup :show.sync="show">
+				<selector :options="zones" dispatch="slideup:hide"></selector>
 			</slideup>
 		</container-body>
 	</container>
@@ -17,13 +22,14 @@
 
 
 <script>
-	import { Container, ContainerBody, Group, GroupItem, Navbar, Selector, Slideup } from '../components/index.js';
+	import { Container, ContainerBody, Group, GroupTitle, GroupItem, Navbar, Selector, Slideup } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
 		  	ContainerBody,
 		    Group,
+		    GroupTitle,
 		    GroupItem,
 		    Navbar,
 		    Selector,
@@ -33,10 +39,14 @@
 		},
 		data(){
 			return {
-				zones: ['福州', '厦门', '泉州']
+				zones: ['福州', '厦门', '泉州'],
+				show: false
 			};
 		},
 		methods: {
+			showSlideup(){
+				this.show = true;
+			}
 		}
 	};
 </script>

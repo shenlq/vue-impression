@@ -1,10 +1,11 @@
-//== slideUp
+//== Slideup
 .slideup{
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	background: #fff;
+  	-webkit-animation: slideInUp 0.36s;
 }
 
 .slideup-heading{
@@ -14,8 +15,17 @@
 	@include border-bottom-variant();
 }
 
-.slideup-item{
-	position: relative;
-	padding: $slideup-item-padding;
-	@include border-bottom-variant();
+
+@-webkit-keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
