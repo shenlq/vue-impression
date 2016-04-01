@@ -1,6 +1,6 @@
 <template>
 	<div class="textarea">
-		<textarea rows="3" v-model="value" :placeholder="placeholder"></textarea>
+		<textarea rows="3" v-model="value" :placeholder="placeholder" :disabled="disabled"></textarea>
 		<div class="textarea-counter" v-if="isCounter">
 			{{count}}/{{max}}
 		</div>
@@ -23,6 +23,10 @@
             },
             max: {
             	type: Number
+            },
+            disabled: {
+            	type: Boolean,
+            	default: false
             }
         },
         computed: {
