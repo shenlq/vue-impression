@@ -14,8 +14,8 @@
 		</input-text>
 
 		<group-title>disabled</group-title>
-		<input-text placeholder="disabled" :disabled="true">
-			<label slot>clear:</label>
+		<input-text placeholder="disabled" :disabled="true" value="这是只读输入框">
+			<label slot>不可编辑:</label>
 		</input-text>
 
 		<group-title>clear icon</group-title>
