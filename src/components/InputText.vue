@@ -4,7 +4,7 @@
             <slot></slot>
        	</div>
       	<div class="group-item-body">
-			<input class="input" :type="type" v-model="value" :placeholder="placeholder"/>
+			<input class="input" :type="type" :disabled="disabled" v-model="value" :placeholder="placeholder"/>
       	</div>
       	<div class="group-item-footer">
     		<a href="javascript:void(0);" class="text-muted" @click="clearHandle" v-if="clear">
@@ -41,6 +41,10 @@
             },
             isError: {
                 type: Boolean
+            },
+            disabled: {
+                type: Boolean,
+                default: false
             }
         },
     methods: {
