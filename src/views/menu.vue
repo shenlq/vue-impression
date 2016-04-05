@@ -19,12 +19,11 @@
 
 
 <script>
-	import { Container, ContainerBody, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem } from '../components/index.js';
+	import { Container, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
-		  	ContainerBody,
 		    Group,
 		    GroupItem,
 		    Navbar,

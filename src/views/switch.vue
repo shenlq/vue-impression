@@ -35,12 +35,11 @@
 
 
 <script>
-	import { Container, ContainerBody, Navbar, GroupTitle, Group, GroupItem, Switch } from '../components/index.js';
+	import { Container, Navbar, GroupTitle, Group, GroupItem, Switch } from '../components/index.js';
 
 	export default {
 		  components: {
 		  	Container,
-		  	ContainerBody,
 		  	Navbar,
 		    GroupTitle,
 		    Group,

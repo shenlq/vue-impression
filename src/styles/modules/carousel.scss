@@ -1,0 +1,56 @@
+.carousel {
+  	position: relative;
+  	width: 100%;
+  	overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    &.active,
+    &.next,
+  	&.prev{
+    	display: block;
+    }
+	&.next,
+  	&.prev {
+    	position: absolute;
+    	top: 0;
+    	width: 100%;
+  	}
+
+  	&.active {
+	    left: 0;
+	}
+  	&.next {
+    	left: 100%;
+  	}
+  	&.prev {
+    	left: -100%;
+  	}
+
+  	&.next.left,
+  	&.prev.right {
+    	left: 0;
+  	}
+
+  	&.active.left {
+    	left: -100%;
+  	}
+  	&.active.right {
+    	left: 100%;
+  	}
+
+  	&.left,
+  	&.right{
+    	transition: .6s ease-in-out left;
+  	}
+
+    > img,
+    > a > img {
+      	display: block;
+  		max-width: 100%;
+  		height: auto;
+      	line-height: 1;
+    }
+}

@@ -43,12 +43,11 @@
 
 
 <script>
-	import { Container, ContainerBody, Navbar, Group, GroupItem, GroupTitle, InputText } from '../components/index.js';
+	import { Container, Navbar, Group, GroupItem, GroupTitle, InputText } from '../components/index.js';
 
 	export default {
 		  components: {
 		  	Container,
-		  	ContainerBody,
 		  	Navbar,
 		    Group,
 		    GroupItem,

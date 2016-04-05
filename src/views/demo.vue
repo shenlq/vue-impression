@@ -98,6 +98,10 @@
 				<i class="fa fa-lg fa-picture-o" slot="heading"></i>
 				<span>LazyImage</span>
 			</group-item>
+			<group-item v-link='{"name": "carousel"}'>
+				<i class="fa fa-lg fa-hourglass-start" slot="heading"></i>
+				<span>Carousel</span>
+			</group-item>
 		</group>
 	</container>
 	<tab-bottom :style="style" class="tab-bottom-cascade">

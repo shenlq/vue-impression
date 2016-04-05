@@ -125,5 +125,10 @@ router.map({
         name: "slideup",
         component: require('./views/slideup.vue')
     },
+    // Carousel
+    '/carousel': {
+        name: "carousel",
+        component: require('./views/carousel.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

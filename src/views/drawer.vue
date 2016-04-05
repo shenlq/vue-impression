@@ -39,7 +39,6 @@
 	export default {
 		  components: {
 		  	Container,
-		  	ContainerBody,
 		  	Navbar,
 		    GroupTitle,
 		    Group,

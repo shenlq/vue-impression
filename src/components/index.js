@@ -24,6 +24,7 @@ import Alert from './Alert';
 import Confirm from './Confirm';
 import ImageLazy from './ImageLazy';
 import Slideup from './Slideup';
+import Carousel from './Carousel';
 
 const components = {
 	Container,
@@ -51,7 +52,8 @@ const components = {
 	Alert,
 	Confirm,
 	ImageLazy,
-	Slideup
+	Slideup,
+	Carousel
 };
 
 module.exports = components;
