@@ -35,6 +35,7 @@ $padding-base-horizontal:    1rem;
 $navbar-zindex:             1100;
 $tab-bottom-zindex:         1100;
 
+$carousel-zindex:           1000;
 $mask-zindex:               1200;
 $toast-zindex:         		1210;
 $confirm-zindex:            1210;
@@ -139,6 +140,13 @@ $selector-item-padding:            $padding-base-vertical $padding-base-horizont
 //== Slideup
 $slideup-title-padding:        $padding-base-horizontal $padding-base-vertical;
 $slideup-item-padding:        $padding-base-horizontal $padding-base-vertical;
+
+//== Carousel
+$carousel-indicators-item-width: 	6px;
+$carousel-indicators-item-height: 	$carousel-indicators-item-width;
+$carousel-indicator-bottom:         $carousel-indicators-item-height;
+$carousel-indicator-bg:             #fff;
+$carousel-indicator-border-color:   #fff;
 
 
 // Tables

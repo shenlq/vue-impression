@@ -1,56 +1,87 @@
 .carousel {
-  	position: relative;
-  	width: 100%;
-  	overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carousel-item {
     position: relative;
     display: none;
+
     &.active,
     &.next,
-  	&.prev{
-    	display: block;
+    &.prev {
+        display: block;
     }
-	&.next,
-  	&.prev {
-    	position: absolute;
-    	top: 0;
-    	width: 100%;
-  	}
 
-  	&.active {
-	    left: 0;
-	}
-  	&.next {
-    	left: 100%;
-  	}
-  	&.prev {
-    	left: -100%;
-  	}
+    &.next,
+    &.prev {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 
-  	&.next.left,
-  	&.prev.right {
-    	left: 0;
-  	}
+    &.active {
+        left: 0;
+    }
 
-  	&.active.left {
-    	left: -100%;
-  	}
-  	&.active.right {
-    	left: 100%;
-  	}
+    &.next {
+        left: 100%;
+    }
 
-  	&.left,
-  	&.right{
-    	transition: .6s ease-in-out left;
-  	}
+    &.prev {
+        left: -100%;
+    }
+
+    &.next.left,
+    &.prev.right {
+        left: 0;
+    }
+
+    &.active.left {
+        left: -100%;
+    }
+
+    &.active.right {
+        left: 100%;
+    }
+
+    &.left,
+    &.right {
+        transition: .6s ease-in-out left;
+    }
 
     > img,
     > a > img {
-      	display: block;
-  		max-width: 100%;
-  		height: auto;
-      	line-height: 1;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        line-height: 1;
+    }
+}
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: $carousel-indicator-bottom;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+    z-index: $carousel-zindex;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: $carousel-indicators-item-width;
+    height: $carousel-indicators-item-height;
+    margin: 0 1px;
+    border: 1px solid $carousel-indicator-border-color;
+    border-radius: $carousel-indicators-item-width;
+
+    &.active{
+        background-color: $carousel-indicator-bg;
     }
 }
