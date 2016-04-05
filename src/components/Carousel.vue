@@ -3,7 +3,8 @@
 		<ol class="carousel-indicators">
 			<li :class="{'active': index == activeIndex}" v-for="(index, item) in images"></li>
 		</ol>
-		<div :class="['carousel-item',
+		<div @touchstart="touchstart" @touchend="touchend"
+			:class="['carousel-item',
 			index==activeIndex?'active':'',
 			(index - activeIndex + images.length)%images.length == 1?'next':'',
 			(index - activeIndex + images.length)%images.length == 2?'prev':'',
@@ -50,9 +51,7 @@
 			};
 		},
 		created(){
-			this.intervalCarousel = setInterval(() => {
-				this.prev();
-			}, this.interval);
+			this.addInterval();
 		},
 		destroyed(){
 			clearInterval(this.intervalCarousel);
@@ -73,6 +72,24 @@
 					this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
 					this.action = 'none';
 				}, this.debounce);
+			},
+			addInterval(){
+				this.intervalCarousel = setInterval(() => {
+					this.next();
+				}, this.interval);
+			},
+			touchstart(e){
+				this.touchStartX = e.targetTouches[0].pageX;
+				clearInterval(this.intervalCarousel);
+			},
+			touchend(e){
+				let touchStartX = e.changedTouches[0].pageX;
+				if(touchStartX > this.touchStartX){
+					this.prev();
+				}else{
+					this.next();
+				}
+				this.addInterval();
 			}
 		}
 	};

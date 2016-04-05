@@ -7,6 +7,7 @@
 .carousel-item {
     position: relative;
     display: none;
+    cursor: pointer;
 
     &.active,
     &.next,
