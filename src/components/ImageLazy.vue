@@ -43,7 +43,7 @@
 				if (this.isHidden()) {
 			      	return false;
 			    }
-    			return (view.bottom >= this.$el.offsetTop);
+    			return (view.bottom >= this.$el.getBoundingClientRect().top);
 			},
 			//渲染
 			render(){
