@@ -130,5 +130,10 @@ router.map({
         name: "carousel",
         component: require('./views/carousel.vue')
     },
+    // Thumbnail
+    '/thumbnail': {
+        name: "thumbnail",
+        component: require('./views/thumbnail.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

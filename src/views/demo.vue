@@ -103,6 +103,12 @@
 				<span>Carousel</span>
 			</group-item>
 		</group>
+		<group>
+			<group-item v-link='{"name": "thumbnail"}'>
+				<i class="fa fa-lg fa-newspaper-o text-primary" slot="heading"></i>
+				<span>Thumbnail</span>
+			</group-item>
+		</group>
 	</container>
 	<tab-bottom :style="style" class="tab-bottom-cascade">
 		<tab-item>

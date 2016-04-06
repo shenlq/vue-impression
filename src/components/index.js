@@ -25,6 +25,7 @@ import Confirm from './Confirm';
 import ImageLazy from './ImageLazy';
 import Slideup from './Slideup';
 import Carousel from './Carousel';
+import Thumbnail from './Thumbnail';
 
 const components = {
 	Container,
@@ -53,7 +54,8 @@ const components = {
 	Confirm,
 	ImageLazy,
 	Slideup,
-	Carousel
+	Carousel,
+	Thumbnail
 };
 
 module.exports = components;

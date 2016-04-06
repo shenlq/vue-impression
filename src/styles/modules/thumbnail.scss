@@ -1,0 +1,17 @@
+.thumbnail{
+	position: relative;
+	display: block;
+	margin-bottom: $thumbnail-margin-bottom;
+	background: $thumbnail-bg;
+    @include border-bottom-variant();
+
+	> img{
+		width: 100%;
+    	display: block;
+	}
+}
+
+.caption{
+	display: block;
+	padding: $caption-padding;
+}
