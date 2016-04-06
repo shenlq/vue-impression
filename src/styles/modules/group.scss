@@ -5,6 +5,10 @@
 	.group-title + &{
 		margin-top: 0;
 	}
+
+	&:last-child{
+		margin-bottom: $margin-base-vertical;
+	}
 }
 
 .group-title{

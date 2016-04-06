@@ -1,5 +1,5 @@
 <template>
-  	<div class="group-item" v-if="!vLink" @click="!!click && click($event)">
+  	<div :class="class" v-if="!vLink" @click="!!click && click($event)">
   	    <span class="group-item-heading" v-if="_slotContents.heading">
             <slot name="heading"></slot>
        	</span>
@@ -14,7 +14,7 @@
         <span class="group-item-arrow" v-if="click"></span>
   	</div>
 
-    <a class="group-item" v-if="vLink" v-link="vLink">
+    <a :class="class" v-if="vLink" v-link="vLink">
         <span class="group-item-heading" v-if="_slotContents.heading">
             <slot name="heading"></slot>
         </span>
@@ -38,6 +38,15 @@
             },
             click: {
                 type: Function
+            },
+            class: {
+                type: Array,
+                default: '',
+                coerce(val){
+                  let result = ['group-item'];
+                  val &&  (result = result.concat(val.split(' ')));
+                  return result;
+                }
             }
         }
     }
