@@ -151,7 +151,14 @@ $carousel-indicator-border-color:   #fff;
 //== Thumbnail
 $thumbnail-bg:                      #fff;
 $thumbnail-margin-bottom:           1rem;
-$caption-padding:                   0.8rem 0.6rem;
+$caption-padding:                   0.6rem;
+
+//== Stick
+$stick-padding:                    1.5rem 0;
+$stick-space:                      0 1.5rem;
+$stick-sider-width:                5rem;
+$stick-sider-bg:                   $gray-lighter;
+$stick-body-padding:               0 0.6rem;
 
 
 // Tables

@@ -25,7 +25,7 @@
 		</flex>
 		<group-title>根据子元素宽度自动排列</group-title>
 
-		<flex class="demo-flex demo-flex-wrap" wrap="wrap" justify="between">
+		<flex class="demo-flex" wrap="wrap" justify="between">
 			<div class="text-center demo-flex-wrap-item">1</div>
 			<div class="text-center demo-flex-wrap-item">2</div>
 			<div class="text-center demo-flex-wrap-item">3</div>

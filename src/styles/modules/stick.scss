@@ -1,0 +1,18 @@
+.stick{
+	color: $text-muted;
+	padding: $stick-padding;
+	text-align: center;
+
+	&:before, &:after{
+		padding: $stick-space;
+		display: inline-block;
+		content: " ";
+		height: 1px;
+		width: $stick-sider-width;
+		background: $stick-sider-bg;
+	}
+}
+
+.stick-body{
+	padding: $stick-body-padding;
+}

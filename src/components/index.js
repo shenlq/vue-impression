@@ -28,6 +28,7 @@ import Carousel from './Carousel';
 import Thumbnail from './Thumbnail';
 import Flex from './Flex';
 import FlexItem from './FlexItem';
+import Stick from './Stick';
 
 const components = {
 	Container,
@@ -59,7 +60,8 @@ const components = {
 	Carousel,
 	Thumbnail,
 	Flex,
-	FlexItem
+	FlexItem,
+	Stick
 };
 
 module.exports = components;

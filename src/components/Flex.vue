@@ -30,11 +30,16 @@
 			switch(this.justify){
 				case 'between':
 					this.class.push('flex-justify-between');
+					break;
+				case 'center':
+					this.class.push('flex-justify-center');
+					break;
 			}
 			//换行
 			switch(this.wrap){
 				case 'wrap':
 					this.class.push('flex-wrap');
+					break;
 			}
 		}
 	}
