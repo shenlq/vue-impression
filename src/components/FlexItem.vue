@@ -1,24 +1,17 @@
 <template>
 	<div :class="class">
-		<img :src="src">
-		<div class="caption">
-			<slot></slot>
-		</div>
+		<slot></slot>
 	</div>
 </template>
 
 <script>
 	export default {
 		props: {
-			src: {
-				type: String,
-				required: true
-			},
 			class: {
 				type: Array,
 				default: '',
 				coerce(val){
-					let result = ['thumbnail'];
+					let result = ['flex-item'];
 					val &&  (result = result.concat(val.split(' ')));
 					return result;
 				}

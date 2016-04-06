@@ -20,6 +20,10 @@
 				<i class="fa fa-lg fa-sitemap text-muted" slot="heading"></i>
 				<span>Group</span>
 			</group-item>
+			<group-item v-link='{"name": "flex"}'>
+				<i class="fa fa-lg fa-th text-success" slot="heading"></i>
+				<span>Flex</span>
+			</group-item>
 			<group-item v-link='{"name": "tab"}'>
 				<i class="fa fa-lg fa-indent text-muted" slot="heading"></i>
 				<span>Tab</span>

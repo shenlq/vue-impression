@@ -40,6 +40,11 @@ router.map({
         name: "group",
         component: require('./views/group.vue')
     },
+    // Flex页
+    '/flex': {
+        name: "flex",
+        component: require('./views/flex.vue')
+    },
     // 按钮页
     '/button': {
         name: "button",

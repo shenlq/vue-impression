@@ -26,6 +26,8 @@ import ImageLazy from './ImageLazy';
 import Slideup from './Slideup';
 import Carousel from './Carousel';
 import Thumbnail from './Thumbnail';
+import Flex from './Flex';
+import FlexItem from './FlexItem';
 
 const components = {
 	Container,
@@ -55,7 +57,9 @@ const components = {
 	ImageLazy,
 	Slideup,
 	Carousel,
-	Thumbnail
+	Thumbnail,
+	Flex,
+	FlexItem
 };
 
 module.exports = components;

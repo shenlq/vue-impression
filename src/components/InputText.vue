@@ -31,7 +31,6 @@
                 type: Boolean
             },
             value: {
-                type: String
             },
             isSuccess: {
                 type: Boolean
