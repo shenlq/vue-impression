@@ -36,16 +36,29 @@
 	color: $text-muted;
 	height: $tab-bottom-height;
 	@include border-top-variant();
+
+	.btn {
+		height: 100%;
+		padding: 0;
+	}
 }
 
-.tab-bottom-cascade{
+.tab-cascade{
+	padding: 0;
 	> * {
-		transform: scale(0.8);
 		> *{
 			display: block !important;
 			&:first-child{
-				padding-bottom: 0.5rem;
+				padding-bottom: 0.3rem;
 			}
 		}
+	}
+}
+
+//== split
+.tab-split{
+	:not(:first-child){
+		position: relative;
+		@include border-left-variant();
 	}
 }

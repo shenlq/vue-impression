@@ -5,6 +5,10 @@
 	color: $brand-primary;
 }
 
+.text-secondary{
+	color: $brand-secondary;
+}
+
 .text-danger{
 	color: $brand-danger;
 }
@@ -19,6 +23,17 @@
 
 .text-muted{
 	color: $gray-light;
+}
+
+//== Background colors
+.bg-primary{
+	color: #fff;
+	background: $brand-primary;
+}
+
+.bg-secondary{
+	color: #fff;
+	background: $brand-secondary;
 }
 
 //== Text align
@@ -83,4 +98,22 @@
     	display: table;
     	clear: both;
   	}
+}
+
+//== Border radius
+.no-radius{
+	border-radius: 0 !important;
+}
+
+//== Flex
+.flex-1{
+	@include flex();
+}
+
+.flex-2{
+	@include flex(2);
+}
+
+.flex-3{
+	@include flex(2);
 }

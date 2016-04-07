@@ -1,5 +1,5 @@
 <template>
-    <div :class="['tab','tab-bottom',class]" :style="style">
+    <div :class="class" :style="style">
         <slot></slot>
     </div>
 </template>
@@ -10,18 +10,26 @@
 			style: {
 				type: Object
 			},
-			'class': {
-				type: String,
-				default: ''
+			class: {
+				type: Array,
+				default: '',
+				coerce(val){
+					let result = ['tab','tab-bottom'];
+					val &&  (result = result.concat(val.split(' ')));
+					return result;
+				}
+			},
+			cascade: {
+				type: Boolean,
+				default: false
+			},
+			split: {
+				type: Boolean,
+				default: false
 			}
 		},
-		data(){
-			return {
-				selectedIndex: 1
-			}
-		},
-		//给tab-item添加索引属性
 		ready(){
+			//给tab-item添加索引属性
 			this.tabItemCount = this.$children.length;
 
 			this.$children.forEach((child, index) => {
@@ -29,7 +37,11 @@
 				child.selected && (this.selectedIndex = index);
 			});
 
-			this.$children[this.selectedIndex - 1].selected = true;
+			this.selectedIndex && (this.$children[this.selectedIndex - 1].selected = true);
+			//层叠
+			this.cascade && (this.class = [...this.class, 'tab-cascade']);
+			//分隔
+			this.split && (this.class = [...this.class, 'tab-split']);
 		},
 		events: {
 			//选中事件

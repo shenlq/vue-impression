@@ -18,7 +18,7 @@
 		<tab-item><i class="fa fa-lg fa-camera"></i></tab-item>
 	</tab-bottom>
 
-	<tab-bottom :style="style" class="tab-bottom-cascade">
+	<tab-bottom :style="style" cascade split>
 		<tab-item>
 			<i class="fa fa-lg fa-phone"></i>电话
 		</tab-item>
