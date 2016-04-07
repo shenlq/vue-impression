@@ -29,6 +29,7 @@ import Thumbnail from './Thumbnail';
 import Flex from './Flex';
 import FlexItem from './FlexItem';
 import Stick from './Stick';
+import TextLabel from './TextLabel';
 
 const components = {
 	Container,
@@ -61,7 +62,8 @@ const components = {
 	Thumbnail,
 	Flex,
 	FlexItem,
-	Stick
+	Stick,
+	TextLabel
 };
 
 module.exports = components;

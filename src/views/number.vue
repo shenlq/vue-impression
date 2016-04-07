@@ -8,14 +8,14 @@
 		<group>
 			<group-item>
 				默认样式：
-				<input-number slot="footer" max="5"></input-number>
+				<input-number slot="footer"></input-number>
 			</group-item>
 			<group-item>
 				disabled：
 				<input-number slot="footer" disabled></input-number>
 			</group-item>
 			<group-item>
-				自定义step=2
+				自定义step=3
 				<input-number slot="footer" step="3" ></input-number>
 			</group-item>
 			<group-item>

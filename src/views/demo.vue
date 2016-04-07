@@ -112,6 +112,10 @@
 				<i class="fa fa-lg fa-newspaper-o text-primary" slot="heading"></i>
 				<span>Thumbnail</span>
 			</group-item>
+			<group-item v-link='{"name": "label"}'>
+				<i class="fa fa-lg fa-tag text-success" slot="heading"></i>
+				<span>TextLabel</span>
+			</group-item>
 		</group>
 	</container>
 	<tab-bottom :style="style" class="tab-bottom-cascade">

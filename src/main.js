@@ -140,5 +140,10 @@ router.map({
         name: "thumbnail",
         component: require('./views/thumbnail.vue')
     },
+    // TextLabel
+    '/label': {
+        name: "label",
+        component: require('./views/label.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');

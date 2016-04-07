@@ -1,0 +1,38 @@
+//== Label
+.label {
+    display: inline-block;
+    padding: $label-padding;
+    font-size: $label-font-size;
+    line-height: 1;
+    color: $label-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $label-border-radius;
+
+    &:empty {
+        display: none;
+    }
+}
+
+
+.label-default {
+    background: $text-muted;
+}
+
+.label-primary {
+    background: $brand-primary;
+}
+
+.label-success {
+    background: $brand-success;
+}
+
+
+.label-warning {
+  background: $brand-warning;
+}
+
+.label-danger {
+    background: $brand-danger;
+}
