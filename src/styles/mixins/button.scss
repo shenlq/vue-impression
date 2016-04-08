@@ -2,7 +2,10 @@
   	$active-background: darken($background, 12%);
 	$active-border: darken($border, 12%);
 
-	color: $color;
+	&, &:hover, &:active{
+		color: $color;
+	}
+
 	background-color: $background;
 	border-color: $border;
 

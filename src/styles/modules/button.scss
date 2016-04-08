@@ -1,67 +1,66 @@
 //== Button
 .btn {
-	line-height: 1;
-  	display: inline-block;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: $cursor-default;
-	user-select: none;
-	border: 1px solid transparent;
-	border-radius: $btn-border-radius;
-	padding: $btn-padding;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: $cursor-default;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding;
 
-	&:active{
-		box-shadow: 0 1px 3px rgba(0, 0, 0, .50);
-	}
-
-  &:active,
-  &.active,
-  &:focus,
-  &.focus {
-  	text-decoration: none;
-    background-image: none;
-    outline: 0;
-  }
-
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-
-    &:hover{
-    	box-shadow: none;
+    &:active {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    &a {
-    	pointer-events: none;
+    &,
+    &:hover,
+    &:active,
+    &:focus{
+        text-decoration: none;
+        background-image: none;
+        outline: 0;
     }
-  }
+
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &a {
+            pointer-events: none;
+        }
+    }
 }
 
 //== Button size
-.btn-sm{
+.btn-sm {
     padding: $btn-sm-padding;
 }
 
 //== Block button
-.btn-block{
-	display: block;
-	width: 100%;
-	padding: $btn-block-padding;
-  border-radius: 4px;
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: $btn-block-padding;
+    border-radius: 4px;
 }
 
 //== Button theme
-.btn-primary{
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
-.btn-secondary{
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
-.btn-default{
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+.btn-default {
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }

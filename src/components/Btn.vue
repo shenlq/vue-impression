@@ -1,7 +1,7 @@
 <template>
-	<button :class="class" @click="!!click && click()" :disabled="disabled">
+	<a :class="class" @click="!!click && click()" :disabled="disabled">
 		<slot></slot>
-	</button>
+	</a>
 </template>
 
 <script>
