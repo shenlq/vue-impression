@@ -1,5 +1,5 @@
 <template>
-	<span :class="class">
+	<span :class="class" @click="!!click && click()">
 		<slot></slot>
 	</span>
 </template>
@@ -11,9 +11,12 @@
 				type: String,
 				default: "primary"
 			},
-			outline:{
+			outline: {
 				type: Boolean,
 				default: false
+			},
+			click: {
+				type: Function
 			}
 		},
 		data(){
@@ -21,8 +24,11 @@
 				class: ['label']
 			};
 		},
-		created(){
-			this.class.push(`label-${this.type}${this.outline?'-outline':''}`);
+		//动态生成class，侦听type/outline的变化
+		computed: {
+			class(){
+				return ['label', `label-${this.type}${this.outline?'-outline':''}`];
+			}
 		}
 	}
 </script>

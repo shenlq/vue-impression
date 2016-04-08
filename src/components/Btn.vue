@@ -35,20 +35,20 @@
 			vLink: {
 			}
 		},
-		data(){
-			return {
-				class: ['btn']
-			};
-		},
-		created(){
-			//样式
-			this.class.push(`btn-${this.style}`);
-			//尺寸
-			this.size != 'default' && (this.class.push(`btn-${this.size}`));
-			//是否block
-			this.block && (this.class.push('btn-block'));
-			//是否disabled
-			this.disabled && this.class.push("disabled");
+		computed: {
+			class(){
+				let result = ['btn'];
+				//样式
+				result.push(`btn-${this.style}`);
+				//尺寸
+				this.size != 'default' && (result.push(`btn-${this.size}`));
+				//是否block
+				this.block && (result.push('btn-block'));
+				//是否disabled
+				this.disabled && result.push("disabled");
+
+				return result;
+			}
 		}
 	}
 </script>
