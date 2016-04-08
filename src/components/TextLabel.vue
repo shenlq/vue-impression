@@ -1,5 +1,5 @@
 <template>
-	<span :class="['label', type]">
+	<span :class="class">
 		<slot></slot>
 	</span>
 </template>
@@ -9,11 +9,20 @@
 		props: {
 			type: {
 				type: String,
-				default: 'primary',
-				coerce(val){
-					return `label-${val}`;
-				}
+				default: "primary"
+			},
+			outline:{
+				type: Boolean,
+				default: false
 			}
+		},
+		data(){
+			return {
+				class: ['label']
+			};
+		},
+		created(){
+			this.class.push(`label-${this.type}${this.outline?'-outline':''}`);
 		}
 	}
 </script>

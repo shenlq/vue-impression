@@ -8,6 +8,7 @@
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
+    border: 1px solid transparent;
     border-radius: $label-border-radius;
 
     &:empty {
@@ -28,11 +29,31 @@
     background: $brand-success;
 }
 
-
 .label-warning {
   background: $brand-warning;
 }
 
 .label-danger {
     background: $brand-danger;
+}
+
+
+.label-default-outline{
+    @include label-outline-variant($text-muted);
+}
+
+.label-primary-outline{
+    @include label-outline-variant($brand-primary);
+}
+
+.label-success-outline{
+    @include label-outline-variant($brand-success);
+}
+
+.label-warning-outline{
+    @include label-outline-variant($brand-warning);
+}
+
+.label-danger-outline{
+    @include label-outline-variant($brand-danger);
 }
