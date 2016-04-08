@@ -58,9 +58,7 @@
 					});
 				}else{
 					this.items.forEach((item, index) => {
-						if(this.value.includes(item.value)){
-							this.selectedIndexs.push(index);
-						}
+						this.value.indexOf(item.value) != -1 && this.selectedIndexs.push(index);
 					});
 				}
 			}
@@ -71,12 +69,12 @@
 				//多选
 				if(this.multiple){
 					//去掉选中
-					if(this.selectedIndexs.includes(index)){
+					if(this.selectedIndexs.indexOf(index) != -1){
 						this.selectedIndexs = this.selectedIndexs.filter(item => item != index);
 					}else{
 						this.selectedIndexs.push(index);
 					}
-					this.value = this.items.filter((item, _index) => this.selectedIndexs.includes(_index));
+					this.value = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
 				}else{
 					this.selectedIndexs = [index];
 					this.value = {...this.items[index]};
