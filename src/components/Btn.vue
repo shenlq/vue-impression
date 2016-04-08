@@ -1,5 +1,8 @@
 <template>
-	<a :class="class" @click="!!click && click()" :disabled="disabled">
+	<a :class="class" @click="!!click && click()" v-if="vLink" v-link="vLink">
+		<slot></slot>
+	</a>
+	<a :class="class" @click="!!click && click()" v-else :href="href">
 		<slot></slot>
 	</a>
 </template>
@@ -25,6 +28,11 @@
 			disabled: {
 				type: Boolean,
 				default: false
+			},
+			href: {
+				type: String
+			},
+			vLink: {
 			}
 		},
 		data(){
@@ -39,6 +47,8 @@
 			this.size != 'default' && (this.class.push(`btn-${this.size}`));
 			//是否block
 			this.block && (this.class.push('btn-block'));
+			//是否disabled
+			this.disabled && this.class.push("disabled");
 		}
 	}
 </script>

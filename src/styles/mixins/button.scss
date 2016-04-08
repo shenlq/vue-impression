@@ -17,10 +17,8 @@
 	    background-image: none;
 	}
 
-	&.disabled,
-	&:disabled {
-	    &:focus,
-	    &.focus {
+	&.disabled {
+	    &:focus {
 	      background-color: $background;
 	          border-color: $border;
 	    }

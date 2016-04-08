@@ -8,9 +8,9 @@
 		<group>
 			<group-item>
 				<div>
-					<btn style="default">默认</btn>
-					<btn>提交</btn>
-					<btn style="secondary">删除</btn>
+					<btn style="default" :click="click">默认</btn>
+					<btn href="http://github.com">Github</btn>
+					<btn :v-link='{"name":"demo"}' style="secondary">删除</btn>
 				</div>
 			</group-item>
 		</group>

@@ -24,8 +24,7 @@
         outline: 0;
     }
 
-    &.disabled,
-    &:disabled {
+    &.disabled{
         cursor: $cursor-disabled;
         opacity: .65;
 

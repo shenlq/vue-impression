@@ -31,11 +31,7 @@
 <script>
     export default {
         props: {
-            vLink: {
-                coerce(val) {
-                    return val ? JSON.parse(val): "";
-              }
-            },
+            vLink: Object,
             click: {
                 type: Function
             },
