@@ -118,7 +118,7 @@
 			</group-item>
 		</group>
 	</container>
-	<tab-bottom :style="style" class="tab-bottom-cascade">
+	<tab-bottom :style="style" cascade>
 		<tab-item>
 			<i class="fa fa-lg fa-phone"></i>电话
 		</tab-item>

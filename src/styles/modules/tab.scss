@@ -26,6 +26,11 @@
 	transition: all .3s;
 }
 
+.tab-bordered{
+	@include border-top-variant();
+	@include border-bottom-variant();
+}
+
 //== Tab bottom
 .tab-bottom{
 	position: fixed;
@@ -45,11 +50,14 @@
 
 .tab-cascade{
 	padding: 0;
-	> * {
+	.tab-item {
 		> *{
 			display: block !important;
 			&:first-child{
 				padding-bottom: 0.3rem;
+			}
+			&:not(:first-child){
+				font-size: 0.8rem;
 			}
 		}
 	}

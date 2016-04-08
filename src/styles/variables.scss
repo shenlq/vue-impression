@@ -36,9 +36,10 @@ $navbar-zindex:             1100;
 $tab-bottom-zindex:         1100;
 
 $carousel-zindex:           1000;
-$mask-zindex:               1200;
+$mask-zindex:               1210;
 $toast-zindex:         		1210;
 $confirm-zindex:            1210;
+$slideup-zindex:            1210;
 
 //== Body
 $body-bg:                    $gray-lightest !default;
@@ -156,7 +157,7 @@ $caption-padding:                   0.6rem;
 //== Stick
 $stick-padding:                    1.5rem 0;
 $stick-space:                      0 1.5rem;
-$stick-sider-width:                5rem;
+$stick-sider-width:                6rem;
 $stick-sider-bg:                   $gray-lighter;
 $stick-body-padding:               0 0.6rem;
 
@@ -165,6 +166,9 @@ $label-color:                      #fff;
 $label-padding:                    0.25em 0.4em;
 $label-font-size:                  0.8rem;
 $label-border-radius:              2px;
+
+//== Slideup
+$slideup-bg:                       #fff;
 
 
 // Tables

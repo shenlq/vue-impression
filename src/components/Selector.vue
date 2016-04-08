@@ -1,6 +1,6 @@
 <template>
 	<div class="selector">
-		<div @click="selected(index)" :class="['selector-item','clearfix',selectedIndexs.includes(index)?'active':'']" v-for="(index, item) in items">
+		<div @click="selected(index)" :class="['selector-item','clearfix',selectedIndexs.indexOf(index)!=-1?'active':'']" v-for="(index, item) in items">
 			<div class="selector-item-body">{{item.name}}</div>
 			<div class="selector-item-addon"></div>
 		</div>

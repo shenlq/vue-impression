@@ -79,12 +79,12 @@
 				}, this.interval));
 			},
 			touchstart(e){
-				this.touchStartX = e.targetTouches[0].pageX;
+				this._touchStartX = e.targetTouches[0].pageX;
 				this.intervalCarousel && clearInterval(this.intervalCarousel);
 			},
 			touchend(e){
 				let touchStartX = e.changedTouches[0].pageX;
-				if(touchStartX > this.touchStartX){
+				if(touchStartX > this._touchStartX){
 					this.prev();
 				}else{
 					this.next();

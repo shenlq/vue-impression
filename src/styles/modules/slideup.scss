@@ -4,8 +4,9 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background: #fff;
-  	-webkit-animation: slideInUp 0.36s;
+	background: $slideup-bg;
+  z-index: $slideup-zindex;
+  -webkit-animation: slideInUp 0.36s;
 }
 
 .slideup-heading{

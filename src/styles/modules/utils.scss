@@ -21,6 +21,10 @@
 	color: $brand-warning;
 }
 
+.text-default{
+	color: $body-color;
+}
+
 .text-muted{
 	color: $gray-light;
 }
@@ -116,4 +120,14 @@
 
 .flex-3{
 	@include flex(2);
+}
+
+
+//== Fa
+.fa-left{
+	margin-right: 0.3rem;
+}
+
+.fa-right{
+	margin-left: 0.3rem;
 }

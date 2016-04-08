@@ -7,6 +7,7 @@ import TabBottom from './TabBottom';
 import Group from './Group';
 import GroupItem from './GroupItem';
 import GroupTitle from './GroupTitle';
+import Btn from './Btn';
 import InputText from './InputText';
 import InputArea from './InputArea';
 import InputNumber from './InputNumber';
@@ -41,6 +42,7 @@ const components = {
 	Group,
 	GroupItem,
 	GroupTitle,
+	Btn,
 	InputText,
 	InputArea,
 	InputNumber,

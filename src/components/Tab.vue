@@ -1,5 +1,5 @@
 <template>
-    <div class="tab">
+    <div :class="['tab', bordered?'tab-bordered':'']">
 		<slot></slot>
 		<div class="tab-bar" :style="{left: barLeft, width: barWidth}"></div>
 	</div>
@@ -7,6 +7,12 @@
 
 <script>
 	export default {
+		props: {
+			bordered: {
+				type: Boolean,
+				default: false
+			}
+		},
 		data(){
 			return {
 				selectedIndex: 1,
