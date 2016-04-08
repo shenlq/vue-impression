@@ -69,6 +69,10 @@
 				<i class="fa fa-lg fa-check text-success" slot="heading"></i>
 				<span>Selector</span>
 			</group-item>
+			<group-item :v-link='{"name": "inlineSelector"}'>
+				<i class="fa fa-lg fa-flag-o text-success" slot="heading"></i>
+				<span>InlineSelector</span>
+			</group-item>
 		</group>
 		<group-title>Tips</group-title>
 		<group>

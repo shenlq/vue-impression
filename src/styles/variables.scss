@@ -134,8 +134,11 @@ $toast-bg: 						rgba(0, 0, 0, 0.42);
 $toast-border-radius:           8px;
 $toast-addon-margin-bottom:     2rem;
 
-//== Radio-List
+//== Selector
 $selector-item-padding:            $padding-base-vertical $padding-base-horizontal;
+
+//== InlineSelector
+$inline-selector-item-margin:      0.2rem 0.6rem 0.2rem 0;
 
 
 //== Slideup

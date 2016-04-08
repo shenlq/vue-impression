@@ -120,10 +120,15 @@ router.map({
         name: "image",
         component: require('./views/image.vue')
     },
-    // RadioList页
+    // Selector页
     '/selector': {
         name: "selector",
         component: require('./views/selector.vue')
+    },
+    // InlineSelector页
+    '/inlineSelector': {
+        name: "inlineSelector",
+        component: require('./views/inlineSelector.vue')
     },
     // SlideUp页
     '/slideup': {

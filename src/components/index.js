@@ -15,6 +15,7 @@ import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
 import Selector from './Selector';
+import InlineSelector from './InlineSelector';
 import Tab from './Tab';
 import TabItem from './TabItem';
 import Drawer from './Drawer';
@@ -50,6 +51,7 @@ const components = {
 	Checkbox,
 	Radio,
 	Selector,
+	InlineSelector,
 	Tab,
 	TabItem,
 	Drawer,
