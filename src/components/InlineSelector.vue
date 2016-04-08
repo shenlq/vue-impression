@@ -1,6 +1,6 @@
 <template>
-	<div class="inline-selector">
-		<text-label @click="selected(index)" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?'primary':'default'" outline>
+	<div :class="['inline-selector', style?`inline-selector-${style}`:'']">
+		<text-label @click="selected(index)" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?style:'default'" outline>
 			{{item.name}}
 		</text-label>
 	</div>
@@ -24,6 +24,10 @@
 			},
 			value: {
 				twoWay: true
+			},
+			style: {
+				type: String,
+				default: 'primary'
 			}
 		},
 		data(){

@@ -23,6 +23,15 @@
 				<inline-selector :options="colorOptions" multiple></inline-selector>
 			</group-item>
 		</group>
+		<group-title>
+			secondary风格
+		</group-title>
+		<group>
+			<group-item>
+				<span slot="heading">颜色：</span>
+				<inline-selector :options="colorOptions" multiple style="secondary"></inline-selector>
+			</group-item>
+		</group>
 	</container>
 </template>
 

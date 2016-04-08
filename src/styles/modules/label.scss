@@ -21,6 +21,10 @@
     background: $text-muted;
 }
 
+.label-secondary{
+    background: $brand-secondary;
+}
+
 .label-primary {
     background: $brand-primary;
 }
@@ -40,6 +44,10 @@
 
 .label-default-outline{
     @include label-outline-variant($text-muted);
+}
+
+.label-secondary-outline{
+    @include label-outline-variant($brand-secondary);
 }
 
 .label-primary-outline{

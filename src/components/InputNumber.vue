@@ -1,5 +1,5 @@
 <template>
-	<div class="number">
+	<div :class="['number',style?`number-${style}`:'']">
 		<div class="circle minus-circle" @click="minus"></div>
 		<div :class="['input-number', disabled?'disabled':'']">{{value}}</div>
 		<div class="circle plus-circle" @click="plus"></div>
@@ -25,6 +25,10 @@
 			value: {
 				default: 0,
 				twoWay: true
+			},
+			style: {
+				type: String,
+				default: ""
 			}
 		},
 		methods: {

@@ -3,6 +3,17 @@
 	display: inline-block;
 }
 
+.number-secondary{
+	.plus-circle{
+		border-color: $brand-secondary;
+		background: $brand-secondary;
+	}
+	.minus-circle{
+		border-color: $brand-secondary;
+		color: $brand-secondary;
+	}
+}
+
 .input-number{
 	background: #fff;
 	display: inline-block;

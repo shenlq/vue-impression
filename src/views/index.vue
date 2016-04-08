@@ -4,7 +4,7 @@
 		<div><small>beta 0.1</small></div>
 	</h3>
 	<group>
-		<group-item v-link='{"name": "demo"}'>
+		<group-item :v-link='{"name": "demo"}'>
 			<i class="fa fa-lg fa-drupal text-success" slot="heading"></i>
 			<span>组件库</span>
 		</group-item>
