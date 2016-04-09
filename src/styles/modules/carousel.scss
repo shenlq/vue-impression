@@ -2,6 +2,22 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    min-height: 100px;
+    color: #cdced0;
+    background: #e8e9eb;
+    text-align: center;
+}
+
+.carousel-empty{
+    &:after{
+        content: '图片加载中...';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 100px;
+    }
 }
 
 .carousel-item {

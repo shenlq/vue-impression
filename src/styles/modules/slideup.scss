@@ -1,5 +1,7 @@
 //== Slideup
 .slideup{
+  max-height: 50%;
+  overflow-y: scroll;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -19,8 +21,8 @@
 @-webkit-keyframes slideInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(2000px);
-    transform: translateY(2000px);
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1d000px);
   }
 
   100% {

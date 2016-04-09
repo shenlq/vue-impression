@@ -1,5 +1,5 @@
 <template>
-	<div class="carousel">
+	<div :class="['carousel', images.length>0?'':'carousel-empty']">
 		<ol class="carousel-indicators" v-if="images.length > 1">
 			<li :class="{'active': index == activeIndex}" v-for="(index, item) in images"></li>
 		</ol>
@@ -14,9 +14,9 @@
 			action=='prev' && (index - activeIndex + images.length)%images.length == 2?'right':''
 			]" v-for="(index, item) in images">
 			<a v-if="item.href" :href="item.href" target="_blank">
-				<img class='carousel-img' :src="item.src"/>
+				<img class='carousel-img' :src="item.image"/>
 			</a>
-			<img v-else class='carousel-img' :src="item.src"/>
+			<img v-else class='carousel-img' :src="item.image"/>
 		</div>
 	</div>
 </template>
@@ -31,11 +31,15 @@
 			images: {
 				type: Array,
 				coerce(val){
+					if(!val || val.length < 1){
+						return [];
+					}
+
 					return val.map((item, index) => {
 						if("[object Object]" == Object.prototype.toString.call(item)){
 							return item;
 						}else{
-							return {src: item};
+							return {image: item};
 						};
 					});
 				}
