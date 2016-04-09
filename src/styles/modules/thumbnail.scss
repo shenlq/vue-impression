@@ -1,7 +1,6 @@
 .thumbnail{
 	position: relative;
 	display: block;
-	margin-bottom: $thumbnail-margin-bottom;
 	background: $thumbnail-bg;
     @include border-bottom-variant();
 
