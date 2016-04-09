@@ -1,11 +1,11 @@
 <template>
-	<div :class="class">
+	<a :class="class" v-link="vLink">
 		<image-lazy :src="src" v-if="lazy"></image-lazy>
 		<img :src="src" v-else>
 		<div class="caption">
 			<slot></slot>
 		</div>
-	</div>
+	</a>
 </template>
 
 <script>
@@ -32,6 +32,9 @@
 					val &&  (result = result.concat(val.split(' ')));
 					return result;
 				}
+			},
+			vLink: {
+
 			}
 		}
 	}
