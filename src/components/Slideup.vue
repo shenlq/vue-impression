@@ -1,11 +1,11 @@
 <template>
 	<div :class="['mask', show?'':'hidden']" @click.self="hide">
 		<div class="slideup">
-			<div class="slideup-heading" v-if="title">
-				{{title}}
-			</div>
-			<div class="slideup-heading" v-if="!title">
-				<slot name="heading"></slot>
+			<div class="slideup-heading">
+				<group-item>
+					<slot name="heading"></slot>
+					<i class="fa fa-lg fa-times-circle-o text-muted" slot="footer" v-if="closeable" @click="hide"></i>
+				</group-item>
 			</div>
 
 			<div class="slideup-body">
@@ -16,7 +16,12 @@
 </template>
 
 <script>
+	import GroupItem from './GroupItem';
+
 	export default {
+		components: {
+			GroupItem
+		},
 		props: {
 			title: {
 				type: String
@@ -25,6 +30,10 @@
 				type: Boolean,
 				default: false,
 				twoWay: true
+			},
+			closeable: {
+				type: Boolean,
+				default: false
 			}
 		},
 		methods: {

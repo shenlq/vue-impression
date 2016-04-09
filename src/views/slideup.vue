@@ -12,8 +12,8 @@
 				选择收货地址
 			</group-item>
 		</group>
-		<slideup :show.sync="show">
-			<div class="text-danger" slot="heading">请选择取货地址</div>
+		<slideup :show.sync="show" closeable>
+			<span class="text-danger" slot="heading">请选择取货地址</span>
 			<selector :options="zones" dispatch="slideup:hide"></selector>
 		</slideup>
 	</container>
