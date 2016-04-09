@@ -55,10 +55,14 @@
 			};
 		},
 		created(){
-			this.addInterval();
 		},
 		destroyed(){
 			clearInterval(this.intervalCarousel);
+		},
+		watch: {
+			images(){
+				this.images.length > 0 && this.addInterval();
+			}
 		},
 		methods: {
 			//下一个
