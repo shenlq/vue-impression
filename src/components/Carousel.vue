@@ -1,22 +1,25 @@
 <template>
-	<div :class="['carousel', images.length>0?'':'carousel-empty']">
-		<ol class="carousel-indicators" v-if="images.length > 1">
-			<li :class="{'active': index == activeIndex}" v-for="(index, item) in images"></li>
+	<div :class="['carousel', options.length>0?'':'carousel-empty']">
+		<ol class="carousel-indicators" v-if="options.length > 1">
+			<li :class="{'active': index == activeIndex}" v-for="(index, item) in options"></li>
 		</ol>
 		<div @touchstart="touchstart" @touchend="touchend"
 			:class="['carousel-item',
 			index==activeIndex?'active':'',
-			(index - activeIndex + images.length)%images.length == 1?'next':'',
-			(index - activeIndex + images.length)%images.length == 2?'prev':'',
+			(index - activeIndex + options.length)%options.length == 1?'next':'',
+			(index - activeIndex + options.length)%options.length == 2?'prev':'',
 			action=='next' && index==activeIndex?'left':'',
 			action=='prev' && index==activeIndex?'right':'',
-			action=='next' && (index - activeIndex + images.length)%images.length == 1?'left':'',
-			action=='prev' && (index - activeIndex + images.length)%images.length == 2?'right':''
-			]" v-for="(index, item) in images">
+			action=='next' && (index - activeIndex + options.length)%options.length == 1?'left':'',
+			action=='prev' && (index - activeIndex + options.length)%options.length == 2?'right':''
+			]" v-for="(index, item) in options">
 			<a v-if="item.href" :href="item.href" target="_blank">
 				<img class='carousel-img' :src="item.image"/>
 			</a>
-			<img v-else class='carousel-img' :src="item.image"/>
+			<a v-if="item.vLink" v-link='item.vLink'>
+				<img class='carousel-img' :src="item.image"/>
+			</a>
+			<img v-if="!item.href && !item.vLink" class='carousel-img' :src="item.image"/>
 		</div>
 	</div>
 </template>
@@ -28,7 +31,7 @@
 				type: Number,
 				default: 3000
 			},
-			images: {
+			options: {
 				type: Array,
 				coerce(val){
 					if(!val || val.length < 1){
@@ -60,8 +63,8 @@
 			clearInterval(this.intervalCarousel);
 		},
 		watch: {
-			images(){
-				this.images.length > 0 && this.addInterval();
+			options(){
+				this.options.length > 0 && this.addInterval();
 			}
 		},
 		methods: {
@@ -69,7 +72,7 @@
 			next(){
 				this.action = 'next';
 				setTimeout(() => {
-					this.activeIndex = (this.activeIndex + 1) % this.images.length;
+					this.activeIndex = (this.activeIndex + 1) % this.options.length;
 					this.action = 'none';
 				}, this.debounce);
 			},
@@ -77,12 +80,12 @@
 			prev(){
 				this.action = 'prev';
 				setTimeout(() => {
-					this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+					this.activeIndex = (this.activeIndex - 1 + this.options.length) % this.options.length;
 					this.action = 'none';
 				}, this.debounce);
 			},
 			addInterval(){
-				this.images.length > 1 && (this.intervalCarousel = setInterval(() => {
+				this.options.length > 1 && (this.intervalCarousel = setInterval(() => {
 					this.next();
 				}, this.interval));
 			},
