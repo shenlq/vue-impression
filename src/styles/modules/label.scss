@@ -16,6 +16,11 @@
     }
 }
 
+.label-sm{
+    padding: $label-sm-padding;
+    font-size: 0.8rem;
+}
+
 
 .label-default {
     background: $text-muted;
