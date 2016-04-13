@@ -6,10 +6,10 @@
 	</navbar>
 	<container>
 		<group>
-			<group-item :click="defaultLoadingHandle">
+			<group-item @click="defaultLoadingHandle">
 				<span>{{show?'隐藏':'显示'}}</span>
 			</group-item>
-			<group-item :click="customLoadingHandle">
+			<group-item @click="customLoadingHandle">
 				<span>自定义信息</span>
 			</group-item>
 		</group>

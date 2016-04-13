@@ -8,7 +8,7 @@
 	</navbar>
 	<container>
 		<group>
-			<group-item :click="showSlideup">
+			<group-item @click="showSlideup">
 				选择收货地址
 			</group-item>
 		</group>

@@ -37,7 +37,7 @@
 		<group-title>block</group-title>
 		<group>
 			<group-item>
-				<btn style="default" block :click="click">默认</btn>
+				<btn style="default" block @click="click">默认</btn>
 			</group-item>
 			<group-item>
 				<btn style="primary" block>主题</btn>

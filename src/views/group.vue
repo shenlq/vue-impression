@@ -6,13 +6,13 @@
 	</navbar>
 	<container>
 		<group>
-			<group-item :click="defaultLoadingHandle">
+			<group-item>
 				张三丰
 			</group-item>
-			<group-item :click="customLoadingHandle">
+			<group-item>
 				张无忌
 			</group-item>
-			<group-item :click="customLoadingHandle">
+			<group-item>
 				张良
 			</group-item>
 		</group>
