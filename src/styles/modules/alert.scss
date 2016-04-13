@@ -22,6 +22,8 @@
 	background: #fff;
 	width: 68%;
 	border-radius: 4px;
+	z-index: $alert-zindex;
+
 }
 
 .alert-heading{
@@ -44,12 +46,16 @@
 	line-height: 3.2rem;
 	border-radius: 0 0 4px 4px;
 	@include border-top-variant();
+}
 
-	> *{
-		position: relative;
-		&:not(:first-child){
-			@include border-left-variant();
-		}
-		@include flex();
+.alert-footer-item{
+	position: relative;
+	&:not(:first-child){
+		@include border-left-variant();
+	}
+	@include flex();
+
+	&, &:hover, &:focus, &:active{
+		text-decoration: none;
 	}
 }

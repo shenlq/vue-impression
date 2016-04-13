@@ -6,17 +6,17 @@
 	</navbar>
 	<container>
 		<group>
-			<group-item :click="defaultAlertHandle">
+			<group-item @click="defaultAlertHandle">
 				<span>默认</span>
 			</group-item>
-			<group-item :click="customAlertHandle">
+			<group-item @click="customAlertHandle">
 				<span>自定义</span>
 			</group-item>
 		</group>
-	<alert title="操作成功", message="恭喜您，抢票成功！" :show.sync="showDefault"></alert>
+	<alert title="操作成功" message="恭喜您，抢票成功！" :show.sync="showDefault" @click="alertClickHandle"></alert>
 	<alert :show.sync="showCustom">
 		<div class="alert-heading" slot="heading"><i class="fa fa-3x fa-check text-success"></i></div>
-		<div class="alert-body text-success">丑是丑了点，能说明问题啊！</div>
+		<div class="alert-body text-success">丑了点，能说明问题啊！</div>
 	</alert>
 	</container>
 </template>
@@ -47,6 +47,10 @@
 			//显示默认
 			customAlertHandle(event){
 				this.showCustom = true;
+			},
+			//确定按钮绑定事件
+			alertClickHandle(){
+				console.log("确定按钮被点击了！");
 			}
 		}
 	};

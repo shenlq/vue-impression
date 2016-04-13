@@ -1,20 +1,19 @@
 <template>
-	<div :class="['mask', show?'':'hidden']">
-		<div class="alert">
-			<slot name="heading" v-if="_slotContents && _slotContents.heading"></slot>
-			<div class="alert-heading" v-else>{{title}}</div>
+	<div :class="['mask', show?'':'hidden']"  @click.self="hide"></div>
+	<div :class="['alert', show?'':'hidden']">
+		<slot name="heading" v-if="_slotContents && _slotContents.heading"></slot>
+		<div class="alert-heading" v-else>{{title}}</div>
 
-			<div class="alert-body" v-if="!message">
-				<slot></slot>
-			</div>
-			<div class="alert-body" v-else>
-				{{message}}
-			</div>
+		<div class="alert-body" v-if="!message">
+			<slot></slot>
+		</div>
+		<div class="alert-body" v-else>
+			{{message}}
+		</div>
 
-			<slot name="footer" v-if="_slotContents && _slotContents.footer"></slot>
-			<div class="alert-footer" @click="hide" v-else>
-				<a href="javascript:void(0);">{{button}}</a>
-			</div>
+		<slot name="footer" v-if="_slotContents && _slotContents.footer"></slot>
+		<div class="alert-footer" v-else>
+			<a class="alert-footer-item" href="javascript:void(0);" @click="click">{{button}}</a>
 		</div>
 	</div>
 </template>
@@ -33,9 +32,6 @@
 				type: String,
 				default: '确定'
 			},
-			click: {
-				type: Function
-			},
 			show: {
 				type: Boolean,
 				default: false,
@@ -43,9 +39,16 @@
 			}
         },
         methods: {
+        	//隐藏
         	hide(){
-        		this.click && this.click(this);
         		this.show = false;
+        	},
+        	//回调函数
+        	click(){
+        		this.show = false;
+        		this._events.click && this._events.click.forEach(fn => {
+        			fn();
+        		});
         	}
         }
 	};

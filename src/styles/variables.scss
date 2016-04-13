@@ -37,9 +37,11 @@ $tab-bottom-zindex:         1100;
 
 $carousel-zindex:           1000;
 $mask-zindex:               1210;
-$toast-zindex:         		1210;
-$confirm-zindex:            1210;
-$slideup-zindex:            1210;
+
+$alert-zindex:         		1220;
+$toast-zindex:         		1220;
+$confirm-zindex:            1220;
+$slideup-zindex:            1220;
 
 //== Body
 $body-bg:                    $gray-lightest !default;

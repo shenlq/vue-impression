@@ -10,7 +10,7 @@
 			style: {
 				type: Object
 			},
-			'class': {
+			class: {
 				type: String,
 				default: ''
 			}
