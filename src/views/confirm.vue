@@ -6,11 +6,11 @@
 	</navbar>
 	<container>
 		<group>
-			<group-item :click="showConfirmHandle">
+			<group-item @click="showConfirmHandle">
 				<span>删除记录</span>
 			</group-item>
 		</group>
-		<confirm title="删除该记录将不可恢复" message="确认删除？" :show.sync="show"></confirm>
+		<confirm title="删除该记录将不可恢复" message="确认删除？" :show.sync="show" @click="sureClickHandle"></confirm>
 	</container>
 </template>
 
@@ -35,6 +35,10 @@
 			showConfirmHandle(event){
 				this.show = true;
 			},
+			//点击确定
+			sureClickHandle(){
+				console.log("您点击了确定！");
+			}
 		}
 	};
 </script>
