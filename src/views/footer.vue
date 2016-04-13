@@ -18,7 +18,14 @@
 		<tab-item><i class="fa fa-lg fa-camera"></i></tab-item>
 	</tab-bottom>
 
-	<tab-bottom :style="style" cascade split>
+	<tab-bottom :style="style3" split>
+		<tab-item>电话</tab-item>
+		<tab-item>短信</tab-item>
+		<tab-item>我</tab-item>
+		<tab-item>照相</tab-item>
+	</tab-bottom>
+
+	<tab-bottom :style="style" cascade>
 		<tab-item>
 			<i class="fa fa-lg fa-phone"></i>电话
 		</tab-item>
@@ -52,6 +59,9 @@
 				},
 				style2: {
 					top: '175px'
+				},
+				style3: {
+					top: '255px'
 				}
 			}
 		}

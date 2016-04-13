@@ -14,7 +14,7 @@
 				type: Array,
 				default: '',
 				coerce(val){
-					let result = ['tab','tab-bottom'];
+					let result = ['tab','tab-bottom', 'flexbox', 'flex-align-center'];
 					val &&  (result = result.concat(val.split(' ')));
 					return result;
 				}
