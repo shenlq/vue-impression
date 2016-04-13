@@ -8,7 +8,7 @@
 	width: 100%;
 	background: $slideup-bg;
   z-index: $slideup-zindex;
-  -webkit-animation: slideInUp 0.36s;
+  animation: slideInUp 0.36s;
 }
 
 .slideup-heading{
@@ -18,16 +18,14 @@
 }
 
 
-@-webkit-keyframes slideInUp {
+@keyframes slideInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1d000px);
+    transform: translateY(1000px);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }

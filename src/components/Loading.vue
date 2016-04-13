@@ -1,5 +1,5 @@
 <template>
-	<div :class="['toast', show?'':'hidden']">
+	<div :class="['toast','flexbox','flex-align-center', show?'':'hidden']">
 		<div class="toast-body">
 			<div class="loading">
 				<div class="loading-leaf"></div>

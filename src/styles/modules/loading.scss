@@ -1,6 +1,4 @@
 //== Loading
-
-
 .loading{
 	position: relative;
 	width: 100%;
@@ -18,30 +16,30 @@
 	height: 0.3rem;
 
 	&:nth-child(1){
-	 	-webkit-animation: rotate 1s linear infinite;
+	 	animation: rotate 1s linear infinite;
 		transform: rotate(0deg);
 	}
 	&:nth-child(2){
-	 -webkit-animation: rotate2 1s linear infinite;
+	 animation: rotate2 1s linear infinite;
 		transform: rotate(30deg);
 	}
 	&:nth-child(3){
-	 -webkit-animation: rotate3 1s linear infinite;
+	 animation: rotate3 1s linear infinite;
 
 		transform: rotate(60deg);
 	}
 	&:nth-child(4){
-	 -webkit-animation: rotate4 1s linear infinite;
+	 animation: rotate4 1s linear infinite;
 
 		transform: rotate(90deg);
 	}
 	&:nth-child(5){
-	 -webkit-animation: rotate5 1s linear infinite;
+	 animation: rotate5 1s linear infinite;
 
 		transform: rotate(120deg);
 	}
 	&:nth-child(6){
-	 -webkit-animation: rotate6 1s linear infinite;
+	 animation: rotate6 1s linear infinite;
 
 		transform: rotate(150deg);
 	}
@@ -64,32 +62,32 @@
 }
 
 
-@-webkit-keyframes rotate{
+@keyframes rotate{
   0%{transform: rotate(0deg) }
   100%{transform: rotate(360deg)};
 }
 
-@-webkit-keyframes rotate2{
+@keyframes rotate2{
   0%{transform: rotate(30deg) }
   100%{transform: rotate(390deg)};
 }
 
-@-webkit-keyframes rotate3{
+@keyframes rotate3{
   0%{transform: rotate(60deg) }
   100%{transform: rotate(420deg)};
 }
 
-@-webkit-keyframes rotate4{
+@keyframes rotate4{
   0%{transform: rotate(90deg) }
   100%{transform: rotate(450deg)};
 }
 
-@-webkit-keyframes rotate5{
+@keyframes rotate5{
   0%{transform: rotate(120deg) }
   100%{transform: rotate(480deg)};
 }
 
-@-webkit-keyframes rotate6{
+@keyframes rotate6{
   0%{transform: rotate(150deg) }
   100%{transform: rotate(510deg)};
 }
