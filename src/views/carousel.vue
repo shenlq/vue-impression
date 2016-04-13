@@ -7,7 +7,7 @@
 		</span>
 	</navbar>
 	<container>
-		<carousel :images="images"></carousel>
+		<carousel :options="images"></carousel>
 	</container>
 </template>
 
