@@ -35,12 +35,11 @@ module.exports = function(grunt) {
       dist: {
         options: {
           sourcemap: 'auto',
-          trace: true,
+          trace: false,
           quiet: false,
-          debugInfo: true,
-          lineNumbers: true,
-          update: true,
-          style: 'compressed'
+          debugInfo: false,
+          lineNumbers: false,
+          update: true
         },
         files: [
           {
@@ -59,6 +58,17 @@ module.exports = function(grunt) {
         ]
       }
     },
+    autoprefixer: {
+      options: {
+        browsers: ['last 20 version', '> 99%']
+      },
+      auto: {
+        expand: true,
+        flatten: true,
+        src: 'build/styles/*.css',
+        dest: 'build/styles/'
+      }
+    },
     watch: {
       less: {
         files: 'src/styles/**/*.scss',
@@ -66,5 +76,5 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('default', ['clean', 'copy:font', 'sass', 'execute']);
+  grunt.registerTask('default', ['clean', 'copy:font', 'sass', 'autoprefixer', 'execute']);
 };

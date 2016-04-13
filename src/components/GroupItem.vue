@@ -36,7 +36,7 @@
                 type: Array,
                 default: '',
                 coerce(val){
-                    let result = ['group-item'];
+                    let result = ['group-item', 'flexbox', 'flex-align-center'];
                     val &&  (result = result.concat(val.split(' ')));
                     return result;
                 }

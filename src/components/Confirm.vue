@@ -7,7 +7,7 @@
 		<div class="alert-body">
 			{{message}}
 		</div>
-		<div class="alert-footer">
+		<div class="alert-footer flexbox">
 			<a href="javascript:void(0)" class="text-muted alert-footer-item" @click="cancel">{{buttons[1]}}</a>
 			<a href="javascript:void(0)" class="alert-footer-item" @click="confirm">{{buttons[0]}}</a>
 		</div>

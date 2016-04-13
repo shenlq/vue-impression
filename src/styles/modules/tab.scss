@@ -1,6 +1,5 @@
 //== Tab
 .tab{
-    @include display-flex();
     padding: $tab-padding;
   	background: #fff;
   	position: relative;

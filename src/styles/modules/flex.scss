@@ -1,8 +1,9 @@
 //== flex布局
 
-.flex{
+.flexbox{
 	width: 100%;
-	@include display-flex();
+    display: flex;
+
 }
 
 .flex-item{
@@ -20,3 +21,21 @@
 .flex-justify-center{
 	justify-content: center;
 }
+
+.flex-align-center{
+ 	align-items: center;
+}
+
+
+.flex-1{
+	@include flex();
+}
+
+.flex-2{
+	@include flex(2);
+}
+
+.flex-3{
+	@include flex(2);
+}
+

@@ -1,5 +1,5 @@
 <template>
-	<div class="input-item">
+	<div class="input-item flexbox">
   	    <div class="group-item-heading" v-if="_slotContents.default">
             <slot></slot>
        	</div>

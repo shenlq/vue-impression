@@ -1,5 +1,5 @@
 <template>
-    <div :class="['tab', bordered?'tab-bordered':'']">
+    <div :class="['tab','flexbox', bordered?'tab-bordered':'']">
 		<slot></slot>
 		<div class="tab-bar" :style="{left: barLeft, width: barWidth}"></div>
 	</div>

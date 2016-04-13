@@ -34,12 +34,12 @@ module.exports = (grunt) ->
             dist: {
                 options: {
                     sourcemap: 'auto'
-                    trace: true
+                    trace: false
                     quiet: false
-                    debugInfo: true
-                    lineNumbers: true
+                    debugInfo: false
+                    lineNumbers: false
                     update: true
-                    style: 'compressed'
+                    # style: 'compressed'
                 }
                 files: [{
                     expand: true,
@@ -56,6 +56,17 @@ module.exports = (grunt) ->
                 }]
             }
         }
+        autoprefixer: {
+            options: {
+                browsers: ['last 20 version', '> 99%']
+            }
+            auto: {
+                expand: true,
+                flatten: true,
+                src: 'build/styles/*.css',
+                dest: 'build/styles/'
+            }
+        }
         watch: {
             less: {
                 files: 'src/styles/**/*.scss'
@@ -65,5 +76,5 @@ module.exports = (grunt) ->
     }
 
     # 浏览器开发
-    grunt.registerTask 'default', ['clean', 'copy:font', 'sass', 'execute']
+    grunt.registerTask 'default', ['clean', 'copy:font', 'sass', 'autoprefixer', 'execute']
     return

@@ -23,8 +23,6 @@
 	position: relative;
 	background: $gray-end;
 	padding: $group-item-padding;
-    @include display-flex();
-
     @include border-top-variant();
 
 	&:last-child{

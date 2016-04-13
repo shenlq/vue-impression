@@ -114,19 +114,6 @@
 	border-radius: 0 !important;
 }
 
-//== Flex
-.flex-1{
-	@include flex();
-}
-
-.flex-2{
-	@include flex(2);
-}
-
-.flex-3{
-	@include flex(2);
-}
-
 
 //== Fa
 .fa-left{

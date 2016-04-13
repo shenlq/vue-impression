@@ -39,7 +39,6 @@
 
 .alert-footer{
 	position: relative;
-	@include display-flex();
 	font-size: 1.1rem;
 	cursor: $cursor-default;
 	color: $brand-primary;

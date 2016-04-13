@@ -1,5 +1,5 @@
 <template>
-    <div :class="['navbar', class]" :style="style">
+    <div :class="['navbar', 'flexbox', 'flex-align-center', class]" :style="style">
         <slot></slot>
     </div>
 </template>

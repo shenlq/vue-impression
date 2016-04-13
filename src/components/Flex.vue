@@ -11,7 +11,7 @@
 				type: Array,
 				default: '',
 				coerce(val){
-					let result = ['flex'];
+					let result = ['flexbox'];
 					val &&  (result = result.concat(val.split(' ')));
 					return result;
 				}

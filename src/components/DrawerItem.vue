@@ -1,5 +1,5 @@
 <template>
-	<div :class="['drawer-item', selected?'active':'']" @click="clickHandle">
+	<div :class="['drawer-item', 'flex-item', selected?'active':'']" @click="clickHandle">
 		<slot></slot>
 	</div>
 </template>

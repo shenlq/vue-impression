@@ -2,7 +2,6 @@
 .input-item{
 	position: relative;
 	padding: $input-item-padding;
-    @include display-flex();
 	@include border-top-variant();
 	@include border-bottom-variant();
 	background: $input-item-bg;

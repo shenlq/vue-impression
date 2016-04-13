@@ -12,7 +12,6 @@
     bottom: 0;
     margin: auto;
     text-align: center;
-    @include display-flex();
     z-index: $toast-zindex;
 }
 

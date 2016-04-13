@@ -1,6 +1,5 @@
 //== Drawer
 .drawer{
-    @include display-flex();
     padding: $drawer-padding;
   	background: #fff;
   	position: relative;
@@ -9,7 +8,6 @@
 
 .drawer-item{
 	position: $cursor-default;
-	@include flex();
 	text-align: center;
 
 	&:not(:last-child){
