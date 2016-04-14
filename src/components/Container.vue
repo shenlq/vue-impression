@@ -1,6 +1,12 @@
 <template>
     <div :class="['container', bottom?'container-sm':'']"  @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend">
         <slot></slot>
+	    <div class="droploading">
+	    	<p>
+				<img src="../images/loading.gif">
+	    	</p>
+			<p>↓ 下拉刷新</p>
+		</div>
     </div>
 </template>
 
@@ -18,12 +24,16 @@
 				console.log(this);
 			},
 			touchmove(event){
+				this.$el.style.overflow = 'visible';
 				let touchY = event.touches[0].screenY;
 				let marginTop = touchY - this._touchStartY;
-				marginTop <= 120 && (this.$el.style.marginTop =marginTop);
+				marginTop <= 100 && (this.$el.style.marginTop =marginTop);
 			},
 			touchend(event){
-				this.$el.style.marginTop = 0;
+				setTimeout(() => {
+					this.$el.style.overflow = 'scroll';
+					this.$el.style.marginTop = 0;
+				}, 2000);
 			}
 		}
 	};

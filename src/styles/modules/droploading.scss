@@ -1,7 +1,7 @@
 .droploading{
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
-	top: $container-content-top;
-
+	top: -102px;
+	text-align: center;
 }
