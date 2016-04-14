@@ -1,5 +1,5 @@
 <template>
-	<div :class="['toast','flexbox','flex-align-center',class, hiddenClass]">
+	<div :class="['toast',class, hiddenClass]">
 		<div class="toast-body">
 			<i :class="['fa','fa-2x','toast-addon',addonClass]"></i>
 			<slot></slot>
