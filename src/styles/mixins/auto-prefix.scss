@@ -1,4 +1,5 @@
 //== display:flex
 @mixin flex($value: 1) {
+	display: block;
     flex: $value;
 }
