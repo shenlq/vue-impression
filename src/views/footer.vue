@@ -27,16 +27,20 @@
 
 	<tab-bottom :style="style" cascade>
 		<tab-item>
-			<i class="fa fa-lg fa-phone"></i>电话
+			<i class="fa fa-lg fa-phone"></i>
+			<span>电话</span>
 		</tab-item>
 		<tab-item selected>
-			<i class="fa fa-lg fa-comment"></i>短信
+			<i class="fa fa-lg fa-comment"></i>
+			<span>短信</span>
 		</tab-item>
 		<tab-item>
-			<i class="fa fa-lg fa-user"></i>我
+			<i class="fa fa-lg fa-user"></i>
+			<span>我</span>
 		</tab-item>
 		<tab-item>
-			<i class="fa fa-lg fa-camera"></i>照相
+			<i class="fa fa-lg fa-camera"></i>
+			<span>照相</span>
 		</tab-item>
 	</tab-bottom>
 </template>

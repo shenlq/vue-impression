@@ -6,9 +6,8 @@
 }
 
 .tab-item{
-	@include flex();
 	text-align: center;
-	position: $cursor-default;
+	cursor: $cursor-default;
 	transition: all .2s;
 
 
@@ -53,7 +52,7 @@
 		> *{
 			display: block !important;
 			&:first-child{
-				padding-bottom: 0.3rem;
+				margin-bottom: 0.3rem;
 			}
 			&:not(:first-child){
 				font-size: 0.8rem;

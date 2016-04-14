@@ -10,9 +10,9 @@
 		<span class="split"></span>
 		<span>转账</span>
 		<span class="pull-right">
-			<i class="fa fa-search"></i>
-			<i class="fa fa-plus"></i>
-			<i class="fa fa-ellipsis-v"></i>
+			<a href="#"><i class="fa fa-search"></i></a>
+			<a href="#"><i class="fa fa-plus"></i></a>
+			<a href="#"><i class="fa fa-ellipsis-v"></i></a>
 		</span>
 	</navbar>
 	<navbar :style="style" class="navbar-default">

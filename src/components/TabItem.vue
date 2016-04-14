@@ -1,5 +1,5 @@
 <template>
-    <div :class="['tab-item', selected?'active':'']" @click="clickHandle">
+    <div :class="['tab-item', 'flex-item', selected?'active':'']" @click="clickHandle">
 		<slot></slot>
 	</div>
 </template>

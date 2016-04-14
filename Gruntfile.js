@@ -60,7 +60,7 @@ module.exports = function(grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['last 20 version', '> 99%']
+        browsers: ['last 100 version', '> 99%']
       },
       auto: {
         expand: true,

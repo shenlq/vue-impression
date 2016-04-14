@@ -7,7 +7,7 @@
 }
 
 .drawer-item{
-	position: $cursor-default;
+	cursor: $cursor-default;
 	text-align: center;
 
 	&:not(:last-child){
