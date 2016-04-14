@@ -5,6 +5,7 @@
 		<span>组件</span>
 		<span class="pull-right">分享</span>
 	</navbar>
+	<drop-loading></drop-loading>
 	<container bottom>
 		<group-title>Layout</group-title>
 		<group>
@@ -110,6 +111,10 @@
 				<i class="fa fa-lg fa-hourglass-start" slot="heading"></i>
 				<span>Carousel</span>
 			</group-item>
+			<group-item :v-link='{"name": "dropLoading"}'>
+				<i class="fa fa-lg fa-hourglass-start" slot="heading"></i>
+				<span>DropLoading</span>
+			</group-item>
 		</group>
 		<group>
 			<group-item :v-link='{"name": "thumbnail"}'>
@@ -140,7 +145,7 @@
 
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem } from '../components/index.js';
+	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading} from '../components/index.js';
 
 	export default {
 		components: {
@@ -150,7 +155,8 @@
 		    GroupItem,
 		    GroupTitle,
 		    TabBottom,
-		    TabItem
+		    TabItem,
+		    DropLoading
 		}
 	};
 </script>

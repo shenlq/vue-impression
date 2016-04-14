@@ -1,5 +1,5 @@
 <template>
-    <div :class="['container', bottom?'container-sm':'']"  @touchstart.self="touchstart" @touchmove.self="touchmove" @touchend.self="touchend">
+    <div :class="['container', bottom?'container-sm':'']"  @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend">
         <slot></slot>
     </div>
 </template>
@@ -15,14 +15,15 @@
 		methods: {
 			touchstart(event){
 				this._touchStartY = event.touches[0].screenY;
+				console.log(this);
 			},
 			touchmove(event){
 				let touchY = event.touches[0].screenY;
-				let marginTop = touchY - this._touchStartY;
-				marginTop <= 38 && (event.target.style.marginTop =marginTop);
+				let marginTop = 0.25*(touchY - this._touchStartY);
+				marginTop <= 76 && (this.$el.style.marginTop =marginTop);
 			},
 			touchend(event){
-				event.target.style.marginTop = 0;
+				this.$el.style.marginTop = 0;
 			}
 		}
 	};

@@ -150,5 +150,10 @@ router.map({
         name: "label",
         component: require('./views/label.vue')
     },
+    // DropLoading
+    '/dropLoading': {
+        name: "dropLoading",
+        component: require('./views/dropLoading.vue')
+    },
 });
 router.start(Vue.extend({}), 'body');
