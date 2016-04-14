@@ -2,6 +2,15 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -102px;
+	top: -205px;
 	text-align: center;
+	color: $text-muted;
+}
+
+.droploading-heading{
+	padding: 5rem 0 2rem 0;
+}
+
+.droploading-footer{
+	padding: 0.5rem;
 }
