@@ -31,8 +31,7 @@
 		//动态生成class，侦听type/outline的变化
 		computed: {
 			class(){
-				// return ['label', `label-${this.type}${this.outline?'-outline':''}`, this.size!='default'?`label-${this.size}`:''];
-				return ['label', `label-primary-outline`];
+				return ['label', `label-${this.type}${this.outline?'-outline':''}`, this.size!='default'?`label-${this.size}`:''];
 			}
 		}
 	}
