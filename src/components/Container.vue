@@ -64,6 +64,7 @@
 				setTimeout(() => {
 					this.$el.style.overflow = 'scroll';
 					this.$el.style.marginTop = 0;
+					this.guide = 0;
 				}, 1500);
 			}
 		}
