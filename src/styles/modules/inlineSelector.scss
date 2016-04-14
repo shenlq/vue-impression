@@ -2,11 +2,7 @@
 	display: inline-block;
 
 	.label{
+		cursor: $cursor-default;
+		margin: $inline-selector-item-margin;
 	}
-}
-
-
-.inline-selector-label{
-	cursor: $cursor-default;
-	margin: $inline-selector-item-margin;
 }
