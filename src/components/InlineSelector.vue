@@ -1,6 +1,6 @@
 <template>
 	<div :class="['inline-selector', `inline-selector-${style}`]">
-		<text-label @click="selected(index)" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?style:'default'" outline>
+		<text-label @click="selected(index)" class="inline-selector-label" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?style:'default'" outline>
 			{{item.name}}
 		</text-label>
 	</div>
