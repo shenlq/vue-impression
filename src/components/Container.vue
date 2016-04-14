@@ -19,8 +19,8 @@
 			},
 			touchmove(event){
 				let touchY = event.touches[0].screenY;
-				let marginTop = 0.25*(touchY - this._touchStartY);
-				marginTop <= 76 && (this.$el.style.marginTop =marginTop);
+				let marginTop = touchY - this._touchStartY;
+				marginTop <= 120 && (this.$el.style.marginTop =marginTop);
 			},
 			touchend(event){
 				this.$el.style.marginTop = 0;
