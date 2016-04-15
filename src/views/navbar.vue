@@ -3,7 +3,7 @@
 		<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>Navbar</span>
-		<span class="pull-right">分享</span>
+		<span class="flex-item text-right">分享</span>
 	</navbar>
 	<navbar :style="style">
 		<a v-link="{name:'demo'}"><i class="fa fa-arrow-left"></i></a>
