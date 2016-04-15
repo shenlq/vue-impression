@@ -35,9 +35,11 @@
 		},
 		methods: {
 			touchstart(event){
+				event.preventDefault();
 				this._touchStartY = event.touches[0].screenY;
 			},
 			touchmove(event){
+				event.preventDefault();
 				this._touchTarget.style.overflow = 'visible';
 				let touchY = event.touches[0].screenY;
 				this._touchRange = touchY - this._touchStartY;
@@ -45,6 +47,7 @@
 				this._touchRange <= this.touchStage[1] && (this._touchTarget.style.marginTop = this._touchRange);
 			},
 			touchend(event){
+				event.preventDefault();
 				this._touchRange > this.touchStage[0] && (this._touchTarget.style.marginTop = this.touchStage[0]);
 				if(this._touchRange < this.touchStage[0]){
 					this._touchTarget.style.overflow = 'scroll';
