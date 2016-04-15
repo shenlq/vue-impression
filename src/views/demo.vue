@@ -5,7 +5,6 @@
 		<span>组件</span>
 		<span class="pull-right">分享</span>
 	</navbar>
-	<drop-loading></drop-loading>
 	<container bottom>
 		<group-title>Layout</group-title>
 		<group>
@@ -145,7 +144,7 @@
 
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading} from '../components/index.js';
+	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, Checkbox} from '../components/index.js';
 
 	export default {
 		components: {
@@ -156,7 +155,8 @@
 		    GroupTitle,
 		    TabBottom,
 		    TabItem,
-		    DropLoading
+		    DropLoading,
+		    Checkbox
 		}
 	};
 </script>

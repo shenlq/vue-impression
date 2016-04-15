@@ -1,71 +1,71 @@
 <template>
-    <div :class="['container', bottom?'container-sm':'']"  @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend">
-        <slot></slot>
-	    <div class="droploading">
-	    	<div class="droploading-heading">
-	    		<checkbox checked circle outline>
-					全场包邮
-				</checkbox>
-				<checkbox checked circle outline>
-					达达品质
-				</checkbox>
-				<checkbox checked circle outline>
-					7天包退
-				</checkbox>
-	    	</div>
-	    	<div class="droploading-image">
-				<img src="../images/loading.gif">
-	    	</div>
-	    	<div class="droploading-footer">
-	    		{{ TOUCH_GUIDE[guide] }}
-	    	</div>
-		</div>
-    </div>
+	<div>
+	    <div :class="['container', bottom?'container-sm':'']" v-if="touch"  @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend">
+	        <slot></slot>
+	    </div>
+	    <div :class="['container', bottom?'container-sm':'']"  v-else>
+	        <slot></slot>
+	    </div>
+	</div>
 </template>
 
 <script>
-	import Checkbox from './Checkbox';
-
 	export default {
-		components: {
-			Checkbox
-		},
 		props: {
+			//是否包含底部栏
 			bottom: {
 				type: Boolean,
 				default: false
+			},
+			//是否支持下拉刷新
+			touch: {
+				type: Boolean,
+				default: false
+			},
+			//下拉阶梯
+			touchStage: {
+				type: Array,
+				default(){
+					return [110, 172];
+				}
 			}
 		},
-		data(){
-			return {
-				guide: 0,
-				TOUCH_GUIDE: ['↓ 下拉刷新', '↑ 释放刷新', '正在刷新...']
-			};
+		ready(){
+			this._touchTarget = this.$el.querySelectorAll(".container")[0];
 		},
 		methods: {
 			touchstart(event){
 				this._touchStartY = event.touches[0].screenY;
 			},
 			touchmove(event){
-				this.$el.style.overflow = 'visible';
+				this._touchTarget.style.overflow = 'visible';
 				let touchY = event.touches[0].screenY;
 				this._touchRange = touchY - this._touchStartY;
-				this._touchRange >= 110 && (this.guide = 1);
-				this._touchRange <= 172 && (this.$el.style.marginTop = this._touchRange);
+				this._touchRange >= this.touchStage[0] && (this.broadcast(1));
+				this._touchRange <= this.touchStage[1] && (this._touchTarget.style.marginTop = this._touchRange);
 			},
 			touchend(event){
-				this._touchRange > 110 && (this.$el.style.marginTop = 110);
-				if(this._touchRange < 110){
-					this.$el.style.overflow = 'scroll';
-					this.$el.style.marginTop = 0;
+				this._touchRange > this.touchStage[0] && (this._touchTarget.style.marginTop = this.touchStage[0]);
+				if(this._touchRange < this.touchStage[0]){
+					this._touchTarget.style.overflow = 'scroll';
+					this._touchTarget.style.marginTop = 0;
 					return false;
 				}
-				this.guide = 2;
-				setTimeout(() => {
-					this.$el.style.overflow = 'scroll';
-					this.$el.style.marginTop = 0;
-					this.guide = 0;
-				}, 1500);
+				this.broadcast(2);
+			},
+			//通知dropLoading组件
+			broadcast(index){
+				this.$broadcast("DropLoading:stage", index);
+			}
+		},
+		events: {
+			['DropLoading:end'](){
+				this.broadcast(0);
+				if(this._touchTarget){
+					this._touchTarget.style.overflow = 'scroll';
+					this._touchTarget.style.marginTop = 0;
+				}
+
 			}
 		}
 	};

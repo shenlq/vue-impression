@@ -27,21 +27,21 @@
 		</group>
 		<group-title>可点击</group-title>
 		<group>
-			<group-item v-link='{"name": "demo"}'>
+			<group-item :v-link='{"name": "demo"}'>
 				赵云
 			</group-item>
-			<group-item v-link='{"name": "demo"}'>
+			<group-item :v-link='{"name": "demo"}'>
 				赵匡胤
 			</group-item>
 		</group>
 		<group-title>带头信息、描述信息</group-title>
 		<group>
-			<group-item v-link='{"name": "demo"}'>
+			<group-item :v-link='{"name": "demo"}'>
 				<i class="fa fa-lg fa-bullseye text-primary" slot="heading"></i>
 				董卓
 				<span slot="footer">0.1</span>
 			</group-item>
-			<group-item v-link='{"name": "demo"}'>
+			<group-item :v-link='{"name": "demo"}'>
 				<i class="fa fa-lg fa-bullseye text-primary" slot="heading"></i>
 				董存瑞
 				<span slot="footer">炸暗堡</span>
