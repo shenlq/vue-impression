@@ -3,7 +3,7 @@
 		<a :v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>组件</span>
-		<span class="pull-right">分享</span>
+		<span class="flex-item text-right">分享</span>
 	</navbar>
 	<container bottom>
 		<group-title>Layout</group-title>
