@@ -89,12 +89,14 @@
 					this.next();
 				}, this.interval));
 			},
-			touchstart(e){
-				this._touchStartX = e.targetTouches[0].pageX;
+			touchstart(event){
+				event.preventDefault();
+				this._touchStartX = event.targetTouches[0].pageX;
 				this.intervalCarousel && clearInterval(this.intervalCarousel);
 			},
-			touchend(e){
-				let touchStartX = e.changedTouches[0].pageX;
+			touchend(event){
+				event.preventDefault();
+				let touchStartX = event.changedTouches[0].pageX;
 				if(touchStartX > this._touchStartX){
 					this.prev();
 				}else{
