@@ -1,8 +1,8 @@
 <template>
-	<a :class="class" @click="!!click && click()" v-if="vLink" v-link="vLink">
+	<a :class="class" @click="onceClick() && !!click && click() && (disabled = true)" v-if="vLink" v-link="vLink">
 		<slot></slot>
 	</a>
-	<a :class="class" @click="!!click && click()" v-else :href="href">
+	<a :class="class" @click="onceClick() && !!click && click()" v-else :href="href">
 		<slot></slot>
 	</a>
 </template>
@@ -33,6 +33,10 @@
 				type: String
 			},
 			vLink: {
+			},
+			once: {
+				type: Boolean,
+				default: false
 			}
 		},
 		computed: {
@@ -48,6 +52,13 @@
 				this.disabled && result.push("disabled");
 
 				return result;
+			}
+		},
+		methods: {
+			//点击一次，阻塞
+			onceClick(){
+				this.once && (this.disabled = true);
+				return true;
 			}
 		}
 	}

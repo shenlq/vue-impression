@@ -24,6 +24,16 @@
 				</div>
 			</group-item>
 		</group>
+		<group-title>once</group-title>
+		<group>
+			<group-item>
+				<div>
+					<btn style="default" once>默认</btn>
+					<btn style="primary" once>保存</btn>
+					<btn style="secondary" once>删除</btn>
+				</div>
+			</group-item>
+		</group>
 		<group-title>sm button</group-title>
 		<group>
 			<group-item>
@@ -40,7 +50,7 @@
 				<btn style="default" block @click="click">默认</btn>
 			</group-item>
 			<group-item>
-				<btn style="primary" block>主题</btn>
+				<btn style="primary" block once>主题</btn>
 			</group-item>
 			<group-item>
 				<btn style="secondary" block>取消</btn>

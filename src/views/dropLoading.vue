@@ -1,9 +1,8 @@
 <template>
 	<navbar>
-		<a :v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
+		<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>DropLoading</span>
-		<span class="pull-right">分享</span>
 	</navbar>
 	<container bottom touch>
 	    <drop-loading :refresh="refresh">

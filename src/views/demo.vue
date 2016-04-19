@@ -111,7 +111,7 @@
 				<span>Carousel</span>
 			</group-item>
 			<group-item :v-link='{"name": "dropLoading"}'>
-				<i class="fa fa-lg fa-hourglass-start" slot="heading"></i>
+				<i class="fa fa-lg fa-balance-scale text-warning" slot="heading"></i>
 				<span>DropLoading</span>
 			</group-item>
 		</group>
