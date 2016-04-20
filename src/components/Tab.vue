@@ -11,6 +11,9 @@
 			bordered: {
 				type: Boolean,
 				default: false
+			},
+			onSelect: {
+				type: Function
 			}
 		},
 		data(){
@@ -33,13 +36,14 @@
 		},
 		events: {
 			//选中事件
-		    selected(index){
+		    selected(index, key){
 		      	this.selectedIndex = index;
 
 		      	this.$children.forEach(child => {
 					child.selected = false;
 				});
 				this.$children[this.selectedIndex - 1].selected = true;
+				this.onSelect && this.onSelect(key);
 		    }
 	  	},
 	  	computed: {
