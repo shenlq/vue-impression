@@ -1,8 +1,5 @@
 <template>
-	<a :class="class" @click="onceClick() && !!click && click() && (disabled = true)" v-if="vLink" v-link="vLink">
-		<slot></slot>
-	</a>
-	<a :class="class" @click="onceClick() && !!click && click()" v-else :href="href">
+	<a :class="class" @click="onceClick()" :href="href">
 		<slot></slot>
 	</a>
 </template>
@@ -22,17 +19,12 @@
 				type: Boolean,
 				default: false
 			},
-			click: {
-				type: Function
-			},
 			disabled: {
 				type: Boolean,
 				default: false
 			},
 			href: {
 				type: String
-			},
-			vLink: {
 			},
 			once: {
 				type: Boolean,

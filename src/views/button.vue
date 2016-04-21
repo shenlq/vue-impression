@@ -8,9 +8,9 @@
 		<group>
 			<group-item>
 				<div>
-					<btn style="default" :click="click">默认</btn>
+					<btn style="default" @click="click">默认</btn>
 					<btn href="http://github.com">Github</btn>
-					<btn :v-link='{"name":"demo"}' style="secondary">删除</btn>
+					<btn style="secondary">删除</btn>
 				</div>
 			</group-item>
 		</group>
@@ -28,7 +28,7 @@
 		<group>
 			<group-item>
 				<div>
-					<btn style="default" once>默认</btn>
+					<btn style="default" @click="click" once>默认</btn>
 					<btn style="primary" once>保存</btn>
 					<btn style="secondary" once>删除</btn>
 				</div>
