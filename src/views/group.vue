@@ -47,12 +47,18 @@
 				<span slot="footer">炸暗堡</span>
 			</group-item>
 		</group>
+		<group-title>pure</group-title>
+		<group>
+			<group-item pure>
+				<btn block>保存</btn>
+			</group-item>
+		</group>
 	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupTitle, GroupItem, Navbar } from '../components/index.js';
+	import { Container, Group, GroupTitle, GroupItem, Navbar, Btn } from '../components/index.js';
 
 	export default {
 		components: {
@@ -61,6 +67,7 @@
 		    GroupTitle,
 		    GroupItem,
 		    Navbar,
+		    Btn
 		}
 	};
 </script>

@@ -46,15 +46,19 @@
 		</group>
 		<group-title>block</group-title>
 		<group>
-			<group-item>
+			<group-item pure>
 				<btn style="default" block @click="click">默认</btn>
 			</group-item>
 		</group>
 		<group>
-			<btn style="primary" block once>主题</btn>
+			<group-item pure>
+				<btn style="primary" block once>主题</btn>
+			</group-item>
 		</group>
 		<group>
-			<btn style="secondary" block>取消</btn>
+			<group-item pure>
+				<btn style="secondary" block>取消</btn>
+			</group-item>
 		</group>
 	</container>
 

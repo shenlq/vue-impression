@@ -21,13 +21,7 @@
 //== .group-item
 .group-item{
 	position: relative;
-	background: $gray-end;
 	padding: $group-item-padding;
-    @include border-top-variant();
-
-	&:last-child{
-    	@include border-bottom-variant();
-	}
 
 	&, &:hover, &:focus{
 		color: inherit;
@@ -38,6 +32,14 @@
 	}
 	.group-title + &{
 		margin-top: 0;
+	}
+
+	&:not(.group-item-pure){
+		background: $gray-end;
+    	@include border-top-variant();
+		&:last-child{
+	    	@include border-bottom-variant();
+		}
 	}
 }
 

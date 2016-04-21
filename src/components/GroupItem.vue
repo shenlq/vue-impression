@@ -1,5 +1,5 @@
 <template>
-    <a :class="class" :href="href" @click="vLinkClickHandle">
+    <a :class="className" :href="href" @click="vLinkClickHandle">
         <span class="group-item-heading" v-if="_slotContents.heading">
             <slot name="heading"></slot>
         </span>
@@ -25,14 +25,22 @@
                 type: Object
             },
             class: {
-                type: Array,
-                default: '',
-                coerce(val){
-                    let result = ['group-item', 'flexbox', 'flex-align-center'];
-                    val &&  (result = result.concat(val.split(' ')));
-                    return result;
-                }
+                type: String,
             },
+            pure: {
+                type: Boolean,
+                default: false
+            }
+        },
+        computed: {
+            className(){
+                let result = ['group-item', 'flexbox', 'flex-align-center'];
+                //自定义class
+                this.class && (result = result.concat(val.split(' ')));
+                //不带样式
+                this.pure && result.push('group-item-pure');
+                return result;
+            }
         },
         methods: {
             //v-link点击事件
