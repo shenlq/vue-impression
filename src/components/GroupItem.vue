@@ -11,7 +11,7 @@
         </span>
         <template v-else>
         </template>
-        <span class="group-item-arrow" v-if="href || vLink || _events.click"></span>
+        <span class="group-item-arrow" v-if="(href || vLink || _events.click) && !unclickable"></span>
     </a>
 </template>
 
@@ -28,6 +28,10 @@
                 type: String,
             },
             pure: {
+                type: Boolean,
+                default: false
+            },
+            unclickable: {
                 type: Boolean,
                 default: false
             }
