@@ -33,6 +33,7 @@ import FlexItem from './FlexItem';
 import Stick from './Stick';
 import TextLabel from './TextLabel';
 import DropLoading from './DropLoading';
+import LiftLoading from './LiftLoading';
 
 const components = {
 	Container,
@@ -69,7 +70,8 @@ const components = {
 	FlexItem,
 	Stick,
 	TextLabel,
-	DropLoading
+	DropLoading,
+	LiftLoading
 };
 
 module.exports = components;

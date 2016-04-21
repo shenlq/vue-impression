@@ -36,11 +36,19 @@
 				<span>户外旅行</span>
 			</group-item>
 		</group>
+		<lift-loading :refresh="refresh">
+			<div slot="desc">
+				<checkbox checked circle outline>中国制造</checkbox>
+				<checkbox checked circle outline>7天包退</checkbox>
+				<checkbox checked circle outline>全店包邮</checkbox>
+			</div>
+			<img src="../images/loading.gif">
+		</lift-loading>
 	</container>
 </template>
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, Checkbox} from '../components/index.js';
+	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, LiftLoading, Checkbox} from '../components/index.js';
 
 	export default {
 		components: {
@@ -52,6 +60,7 @@
 		    TabBottom,
 		    TabItem,
 		    DropLoading,
+			LiftLoading,
 		    Checkbox
 		},
 		methods: {
