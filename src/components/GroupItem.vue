@@ -1,5 +1,5 @@
 <template>
-    <div :class="class" v-if="!vLink" @click="click">
+    <a :class="class" :href="href" @click="vLinkClickHandle">
         <span class="group-item-heading" v-if="_slotContents.heading">
             <slot name="heading"></slot>
         </span>
@@ -11,27 +11,19 @@
         </span>
         <template v-else>
         </template>
-        <span class="group-item-arrow" v-if="_events.click"></span>
-    </div>
-
-    <a :class="class" v-if="vLink" v-link="vLink">
-        <span class="group-item-heading" v-if="_slotContents.heading">
-            <slot name="heading"></slot>
-        </span>
-        <span class="group-item-body">
-            <slot></slot>
-        </span>
-        <span class="group-item-footer">
-            <slot name="footer"></slot>
-        </span>
-        <span class="group-item-arrow"></span>
+        <span class="group-item-arrow" v-if="href || vLink || _events.click"></span>
     </a>
 </template>
 
 <script>
     export default {
         props: {
-            vLink: Object,
+            href: {
+                type: String
+            },
+            vLink: {
+                type: Object
+            },
             class: {
                 type: Array,
                 default: '',
@@ -40,17 +32,13 @@
                     val &&  (result = result.concat(val.split(' ')));
                     return result;
                 }
-            }
+            },
         },
         methods: {
-            click(){
-                if(!this._events || !this._events.click || this._events.click.length < 1){
-                    return false;
-                }
-                this._events.click.forEach((fn, index) => {
-                    fn();
-                });
+            //v-link点击事件
+            vLinkClickHandle(){
+                this.vLink && this.$route.router.go(this.vLink);
             }
-        },
+        }
     }
 </script>

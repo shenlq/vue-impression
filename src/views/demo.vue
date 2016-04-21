@@ -1,6 +1,6 @@
 <template>
 	<navbar>
-		<a :v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
+		<a v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
 		<span class="split"></span>
 		<span>组件</span>
 		<span class="flex-item text-right">分享</span>

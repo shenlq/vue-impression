@@ -10,7 +10,7 @@
 				<div>
 					<btn style="default" @click="click">默认</btn>
 					<btn href="http://github.com">Github</btn>
-					<btn style="secondary">删除</btn>
+					<btn style="secondary" :v-link='{"name": "demo"}'>删除</btn>
 				</div>
 			</group-item>
 		</group>
@@ -49,12 +49,12 @@
 			<group-item>
 				<btn style="default" block @click="click">默认</btn>
 			</group-item>
-			<group-item>
-				<btn style="primary" block once>主题</btn>
-			</group-item>
-			<group-item>
-				<btn style="secondary" block>取消</btn>
-			</group-item>
+		</group>
+		<group>
+			<btn style="primary" block once>主题</btn>
+		</group>
+		<group>
+			<btn style="secondary" block>取消</btn>
 		</group>
 	</container>
 

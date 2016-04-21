@@ -1,5 +1,5 @@
 <template>
-	<a :class="class" @click="onceClick()" :href="href">
+	<a :class="class" @click="clickHandle()" :href="href">
 		<slot></slot>
 	</a>
 </template>
@@ -29,7 +29,10 @@
 			once: {
 				type: Boolean,
 				default: false
-			}
+			},
+			vLink: {
+                type: Object
+            },
 		},
 		computed: {
 			class(){
@@ -48,10 +51,11 @@
 		},
 		methods: {
 			//点击一次，阻塞
-			onceClick(){
+			clickHandle(){
 				this.once && (this.disabled = true);
+                this.vLink && this.$route.router.go(this.vLink);
 				return true;
-			}
+			},
 		}
 	}
 </script>
