@@ -5,27 +5,27 @@
 		<span>Drawer</span>
 	</navbar>
 	<container>
-		<drawer>
-			<drawer-item>
+		<drawer :on-select="drawerChangeHandle">
+			<drawer-item event-key="分类">
 				分类
 			</drawer-item>
-			<drawer-item>
+			<drawer-item event-key="筛选">
 				筛选
 			</drawer-item>
-			<drawer-item>
+			<drawer-item event-key="排序">
 				排序
 			</drawer-item>
 		</drawer>
 
 		<group-title>Default selected</group-title>
-		<drawer>
-			<drawer-item>
+		<drawer :on-select="drawerChangeHandle">
+			<drawer-item event-key="1">
 				分类
 			</drawer-item>
-			<drawer-item selected>
+			<drawer-item event-key="2" selected>
 				筛选
 			</drawer-item>
-			<drawer-item>
+			<drawer-item event-key="3">
 				排序
 			</drawer-item>
 		</drawer>
@@ -37,7 +37,7 @@
 	import { Container, Navbar, GroupTitle, Group, GroupItem, Drawer, DrawerItem } from '../components/index.js';
 
 	export default {
-		  components: {
+		components: {
 		  	Container,
 		  	Navbar,
 		    GroupTitle,
@@ -45,6 +45,11 @@
 		    GroupItem,
 		    Drawer,
 		    DrawerItem
-		  }
+		},
+		methods: {
+			drawerChangeHandle(key, selected){
+				console.log(`${key}: ${selected?'选中':'取消选中'}!`);
+			}
+		}
 	};
 </script>

@@ -6,6 +6,11 @@
 
 <script>
 	export default {
+		props: {
+			onSelect: {
+				type: Function
+			}
+		},
 		//给drawer-item添加索引属性
 		ready(){
 			this.$children.forEach((child, index) => {
@@ -14,11 +19,13 @@
 		},
 		events: {
 			//点击事件
-		    selected(index) {
+		    selected(index, key, flag) {
 		      	this.$children.forEach(child => {
 					child.selected = false;
 				});
 				index != -1 && (this.$children[index - 1].selected = true);
+				//触发事件
+				this.onSelect && this.onSelect(key, flag);
 		    }
 	  	},
 	  	methods: {

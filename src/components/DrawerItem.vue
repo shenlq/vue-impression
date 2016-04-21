@@ -9,13 +9,14 @@
 		props: {
 	      	selected: {
 		        type: Boolean
-	      	}
+	      	},
+		    eventKey: {},
 	    },
 		methods: {
 			clickHandle(){
 				let index = this.$el.getAttribute('data-index');
 				this.selected && (index = -1);
-        		this.$dispatch('selected', index);
+        		this.$dispatch('selected', index, this.eventKey, !this.selected);
 			}
 		}
 	}
