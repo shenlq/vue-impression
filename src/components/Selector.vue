@@ -23,6 +23,9 @@
 			},
 			dispatch: {
 				type: String
+			},
+			onSelect: {
+				type: Function
 			}
 		},
 		data(){
@@ -78,9 +81,13 @@
 						this.selectedIndexs.push(index);
 					}
 					this.value = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
+					//回调
+					this.onSelect && this.onSelect(this.value, this.selectedIndexs);
 				}else{
 					this.selectedIndexs = [index];
 					this.value = {...this.items[index]};
+					//回调
+					this.onSelect && this.onSelect(this.value, index);
 					//派发事件
         			this.dispatch && this.$dispatch(this.dispatch);
 				}

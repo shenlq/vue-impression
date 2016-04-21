@@ -8,11 +8,11 @@
 		<group-title>
 			单选列表
 		</group-title>
-		<selector :options="options" value="name"></selector>
+		<selector :options="options" value="name" :on-select="selectHandle"></selector>
 		<group-title>
 			多选列表
 		</group-title>
-		<selector :options="options" multiple :value.sync='multipleValues'></selector>
+		<selector :options="options" :on-select="mulSelectHandle" multiple :value.sync='multipleValues'></selector>
 	</container>
 </template>
 
@@ -21,7 +21,7 @@
 	import { Container, Navbar, GroupTitle, Group, GroupItem, Selector } from '../components/index.js';
 
 	export default {
-		  components: {
+		components: {
 		  	Container,
 		  	Navbar,
 		    GroupTitle,
@@ -34,6 +34,14 @@
 				options: [{name: "name"}, "b", "c"],
 				multipleValues: ['b', 'c']
 			};
+		},
+		methods: {
+			selectHandle(value, index){
+				console.log(value, index);
+			},
+			mulSelectHandle(value, index){
+				console.log(value, index);
+			}
 		}
 	};
 </script>
