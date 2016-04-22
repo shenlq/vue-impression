@@ -86,6 +86,8 @@
 					this.defaultValue = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
 					//回调
 					this.onSelect && this.onSelect(this.defaultValue, this.selectedIndexs);
+					//同步组件
+					this.syncComponent && this.syncComponent.setValue(this.defaultValue);
 				}else{
 					this.selectedIndexs = [index];
 					this.defaultValue = {...this.items[index]};
@@ -94,7 +96,7 @@
 					//派发事件
         			this.dispatch && this.$dispatch(this.dispatch);
         			//同步组件
-					this.syncComponent.setValue(this.defaultValue);
+					this.syncComponent && this.syncComponent.setValue(this.defaultValue);
 				}
 			}
 		}
