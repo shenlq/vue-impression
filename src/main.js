@@ -66,6 +66,11 @@ router.map({
         name: "number",
         component: require('./views/number.vue')
     },
+    // InputSelect页
+    '/inputSelect': {
+        name: "inputSelect",
+        component: require('./views/inputSelect.vue')
+    },
     // Switch页
     '/switch': {
     	name: "switch",

@@ -51,6 +51,10 @@
 				<i class="fa fa-lg fa-file-text-o" slot="heading"></i>
 				<span>Textarea</span>
 			</group-item>
+			<group-item :v-link='{"name": "inputSelect"}'>
+				<i class="fa fa-lg fa-angle-down" slot="heading"></i>
+				<span>InputSelect</span>
+			</group-item>
 		</group>
 		<group>
 			<group-item :v-link='{"name": "switch"}'>
