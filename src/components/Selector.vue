@@ -62,6 +62,7 @@
 							this.value == item.value && this.selectedIndexs.push(index);
 						});
 					}else{
+						Object.prototype.toString.call(this.value) === "[object Array]" &&
 						this.items.forEach((item, index) => {
 							this.value.indexOf(item.value) != -1 && this.selectedIndexs.push(index);
 						});
