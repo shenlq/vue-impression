@@ -35,11 +35,11 @@
         },
     },
     methods: {
-        //返回值
+        //取值
         getValue(){
             return this.defaultValue.value;
         },
-        //设置值
+        //设值
         setValue(value){
             this.defaultValue = value;
         }

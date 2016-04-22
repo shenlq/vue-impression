@@ -18,14 +18,16 @@
 				type: Boolean,
 				default: false
 			},
-			value: {
-				twoWay: true
+			defaultValue: {
 			},
 			dispatch: {
 				type: String
 			},
 			onSelect: {
 				type: Function
+			},
+			syncComponent: {
+
 			}
 		},
 		data(){
@@ -56,15 +58,15 @@
 		watch: {
 			items(){
 				// 初始化已选中
-				if(this.value){
-					if(typeof this.value == 'string'){
+				if(this.defaultValue){
+					if(typeof this.defaultValue == 'string'){
 						this.items.forEach((item, index) => {
-							this.value == item.value && this.selectedIndexs.push(index);
+							this.defaultValue == item.value && this.selectedIndexs.push(index);
 						});
 					}else{
-						Object.prototype.toString.call(this.value) === "[object Array]" &&
+						Object.prototype.toString.call(this.defaultValue) === "[object Array]" &&
 						this.items.forEach((item, index) => {
-							this.value.indexOf(item.value) != -1 && this.selectedIndexs.push(index);
+							this.defaultValue.indexOf(item.value) != -1 && this.selectedIndexs.push(index);
 						});
 					}
 				}
@@ -81,16 +83,18 @@
 					}else{
 						this.selectedIndexs.push(index);
 					}
-					this.value = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
+					this.defaultValue = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
 					//回调
-					this.onSelect && this.onSelect(this.value, this.selectedIndexs);
+					this.onSelect && this.onSelect(this.defaultValue, this.selectedIndexs);
 				}else{
 					this.selectedIndexs = [index];
-					this.value = {...this.items[index]};
+					this.defaultValue = {...this.items[index]};
 					//回调
-					this.onSelect && this.onSelect(this.value, index);
+					this.onSelect && this.onSelect(this.defaultValue, index);
 					//派发事件
         			this.dispatch && this.$dispatch(this.dispatch);
+        			//同步组件
+					this.syncComponent.setValue(this.defaultValue);
 				}
 			}
 		}

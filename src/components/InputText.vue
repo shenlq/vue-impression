@@ -57,6 +57,10 @@
         getValue(){
             return this.defaultValue;
         },
+        //设值
+        setValue(value){
+            this.defaultValue = value;
+        },
         //清空
         clear(){
             this.defaultValue = '';
