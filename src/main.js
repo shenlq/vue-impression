@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router';
 
 //路由配置
+Vue.config.debug = true;
 Vue.use(VueRouter);
 let router = new VueRouter({
 	hashbang: true,

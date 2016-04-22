@@ -6,7 +6,7 @@
 	</navbar>
 	<container>
 		<group-title></group-title>
-		<input-text value="peter">
+		<input-text default-value="peter">
 			<label slot>username:</label>
 		</input-text>
 		<input-text type="password" placeholder="请输入密码">
@@ -19,24 +19,29 @@
 		</input-text>
 
 		<group-title>clear icon</group-title>
-		<input-text placeholder="可以清除内容" clear>
+		<input-text placeholder="可以清除内容" clearable>
 			<label slot>clear:</label>
 		</input-text>
 
 		<group-title>status</group-title>
-		<input-text is-success>
+		<input-text state='success'>
 			<label slot>success:</label>
 		</input-text>
-		<input-text is-warning>
+		<input-text state='warning'>
 			<label slot>warning:</label>
 		</input-text>
-		<input-text is-error>
+		<input-text state='error'>
 			<label slot>error:</label>
 		</input-text>
 
 		<group-title>multiple icon</group-title>
-		<input-text is-warning clear>
+		<input-text state='warning' clearable>
 			<label slot>warning:</label>
+		</input-text>
+
+		<group-title>onchange</group-title>
+		<input-text :on-change="onChangeHandle">
+			<label slot>input:</label>
 		</input-text>
 	</container>
 </template>
@@ -46,13 +51,18 @@
 	import { Container, Navbar, Group, GroupItem, GroupTitle, InputText } from '../components/index.js';
 
 	export default {
-		  components: {
+		components: {
 		  	Container,
 		  	Navbar,
 		    Group,
 		    GroupItem,
 		    GroupTitle,
 		    InputText
-		  }
+		},
+		methods: {
+			onChangeHandle(event, value){
+				console.log(event, value);
+			}
+		}
 	};
 </script>

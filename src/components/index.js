@@ -11,6 +11,7 @@ import Btn from './Btn';
 import InputText from './InputText';
 import InputArea from './InputArea';
 import InputNumber from './InputNumber';
+import InputSelect from './InputSelect';
 import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
@@ -49,6 +50,7 @@ const components = {
 	InputText,
 	InputArea,
 	InputNumber,
+	InputSelect,
 	Switch,
 	Checkbox,
 	Radio,
