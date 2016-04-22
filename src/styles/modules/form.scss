@@ -17,6 +17,9 @@
 	outline: 0;
 	-webkit-appearance: none;
 	background: transparent;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 //== Textarea
