@@ -1,35 +1,37 @@
 <template>
-	<navbar>
-		<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
-		<span class="split"></span>
-		<span>Drawer</span>
-	</navbar>
-	<container>
-		<drawer :on-select="drawerChangeHandle">
-			<drawer-item event-key="分类">
-				分类
-			</drawer-item>
-			<drawer-item event-key="筛选">
-				筛选
-			</drawer-item>
-			<drawer-item event-key="排序">
-				排序
-			</drawer-item>
-		</drawer>
+	<div>
+		<navbar>
+			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+			<span class="split"></span>
+			<span>Drawer</span>
+		</navbar>
+		<container>
+			<drawer :on-select="drawerChangeHandle">
+				<drawer-item event-key="分类">
+					分类
+				</drawer-item>
+				<drawer-item event-key="筛选">
+					筛选
+				</drawer-item>
+				<drawer-item event-key="排序">
+					排序
+				</drawer-item>
+			</drawer>
 
-		<group-title>Default selected</group-title>
-		<drawer :on-select="drawerChangeHandle">
-			<drawer-item event-key="1">
-				分类
-			</drawer-item>
-			<drawer-item event-key="2" selected>
-				筛选
-			</drawer-item>
-			<drawer-item event-key="3">
-				排序
-			</drawer-item>
-		</drawer>
-	</container>
+			<group-title>Default selected</group-title>
+			<drawer :on-select="drawerChangeHandle">
+				<drawer-item event-key="1">
+					分类
+				</drawer-item>
+				<drawer-item event-key="2" selected>
+					筛选
+				</drawer-item>
+				<drawer-item event-key="3">
+					排序
+				</drawer-item>
+			</drawer>
+		</container>
+	</div>
 </template>
 
 

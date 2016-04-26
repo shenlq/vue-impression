@@ -1,38 +1,40 @@
 <template>
-	<navbar>
-		<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
-		<span class="split"></span>
-		<span>Flex</span>
-	</navbar>
-	<container>
-		<group-title>等比栅栏</group-title>
-		<flex class="demo-flex">
-			<flex-item class="text-center demo-flex-item">1</flex-item>
-			<flex-item class="text-center demo-flex-item">2</flex-item>
-			<flex-item class="text-center demo-flex-item">3</flex-item>
-			<flex-item class="text-center demo-flex-item">4</flex-item>
-			<flex-item class="text-center demo-flex-item">5</flex-item>
-			<flex-item class="text-center demo-flex-item">6</flex-item>
-		</flex>
-		<flex class="demo-flex">
-			<flex-item class="text-center demo-flex-item">1</flex-item>
-			<flex-item class="text-center demo-flex-item">2</flex-item>
-			<flex-item class="text-center demo-flex-item">3</flex-item>
-		</flex>
-		<flex class="demo-flex">
-			<flex-item class="text-center demo-flex-item">1</flex-item>
-			<flex-item class="text-center demo-flex-item">2</flex-item>
-		</flex>
-		<group-title>根据子元素宽度自动排列</group-title>
+	<div>
+		<navbar>
+			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+			<span class="split"></span>
+			<span>Flex</span>
+		</navbar>
+		<container>
+			<group-title>等比栅栏</group-title>
+			<flex class="demo-flex">
+				<flex-item class="text-center demo-flex-item">1</flex-item>
+				<flex-item class="text-center demo-flex-item">2</flex-item>
+				<flex-item class="text-center demo-flex-item">3</flex-item>
+				<flex-item class="text-center demo-flex-item">4</flex-item>
+				<flex-item class="text-center demo-flex-item">5</flex-item>
+				<flex-item class="text-center demo-flex-item">6</flex-item>
+			</flex>
+			<flex class="demo-flex">
+				<flex-item class="text-center demo-flex-item">1</flex-item>
+				<flex-item class="text-center demo-flex-item">2</flex-item>
+				<flex-item class="text-center demo-flex-item">3</flex-item>
+			</flex>
+			<flex class="demo-flex">
+				<flex-item class="text-center demo-flex-item">1</flex-item>
+				<flex-item class="text-center demo-flex-item">2</flex-item>
+			</flex>
+			<group-title>根据子元素宽度自动排列</group-title>
 
-		<flex class="demo-flex" wrap="wrap" justify="between">
-			<div class="text-center demo-flex-wrap-item">1</div>
-			<div class="text-center demo-flex-wrap-item">2</div>
-			<div class="text-center demo-flex-wrap-item">3</div>
-			<div class="text-center demo-flex-wrap-item">4</div>
-			<div class="text-center demo-flex-wrap-item">5</div>
-		</flex>
-	</container>
+			<flex class="demo-flex" wrap="wrap" justify="between">
+				<div class="text-center demo-flex-wrap-item">1</div>
+				<div class="text-center demo-flex-wrap-item">2</div>
+				<div class="text-center demo-flex-wrap-item">3</div>
+				<div class="text-center demo-flex-wrap-item">4</div>
+				<div class="text-center demo-flex-wrap-item">5</div>
+			</flex>
+		</container>
+	</div>
 </template>
 
 

@@ -29,6 +29,16 @@ module.exports = function(grunt) {
             dest: 'build/styles/'
           }
         ]
+      },
+      animate: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/styles/animate',
+            src: ['*.css'],
+            dest: 'build/styles/animate'
+          }
+        ]
       }
     },
     sass: {
@@ -76,5 +86,5 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('default', ['clean', 'copy:font', 'sass', 'autoprefixer', 'execute']);
+  grunt.registerTask('default', ['clean', 'copy:font', 'copy:animate', 'sass', 'autoprefixer', 'execute']);
 };

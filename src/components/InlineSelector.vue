@@ -1,6 +1,6 @@
 <template>
 	<div :class="['inline-selector', `inline-selector-${style}`]">
-		<text-label @click="selected(index)" class="inline-selector-label" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?style:'default'" outline>
+		<text-label @click="itemSelectedHandle(index)" class="inline-selector-label" v-for="(index, item) in items" :type="selectedIndexs.indexOf(index) !=-1?style:'default'" outline>
 			{{item.name}}
 		</text-label>
 	</div>
@@ -28,6 +28,9 @@
 			style: {
 				type: String,
 				default: 'primary'
+			},
+			onSelect: {
+				type: Function
 			}
 		},
 		data(){
@@ -75,7 +78,7 @@
 		},
 		methods: {
 			//选中
-			selected(index){
+			itemSelectedHandle(index){
 				//多选
 				if(this.multiple){
 					//去掉选中
@@ -85,9 +88,11 @@
 						this.selectedIndexs.push(index);
 					}
 					this.value = this.items.filter((item, _index) => this.selectedIndexs.indexOf(_index) != -1);
+					this.onSelect && this.onSelect(this.value, this.selectedIndexs);
 				}else{
 					this.selectedIndexs = [index];
 					this.value = {...this.items[index]};
+					this.onSelect && this.onSelect(this.value, index);
 				}
 			}
 		}

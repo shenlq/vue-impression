@@ -40,7 +40,7 @@
         },
         disabled: {
             type: Boolean,
-            default: false
+            default: false,
         },
         onChange: {
             type: Function

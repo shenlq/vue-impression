@@ -1,14 +1,16 @@
 <template>
-	<navbar>
-		<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
-		<span class="split"></span>
-		<span>Carousel</span>
-		<span class="pull-right">
-		</span>
-	</navbar>
-	<container>
-		<carousel :options="images"></carousel>
-	</container>
+	<div>
+		<navbar>
+			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+			<span class="split"></span>
+			<span>Carousel</span>
+			<span class="pull-right">
+			</span>
+		</navbar>
+		<container>
+			<carousel :options="images"></carousel>
+		</container>
+	</div>
 </template>
 
 

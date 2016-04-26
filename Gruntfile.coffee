@@ -29,6 +29,16 @@ module.exports = (grunt) ->
                     dest: 'build/styles/'
                 }]
             }
+            animate: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/styles/animate'
+                    src: [
+                        '*.css'
+                    ]
+                    dest: 'build/styles/animate'
+                }]
+            }
         }
         sass: {
             dist: {
@@ -76,5 +86,5 @@ module.exports = (grunt) ->
     }
 
     # 浏览器开发
-    grunt.registerTask 'default', ['clean', 'copy:font', 'sass', 'autoprefixer', 'execute']
+    grunt.registerTask 'default', ['clean', 'copy:font', 'copy:animate', 'sass', 'autoprefixer', 'execute']
     return
