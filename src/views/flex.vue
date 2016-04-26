@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Flex</span>
 		</navbar>
-		<container>
+		<content>
 			<group-title>等比栅栏</group-title>
 			<flex class="demo-flex">
 				<flex-item class="text-center demo-flex-item">1</flex-item>
@@ -33,17 +33,18 @@
 				<div class="text-center demo-flex-wrap-item">4</div>
 				<div class="text-center demo-flex-wrap-item">5</div>
 			</flex>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, GroupTitle, Navbar, Flex, FlexItem } from '../components/index.js';
+	import { Container, Content, GroupTitle, Navbar, Flex, FlexItem } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		  	GroupTitle,
 		  	Navbar,
 		    Flex,

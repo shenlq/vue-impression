@@ -1,4 +1,5 @@
 import Container from './Container';
+import Content from './Content';
 import Navbar from './Navbar';
 import Dropdown from './Dropdown';
 import DropdownMenu from './DropdownMenu';
@@ -38,6 +39,7 @@ import LiftLoading from './LiftLoading';
 
 const components = {
 	Container,
+	Content,
 	Navbar,
 	Dropdown,
 	DropdownMenu,

@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<router-view transition="fadeIn" class="animated"></router-view>
+		<router-view></router-view>
 	</div>
 </template>

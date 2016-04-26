@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>InputSelect</span>
 		</navbar>
-		<container>
+		<content>
 			<group-title></group-title>
 			<input-select :default-value="city" @click="showSlideupHandle" placeholder="请选择城市" v-ref:city>
 				<label slot>城市:</label>
@@ -13,7 +13,7 @@
 			<input-select :default-value="good" @click="showGoodsHandle" v-ref:goods>
 				<label slot>默认值:</label>
 			</input-select>
-		</container>
+		</content>
 		<slideup :show.sync="showCity">
 			<span class="text-danger" slot="heading">请选择取货地址</span>
 			<selector :options="zones" dispatch="slideup:hide" :sync-component="$refs.city"></selector>
@@ -22,16 +22,17 @@
 			<span class="text-danger" slot="heading">请选择擅长</span>
 			<selector :options="goods" dispatch="slideup:hide" :sync-component="$refs.goods"></selector>
 		</slideup>
-	</div>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, InputSelect, Slideup, Selector } from '../components/index.js';
+	import { Container, Content, Navbar, Group, GroupItem, GroupTitle, InputSelect, Slideup, Selector } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		  	Navbar,
 		    Group,
 		    GroupItem,

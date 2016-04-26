@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
@@ -7,7 +7,7 @@
 			<span class="pull-right">
 			</span>
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item @click="showSlideup">
 					选择收货地址
@@ -17,17 +17,18 @@
 				<span class="text-danger" slot="heading">请选择取货地址</span>
 				<selector :options="zones" dispatch="slideup:hide"></selector>
 			</slideup>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupTitle, GroupItem, Navbar, Selector, Slideup } from '../components/index.js';
+	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Selector, Slideup } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupTitle,
 		    GroupItem,

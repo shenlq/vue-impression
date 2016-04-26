@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>InlineSelector</span>
 		</navbar>
-		<container>
+		<content>
 			<group-title>
 				单选列表
 			</group-title>
@@ -33,17 +33,18 @@
 					<inline-selector :options="colorOptions" multiple style="secondary" :on-select="onSelectHandle"></inline-selector>
 				</group-item>
 			</group>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Navbar, GroupTitle, Group, GroupItem, InlineSelector } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, InlineSelector } from '../components/index.js';
 
 	export default {
 		  components: {
 		  	Container,
+		  	Content,
 		  	Navbar,
 		    GroupTitle,
 		    Group,

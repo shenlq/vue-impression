@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Loading</span>
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item @click="defaultLoadingHandle">
 					<span>{{show?'隐藏':'显示'}}</span>
@@ -15,17 +15,18 @@
 				</group-item>
 			</group>
 			<loading :show.sync="show" :message="message"></loading>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupItem, Navbar, Loading } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Loading } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupItem,
 		    Navbar,

@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Toast</span>
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item @click="defaultChangeHandle">
 					<span>默认（1s）</span>
@@ -29,17 +29,18 @@
 				</group-item>
 			</group>
 			<toast :type="totastType" :show.sync="showToast" :duration="duration">{{totastMsg}}</toast>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupItem, Navbar, Switch, Toast } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Switch, Toast } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupItem,
 		    Navbar,

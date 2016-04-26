@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Tab</span>
 		</navbar>
-		<container>
+		<content>
 			<tab :on-select="tabChangeHandle">
 				<tab-item event-key="科技">科技</tab-item>
 				<tab-item event-key="财经">财经</tab-item>
@@ -24,17 +24,18 @@
 				<tab-item event-key="2"><i class="fa fa-lg fa-weixin text-success"></i></tab-item>
 				<tab-item event-key="3" selected><i class="fa fa-lg fa-weibo text-warning"></i></tab-item>
 			</tab>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, GroupTitle, Group, GroupItem, Tab, TabItem, Navbar } from '../components/index.js';
+	import { Container, Content, GroupTitle, Group, GroupItem, Tab, TabItem, Navbar } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    GroupTitle,
 		    Group,
 		    GroupItem,

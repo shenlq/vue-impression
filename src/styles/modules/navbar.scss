@@ -1,11 +1,8 @@
 //== Nav
 .navbar{
     color: #fff;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: $navbar-zindex;
     width: 100%;
+    z-index: 1;
     font-size: $navbar-font-size;
     background: $brand-primary;
     height: $navbar-height;

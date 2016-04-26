@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Switch</span>
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item>
 					<i class="fa fa-microphone" slot="heading"></i>
@@ -31,17 +31,18 @@
 					<switch slot="footer" disabled></switch>
 				</group-item>
 			</group>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Navbar, GroupTitle, Group, GroupItem, Switch } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Switch } from '../components/index.js';
 
 	export default {
 		  components: {
 		  	Container,
+		  	Content,
 		  	Navbar,
 		    GroupTitle,
 		    Group,

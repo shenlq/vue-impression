@@ -1,15 +1,6 @@
 //== Container
 .container{
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: $container-content-top;
-	bottom: 0;
-	overflow: scroll;
-	padding-bottom: 2px;
-	background: $body-bg;
-}
-
-.container-sm{
-	bottom: $container-content-bottom;
+	height: 100%;
+	display: flex;
+  	flex-direction: column;
 }

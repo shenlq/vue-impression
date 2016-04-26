@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			Group
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item>
 					张三丰
@@ -54,17 +54,18 @@
 					<btn block>保存</btn>
 				</group-item>
 			</group>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupTitle, GroupItem, Navbar, Btn } from '../components/index.js';
+	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Btn } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupTitle,
 		    GroupItem,

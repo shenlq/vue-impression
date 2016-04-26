@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
@@ -7,19 +7,20 @@
 			<span class="pull-right">
 			</span>
 		</navbar>
-		<container>
+		<content>
 			<carousel :options="images"></carousel>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupTitle, GroupItem, Navbar, Carousel } from '../components/index.js';
+	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Carousel } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupTitle,
 		    GroupItem,

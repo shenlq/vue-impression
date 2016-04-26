@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>DropLoading</span>
 		</navbar>
-		<container bottom touch>
+		<content bottom touch>
 		    <drop-loading :refresh="refresh">
 		    	<div slot="desc">
 			    	<checkbox checked circle outline>中国制造</checkbox>
@@ -48,16 +48,17 @@
 				</div>
 				<img src="../images/loading.gif">
 			</lift-loading>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, LiftLoading, Checkbox} from '../components/index.js';
+	import { Container, Content, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, LiftLoading, Checkbox} from '../components/index.js';
 
 	export default {
 		components: {
 			Container,
+			Content,
 			Navbar,
 		    Group,
 		    GroupItem,

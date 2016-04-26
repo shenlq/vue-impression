@@ -31,10 +31,7 @@
 
 //== Tab bottom
 .tab-bottom{
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	z-index: $tab-bottom-zindex;
+	z-index: 1;
 	width: 100%;
 	color: $text-muted;
 	height: $tab-bottom-height;

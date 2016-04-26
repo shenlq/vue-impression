@@ -80,7 +80,7 @@ module.exports = (grunt) ->
         watch: {
             less: {
                 files: 'src/styles/**/*.scss'
-                tasks: ['sass']
+                tasks: ['sass', 'autoprefixer']
             }
         }
     }

@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<container>
+	<container>
+		<content>
 			<navbar>
 				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 				<span class="split"></span>
@@ -15,17 +15,18 @@
 					</dropdown>
 				</span>
 			</navbar>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupItem,
 		    Navbar,

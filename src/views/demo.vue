@@ -1,12 +1,12 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "index"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>组件</span>
 			<span class="flex-item text-right">分享</span>
 		</navbar>
-		<container bottom>
+		<content>
 			<group-title>Layout</group-title>
 			<group>
 				<group-item :v-link='{"name": "navbar"}'>
@@ -130,7 +130,7 @@
 					<span>TextLabel</span>
 				</group-item>
 			</group>
-		</container>
+		</content>
 		<tab-bottom :style="style" cascade>
 			<tab-item>
 				<i class="fa fa-lg fa-phone"></i>电话
@@ -145,16 +145,17 @@
 				<i class="fa fa-lg fa-camera"></i>照相
 			</tab-item>
 		</tab-bottom>
-	</div>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, Checkbox} from '../components/index.js';
+	import { Container, Content, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, Checkbox} from '../components/index.js';
 
 	export default {
 		components: {
 			Container,
+			Content,
 			Navbar,
 		    Group,
 		    GroupItem,

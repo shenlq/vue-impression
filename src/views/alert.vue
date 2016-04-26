@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
 			<span>Alert</span>
 		</navbar>
-		<container>
+		<content>
 			<group>
 				<group-item @click="defaultAlertHandle">
 					<span>默认</span>
@@ -19,17 +19,18 @@
 			<div class="alert-heading" slot="heading"><i class="fa fa-3x fa-check text-success"></i></div>
 			<div class="alert-body text-success">丑了点，能说明问题啊！</div>
 		</alert>
-		</container>
-	</div>
+		</content>
+	</container>
 </template>
 
 
 <script>
-	import { Container, Group, GroupItem, Navbar, Alert } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Alert } from '../components/index.js';
 
 	export default {
 		components: {
 		  	Container,
+		  	Content,
 		    Group,
 		    GroupItem,
 		    Navbar,

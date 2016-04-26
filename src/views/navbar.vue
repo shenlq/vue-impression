@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<container>
 		<navbar :style="style">
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
@@ -26,15 +26,16 @@
 				<i class="fa fa-ellipsis-v"></i>
 			</span>
 		</navbar>
-	</div>
+	</container>
 </template>
 
 
 <script>
-	import { GroupTitle, Navbar } from '../components/index.js';
+	import { Container, GroupTitle, Navbar } from '../components/index.js';
 
 	export default {
 		components: {
+			Container,
 		    GroupTitle,
 		    Navbar
 		},

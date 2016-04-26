@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<container>
 		<navbar>
 			<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
 			<span class="split"></span>
@@ -44,15 +44,16 @@
 				<span>照相</span>
 			</tab-item>
 		</tab-bottom>
-	</div>
+	</container>
 </template>
 
 
 <script>
-	import { GroupTitle, Navbar, TabBottom, TabItem } from '../components/index.js';
+	import { Container, GroupTitle, Navbar, TabBottom, TabItem } from '../components/index.js';
 
 	export default {
 		components: {
+			Container,
 		    GroupTitle,
 		    Navbar,
 		    TabBottom,
