@@ -1,24 +1,26 @@
 <template>
-	<container>
-		<navbar>
-			<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
-			<span class="split"></span>
-			<span>SlideUp</span>
-			<span class="pull-right">
-			</span>
-		</navbar>
-		<content>
-			<group>
-				<group-item @click="showSlideup">
-					选择收货地址
-				</group-item>
-			</group>
-			<slideup :show.sync="show" closeable>
-				<span class="text-danger" slot="heading">请选择取货地址</span>
-				<selector :options="zones" dispatch="slideup:hide"></selector>
-			</slideup>
-		</content>
-	</container>
+	<div>
+		<container>
+			<navbar>
+				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<span class="split"></span>
+				<span>SlideUp</span>
+				<span class="pull-right">
+				</span>
+			</navbar>
+			<content>
+				<group>
+					<group-item @click="showSlideup">
+						选择收货地址
+					</group-item>
+				</group>
+				<slideup :show.sync="show" closeable>
+					<span class="text-danger" slot="heading">请选择取货地址</span>
+					<selector :options="zones" dispatch="slideup:hide"></selector>
+				</slideup>
+			</content>
+		</container>
+	</div>
 </template>
 
 

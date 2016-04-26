@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 let router = new VueRouter({
 	hashbang: true,
 	history: false,
-	saveScrollPosition: false,
+	saveScrollPosition: true,
 	transitionOnLoad: true
 });
 

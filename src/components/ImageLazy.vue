@@ -28,7 +28,7 @@
 		methods: {
 			//设置侦听容器
 			initView(){
-				let containers = document.body.querySelectorAll('.container');
+				let containers = document.body.querySelectorAll('.content');
 				this.listenView = containers.length ? containers[0]: document.body;
 			},
 			//判断元素是否隐藏（隐藏就不显示）
