@@ -130,6 +130,10 @@
 						<i class="fa fa-lg fa-tag text-success" slot="heading"></i>
 						<span>TextLabel</span>
 					</group-item>
+					<group-item :v-link='{"name": "date"}'>
+						<i class="fa fa-lg fa-clock-o" slot="heading"></i>
+						<span>DatePicker</span>
+					</group-item>
 				</group>
 			</content>
 			<tab-bottom :style="style" cascade>
@@ -147,7 +151,6 @@
 				</tab-item>
 			</tab-bottom>
 		</container>
-		
 	</div>
 </template>
 

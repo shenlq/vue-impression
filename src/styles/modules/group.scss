@@ -47,21 +47,6 @@
 	padding-right: $group-item-heading-padding;
 }
 
-.group-item-arrow{
-	color: $group-item-footer-color;
-	padding-left: $group-item-heading-padding;
-	&:after{
-		display: inline-block;
-		content: " ";
-		height: 6px;
-    	width: 6px;
-		transform: rotate(45deg);
-		border-width: 1px 1px 0 0;
-    	border-color: #C8C8CD;
-    	border-style: solid;
-	}
-}
-
 
 .group-item-body{
     @include flex();

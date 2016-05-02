@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/shenlq/vue-dui",
   "dependencies": {
+    "moment": "^2.13.0",
     "vue": "^1.0.18",
     "vue-router": "^0.7.11",
     "vuex": "^0.6.2"

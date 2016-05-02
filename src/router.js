@@ -149,5 +149,10 @@ export default function(router){
 	        name: "dropLoading",
 	        component: require('./views/dropLoading.vue')
 	    },
+	   	// DatePicker
+	    '/date': {
+	        name: "date",
+	        component: require('./views/date.vue')
+	    },
 	});
 }

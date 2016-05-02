@@ -1,0 +1,60 @@
+//== datepicker
+.datepicker{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1220;
+    width: 500px;
+    max-width: 100%;
+}
+
+.datepicker-heading{
+    color: #fff;
+    height: 50px;
+    background: $brand-primary;
+}
+
+.datepicker-caption{
+     font-size: 1.2rem;
+}
+
+.datepicker-prev,
+.datepicker-next{
+    cursor: $cursor-default;
+    padding: (50px - 12)/2 1rem;
+}
+
+.datepicker-body{
+    padding: 1rem;
+}
+
+.datepicker-weekgroup{
+    padding: 0;
+    list-style: none;
+}
+
+.datepicker-weekgroup-item{
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: percentage(1/ 7);
+    display: inline-block;
+    text-align: center;
+}
+
+.datepicker-daygroup-item{
+        width: percentage(1/ 7);
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      height: 34px;
+      padding: 0;
+      line-height: 34px;
+      color: #000;
+      background: #fff;
+      vertical-align: middle;
+    
+}
+.datepicker-footer{
+
+}

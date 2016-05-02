@@ -18,6 +18,7 @@ import Checkbox from './Checkbox';
 import Radio from './Radio';
 import Selector from './Selector';
 import InlineSelector from './InlineSelector';
+import DatePicker from './DatePicker';
 import Tab from './Tab';
 import TabItem from './TabItem';
 import Drawer from './Drawer';
@@ -58,6 +59,7 @@ const components = {
 	Radio,
 	Selector,
 	InlineSelector,
+	DatePicker,
 	Tab,
 	TabItem,
 	Drawer,
