@@ -34,6 +34,14 @@ module.exports = function(grunt) {
                     src: ['*.css'],
                     dest: 'build/styles/animate'
                 }]
+            },
+            image: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/images',
+                    src: ['*.*'],
+                    dest: 'build/images'
+                }]
             }
         },
         sass: {
@@ -82,4 +90,5 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['clean', 'copy:font', 'copy:animate', 'sass', 'autoprefixer', 'execute']);
+    grunt.registerTask('build', ['clean', 'copy:font', 'copy:animate', 'sass','copy:image', 'autoprefixer']);
 };
