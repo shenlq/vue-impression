@@ -7,16 +7,18 @@
                 <span>DatePicker</span>
             </navbar>
             <content>
-                <group-title>请选择时间：</group-title>
-                <date-picker></date-picker>
+                <input-select :default-value="date"  @click="showDatePickerHandle" v-ref:mydate>
+                    <label slot>请选择时间:</label>
+                </input-select>
             </content>
         </container>
+        <date-picker :show.sync="show" :sync-component="$refs.mydate"><date-picker>
     </div>
 </template>
 
 
 <script>
-    import { Container, Content, Navbar, Group, GroupItem, GroupTitle, DatePicker} from '../components/index.js';
+    import { Container, Content, Navbar, Group, GroupItem, GroupTitle, InputSelect, DatePicker} from '../components/index.js';
 
     export default {
         components: {
@@ -26,9 +28,19 @@
             Group,
             GroupItem,
             GroupTitle,
+            InputSelect,
             DatePicker,
         },
+        data(){
+            return {
+                show: false,
+                date: '2015-05-16'
+            };
+        },
         methods: {
+            showDatePickerHandle(){
+                this.show = true;
+            }
         }
     };
 </script>

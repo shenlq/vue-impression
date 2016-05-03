@@ -1,11 +1,12 @@
 .arrow{
     display: block;
     padding-left: $group-item-heading-padding;
+    transform: rotate(45deg);
     &:after{
         display: inline-block;
         content: " ";
-        height: 6px;
-        width: 6px;
+        height: 0.5rem;
+        width: 0.5rem;
         border-width: 1px 1px 0 0;
         border-style: solid;
     }
@@ -13,16 +14,20 @@
 
 .arrow-lg{
     &:after{
-        height: 12px;
-        width: 12px;
-        border-width: 2px 2px 0 0;
+        height: 1rem;
+        width: 1rem;
+
     }
 }
 
 .arrow-right{
-    transform: rotate(45deg);
+    &:after{
+        border-width: 2px 2px 0 0 ;
+    }
 }
 
 .arrow-left{
-    transform: rotate(-135deg);
+    &:after{
+        border-width: 0 0 2px 2px;
+    }
 }

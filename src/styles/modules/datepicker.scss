@@ -3,30 +3,62 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #fff;
-    z-index: 1220;
-    width: 500px;
+    right: 0;
+    margin: auto;
+    background: $datepicker-bg;
+    z-index: $datepicker-zindex;
+    width: $datepicker-width;
     max-width: 100%;
+    animation: slideInDown 0.36s;
+
 }
 
 .datepicker-heading{
-    color: #fff;
-    height: 50px;
+    color: $datepicker-heading-color;
+    height: $datepicker-heading-height;
     background: $brand-primary;
+    padding: 0 1rem;
 }
 
 .datepicker-caption{
-     font-size: 1.2rem;
+    font-size: $datepicker-caption-font-size;
+    cursor: $cursor-default;
 }
 
 .datepicker-prev,
 .datepicker-next{
     cursor: $cursor-default;
-    padding: (50px - 12)/2 1rem;
 }
 
 .datepicker-body{
-    padding: 1rem;
+    padding: $datepicker-body-padding;
+}
+
+.datepicker-yeargroup,
+.datepicker-monthgroup{
+    height: $datepicker-yeargroup-height;
+    overflow-y: scroll;
+}
+
+.datepicker-yeargroup{
+    padding-right: $datepicker-yeargroup-padding;
+}
+.datepicker-monthgroup{
+    padding-left: $datepicker-yeargroup-padding;
+    border-left: 1px solid $border-color;
+}
+
+.datepicker-yeargroup-item,
+.datepicker-monthgroup-item{
+    padding: $datepicker-yeargroup-item-padding;
+    font-size: $datepicker-yeargroup-item-font;
+    cursor: $cursor-default;
+
+    &.active{
+        color: $brand-primary;
+        font-weight: bold;
+        background: $gray-lighter;
+    }
 }
 
 .datepicker-weekgroup{
@@ -35,7 +67,7 @@
 }
 
 .datepicker-weekgroup-item{
-    font-size: 1.2rem;
+    font-size: $datepicker-weekgroup-item-font;
     font-weight: bold;
     width: percentage(1/ 7);
     display: inline-block;
@@ -43,18 +75,29 @@
 }
 
 .datepicker-daygroup-item{
-        width: percentage(1/ 7);
-      display: inline-block;
-      text-align: center;
-      cursor: pointer;
-      height: 34px;
-      padding: 0;
-      line-height: 34px;
-      color: #000;
-      background: #fff;
-      vertical-align: middle;
-    
-}
-.datepicker-footer{
+    font-size: $datepicker-daygroup-item-font;
+    width: percentage(1/ 7);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: $datepicker-daygroup-item-margin;
+    border: 1px solid transparent;
 
+    &,
+    &.label{
+        padding: $datepicker-daygroup-item-addon-padding;
+    }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

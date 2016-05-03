@@ -42,6 +42,7 @@ $alert-zindex:         		1220;
 $toast-zindex:         		1220;
 $confirm-zindex:            1220;
 $slideup-zindex:            1220;
+$datepicker-zindex:         1220;
 
 //== Body
 $body-bg:                    $gray-lightest !default;
@@ -176,6 +177,28 @@ $label-sm-padding:                 0.15rem;
 
 //== Slideup
 $slideup-bg:                       #fff;
+
+//== DatePicker
+$datepicker-width:                          500px;
+$datepicker-bg:                             #fff;
+
+$datepicker-heading-color:                  #fff;
+$datepicker-heading-height:                 $navbar-height;
+$datepicker-caption-font-size:              1.2rem;
+
+$datepicker-body-padding:                   1rem;
+
+$datepicker-weekgroup-item-font:            1.2rem;
+
+$datepicker-yeargroup-height:               12rem;
+$datepicker-yeargroup-padding:              $datepicker-body-padding;
+$datepicker-yeargroup-item-padding:         0.6rem;
+$datepicker-yeargroup-item-font:            1.5rem;
+
+$datepicker-daygroup-item-font:             1.1rem;
+$datepicker-daygroup-item-margin:           0.2rem 0;
+$datepicker-daygroup-item-addon-padding:    0.8rem 0;
+
 
 
 // Tables
