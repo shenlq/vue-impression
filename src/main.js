@@ -1,22 +1,9 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import configRouter from './router';
+import router from './router';
 import app from './views/app';
 import transition from './transition';
 
 
 //路由配置
 Vue.config.debug = true;
-Vue.use(VueRouter);
-
-let router = new VueRouter({
-	hashbang: true,
-	history: false,
-	saveScrollPosition: true,
-	transitionOnLoad: true
-});
-
-configRouter(router);
-
-const App = Vue.extend(app);
-router.start(App, '#app');
+router.start(Vue.extend(app), '#app');
