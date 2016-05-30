@@ -1,8 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var projectRoot = path.resolve(__dirname, '../');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var PORT = 9012;
+var path = require('path'),
+    webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    PORT = 9012;
 
 module.exports = {
     port: PORT,
@@ -28,7 +27,7 @@ module.exports = {
 	    },{
 	        test: /\.js$/,
 	        loader: 'babel',
-	        include: projectRoot,
+	        include: path.join(__dirname, 'src'),
 	        exclude: /node_modules/
 	    },{
 	    	test: /\.scss$/,

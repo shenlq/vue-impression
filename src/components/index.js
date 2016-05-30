@@ -1,83 +1,39 @@
-import Container from './Container';
-import Content from './Content';
-import Navbar from './Navbar';
-import Dropdown from './Dropdown';
-import DropdownMenu from './DropdownMenu';
-import DropdownMenuItem from './DropdownMenuItem';
-import TabBottom from './TabBottom';
-import Group from './Group';
-import GroupItem from './GroupItem';
-import GroupTitle from './GroupTitle';
-import Btn from './Btn';
-import InputText from './InputText';
-import InputArea from './InputArea';
-import InputNumber from './InputNumber';
-import InputSelect from './InputSelect';
-import Switch from './Switch';
-import Checkbox from './Checkbox';
-import Radio from './Radio';
-import Selector from './Selector';
-import InlineSelector from './InlineSelector';
-import DatePicker from './DatePicker';
-import Tab from './Tab';
-import TabItem from './TabItem';
-import Drawer from './Drawer';
-import DrawerItem from './DrawerItem';
-import Toast from './Toast';
-import Loading from './Loading';
-import Alert from './Alert';
-import Confirm from './Confirm';
-import ImageLazy from './ImageLazy';
-import Slideup from './Slideup';
-import Carousel from './Carousel';
-import Thumbnail from './Thumbnail';
-import Flex from './Flex';
-import FlexItem from './FlexItem';
-import Stick from './Stick';
-import TextLabel from './TextLabel';
-import DropLoading from './DropLoading';
-import LiftLoading from './LiftLoading';
-
-const components = {
-	Container,
-	Content,
-	Navbar,
-	Dropdown,
-	DropdownMenu,
-	DropdownMenuItem,
-	TabBottom,
-	Group,
-	GroupItem,
-	GroupTitle,
-	Btn,
-	InputText,
-	InputArea,
-	InputNumber,
-	InputSelect,
-	Switch,
-	Checkbox,
-	Radio,
-	Selector,
-	InlineSelector,
-	DatePicker,
-	Tab,
-	TabItem,
-	Drawer,
-	DrawerItem,
-	Toast,
-	Loading,
-	Alert,
-	Confirm,
-	ImageLazy,
-	Slideup,
-	Carousel,
-	Thumbnail,
-	Flex,
-	FlexItem,
-	Stick,
-	TextLabel,
-	DropLoading,
-	LiftLoading
-};
-
-module.exports = components;
+export Container from './Container';
+export Content from './Content';
+export Navbar from './Navbar';
+export Dropdown from './Dropdown';
+export DropdownMenu from './DropdownMenu';
+export DropdownMenuItem from './DropdownMenuItem';
+export TabBottom from './TabBottom';
+export Group from './Group';
+export GroupItem from './GroupItem';
+export GroupTitle from './GroupTitle';
+export Btn from './Btn';
+export InputText from './InputText';
+export InputArea from './InputArea';
+export InputNumber from './InputNumber';
+export InputSelect from './InputSelect';
+export Switch from './Switch';
+export Checkbox from './Checkbox';
+export Radio from './Radio';
+export Selector from './Selector';
+export InlineSelector from './InlineSelector';
+export DatePicker from './DatePicker';
+export Tab from './Tab';
+export TabItem from './TabItem';
+export Drawer from './Drawer';
+export DrawerItem from './DrawerItem';
+export Toast from './Toast';
+export Loading from './Loading';
+export Alert from './Alert';
+export Confirm from './Confirm';
+export ImageLazy from './ImageLazy';
+export Slideup from './Slideup';
+export Carousel from './Carousel';
+export Thumbnail from './Thumbnail';
+export Flex from './Flex';
+export FlexItem from './FlexItem';
+export Stick from './Stick';
+export TextLabel from './TextLabel';
+export DropLoading from './DropLoading';
+export LiftLoading from './LiftLoading';
