@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import router from './router';
-import app from './views/app';
+import app from './containers/app';
 import transition from './transition';
 
 
