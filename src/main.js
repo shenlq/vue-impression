@@ -6,4 +6,4 @@ import transition from './transition';
 
 //路由配置
 Vue.config.debug = true;
-router.start(Vue.extend(app), '#app');
+router.start(Vue.extend(app), 'body');

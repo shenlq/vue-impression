@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+//创建router对象
 const router = new VueRouter({
     hashbang: true,
     history: false,
