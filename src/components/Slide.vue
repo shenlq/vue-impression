@@ -1,7 +1,7 @@
 <template>
 	<div :class="['mask', show?'':'hidden']" @click.self="hide">
 		<div :class="['slide', direction]">
-			<div class="slide-header">
+			<div class="slide-header" v-if="_slotContents.header">
 				<group-item>
 					<slot name="header"></slot>
 					<i class="fa fa-lg fa-times-circle-o text-muted" slot="footer" v-if="closeable" @click="hide"></i>

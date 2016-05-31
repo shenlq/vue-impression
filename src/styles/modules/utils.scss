@@ -154,3 +154,29 @@
 	border-bottom: 1px solid $border-color;
 }
 
+//== Padding
+.padding-top{
+	padding-top: $padding-base-vertical !important;
+}
+
+.padding-bottom{
+	padding-bottom: $padding-base-vertical !important;
+}
+
+.padding-vertical{
+	padding-top: $padding-base-vertical !important;
+	padding-bottom: $padding-base-vertical !important;
+}
+
+.padding-left{
+	padding-left: $padding-base-horizontal !important;
+}
+
+.padding-right{
+	padding-right: $padding-base-horizontal !important;
+}
+
+.padding-horizontal{
+	padding-left: $padding-base-horizontal !important;
+	padding-right: $padding-base-horizontal !important;
+}

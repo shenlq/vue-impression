@@ -2,7 +2,7 @@
 .slide{
   max-height: 50%;
   overflow-y: scroll;
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   background: $slide-bg;
