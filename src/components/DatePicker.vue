@@ -5,11 +5,11 @@
         <div :class="['datepicker', show?'':'hidden']">
             <div class="datepicker-header flexbox flex-align-center">
                 <div class="datepicker-prev" @click="prevMonthHandle">
-                    <span class="arrow arrow-lg arrow-left "></span>
+                    <i class="fa fa-2x fa-angle-left"></i>
                 </div>
                 <div class="datepicker-caption flex-item text-center" @click="toggleMonthOptionHandle">{{currentYear}}年{{currentMonth}}月</div>
                 <div class="datepicker-next" @click="nextMonthHandle">
-                    <span class="arrow arrow-lg arrow-right"></span>
+                    <i class="fa fa-2x fa-angle-right"></i>
                 </div>
             </div>
             <div class="datepicker-body">

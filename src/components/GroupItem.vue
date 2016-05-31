@@ -11,7 +11,7 @@
         </span>
         <template v-else>
         </template>
-        <span class="arrow arrow-right text-muted" v-if="(href || vLink || _events.click) && !unclickable"></span>
+        <i class="fa fa-angle-right text-muted" v-if="(href || vLink || _events.click) && !unclickable"></i>
     </a>
 </template>
 

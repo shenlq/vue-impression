@@ -7,7 +7,7 @@
 			<input class="input" :type="type" disabled :value="defaultValue.name" :placeholder="placeholder" readonly/>
       	</div>
       	<div class="group-item-footer">
-            <span class="arrow arrow-right text-muted"></span>
+            <i class="fa fa-angle-right text-muted"></i>
       	</div>
   	</div>
 </template>
