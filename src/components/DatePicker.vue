@@ -3,7 +3,7 @@
         <div :class="['mask', show?'':'hidden']"  @click.self="hide"></div>
 
         <div :class="['datepicker', show?'':'hidden']">
-            <div class="datepicker-heading flexbox flex-align-center">
+            <div class="datepicker-header flexbox flex-align-center">
                 <div class="datepicker-prev" @click="prevMonthHandle">
                     <span class="arrow arrow-lg arrow-left "></span>
                 </div>

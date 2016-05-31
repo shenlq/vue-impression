@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Textarea</span>
 			</navbar>
@@ -18,7 +18,7 @@
 
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, InputArea } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, InputArea, Icon } from '../components/index.js';
 
 	export default {
 		  components: {
@@ -26,7 +26,8 @@
 		  	Content,
 		  	Navbar,
 		    GroupTitle,
-		    InputArea
+		    InputArea,
+		    Icon
 		  }
 	};
 </script>

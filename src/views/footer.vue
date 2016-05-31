@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Tab bottom</span>
 			</navbar>
@@ -14,10 +14,10 @@
 			</tab-bottom>
 
 			<tab-bottom :on-select="tabChangeHandle" :style="style2">
-				<tab-item event-key="1"><i class="fa fa-lg fa-phone"></i></tab-item>
-				<tab-item event-key="2"><i class="fa fa-lg fa-comment"></i></tab-item>
-				<tab-item event-key="3" selected><i class="fa fa-lg fa-user"></i></tab-item>
-				<tab-item event-key="4"><i class="fa fa-lg fa-camera"></i></tab-item>
+				<tab-item event-key="1"><icon type="phone" size="lg"></icon></tab-item>
+				<tab-item event-key="2"><icon type="comment" size="lg"></icon></tab-item>
+				<tab-item event-key="3" selected><icon type="user" size="lg"></icon></tab-item>
+				<tab-item event-key="4"><icon type="camera" size="lg"></icon></tab-item>
 			</tab-bottom>
 
 			<tab-bottom :on-select="tabChangeHandle" :style="style3" split>
@@ -29,19 +29,19 @@
 
 			<tab-bottom :on-select="tabChangeHandle" :style="style" cascade>
 				<tab-item event-key="1-电话">
-					<i class="fa fa-lg fa-phone"></i>
+					<icon type="phone" size="lg"></icon>
 					<span>电话</span>
 				</tab-item>
 				<tab-item event-key="2-短信" selected>
-					<i class="fa fa-lg fa-comment"></i>
+					<icon type="comment" size="lg"></icon>
 					<span>短信</span>
 				</tab-item>
 				<tab-item event-key="3-我">
-					<i class="fa fa-lg fa-user"></i>
+					<icon type="user" size="lg"></icon>
 					<span>我</span>
 				</tab-item>
 				<tab-item event-key="4-照相">
-					<i class="fa fa-lg fa-camera"></i>
+					<icon type="camera" size="lg"></icon>
 					<span>照相</span>
 				</tab-item>
 			</tab-bottom>
@@ -51,7 +51,7 @@
 
 
 <script>
-	import { Container, GroupTitle, Navbar, TabBottom, TabItem } from '../components/index.js';
+	import { Container, GroupTitle, Navbar, TabBottom, TabItem, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -59,7 +59,8 @@
 		    GroupTitle,
 		    Navbar,
 		    TabBottom,
-		    TabItem
+		    TabItem,
+		    Icon
 		},
 		data(){
 			return {

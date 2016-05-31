@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Flex</span>
 			</navbar>
@@ -41,7 +41,7 @@
 
 
 <script>
-	import { Container, Content, GroupTitle, Navbar, Flex, FlexItem } from '../components/index.js';
+	import { Container, Content, GroupTitle, Navbar, Flex, FlexItem, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -50,7 +50,8 @@
 		  	GroupTitle,
 		  	Navbar,
 		    Flex,
-		    FlexItem
+		    FlexItem,
+		    Icon
 		}
 	};
 </script>

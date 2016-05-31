@@ -3,12 +3,12 @@
 		<container>
 			<content>
 				<navbar>
-					<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+					<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 					<span class="split"></span>
 					<span>Menu</span>
 					<span class="flex-item text-right">
 						<dropdown>
-							<i class="fa fa-lg fa-ellipsis-v"></i>
+							<icon type="ellipsis-v" size="lg"></icon>
 							<dropdown-menu>
 								<dropdown-menu-item @click="callback">设置</dropdown-menu-item>
 								<dropdown-menu-item @click="callback">关于</dropdown-menu-item>
@@ -23,7 +23,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Dropdown, DropdownMenu, DropdownMenuItem, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -34,7 +34,8 @@
 		    Navbar,
 		    Dropdown,
 		    DropdownMenu,
-		    DropdownMenuItem
+		    DropdownMenuItem,
+		    Icon
 		},
 		data(){
 			return {

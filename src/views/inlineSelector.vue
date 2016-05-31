@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>InlineSelector</span>
 			</navbar>
@@ -12,7 +12,7 @@
 				</group-title>
 				<group>
 					<group-item>
-						<span slot="heading">尺码：</span>
+						<span slot="header">尺码：</span>
 						<inline-selector :options="sizeOptions" :on-select="onSelectHandle"></inline-selector>
 					</group-item>
 				</group>
@@ -21,7 +21,7 @@
 				</group-title>
 				<group>
 					<group-item>
-						<span slot="heading">颜色：</span>
+						<span slot="header">颜色：</span>
 						<inline-selector :options="colorOptions" multiple :on-select="onSelectHandle"></inline-selector>
 					</group-item>
 				</group>
@@ -30,7 +30,7 @@
 				</group-title>
 				<group>
 					<group-item>
-						<span slot="heading">颜色：</span>
+						<span slot="header">颜色：</span>
 						<inline-selector :options="colorOptions" multiple style="secondary" :on-select="onSelectHandle"></inline-selector>
 					</group-item>
 				</group>
@@ -41,7 +41,7 @@
 
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, InlineSelector } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, InlineSelector, Icon } from '../components/index.js';
 
 	export default {
 		  components: {
@@ -51,7 +51,8 @@
 		    GroupTitle,
 		    Group,
 		    GroupItem,
-		    InlineSelector
+		    InlineSelector,
+		    Icon
 		},
 		data(){
 			return {

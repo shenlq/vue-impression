@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Drawer</span>
 			</navbar>
@@ -38,7 +38,7 @@
 
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Drawer, DrawerItem } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Drawer, DrawerItem, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -49,7 +49,8 @@
 		    Group,
 		    GroupItem,
 		    Drawer,
-		    DrawerItem
+		    DrawerItem,
+		    Icon
 		},
 		methods: {
 			drawerChangeHandle(key, selected){

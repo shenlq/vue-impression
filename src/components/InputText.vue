@@ -1,6 +1,6 @@
 <template>
 	<div class="input-item flexbox">
-  	    <div class="group-item-heading" v-if="_slotContents.default">
+  	    <div class="group-item-header" v-if="_slotContents.default">
             <slot></slot>
        	</div>
       	<div class="group-item-body">

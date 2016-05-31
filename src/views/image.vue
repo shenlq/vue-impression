@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>LazyImage</span>
 				<span class="pull-right">
@@ -19,7 +19,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupItem, Navbar, ImageLazy } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, ImageLazy, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -28,7 +28,8 @@
 		    Group,
 		    GroupItem,
 		    Navbar,
-		    ImageLazy
+		    ImageLazy,
+		    Icon
 		},
 		created(){
 		},

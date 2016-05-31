@@ -1,7 +1,7 @@
 <template>
 	<div :class="['mask', show?'':'hidden']" @click="cancel"></div>
 	<div :class="['alert', show?'':'hidden']">
-		<div class="alert-heading">
+		<div class="alert-header">
 			{{title}}
 		</div>
 		<div class="alert-body">

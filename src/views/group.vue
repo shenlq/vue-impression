@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				Group
 			</navbar>
@@ -41,12 +41,12 @@
 				<group-title>带头信息、描述信息</group-title>
 				<group>
 					<group-item :v-link='{"name": "demo"}'>
-						<i class="fa fa-lg fa-bullseye text-primary" slot="heading"></i>
+						<icon type="bullseye" size="lg" class="text-primary" slot="header"></icon>
 						董卓
 						<span slot="footer">0.1</span>
 					</group-item>
 					<group-item :v-link='{"name": "demo"}'>
-						<i class="fa fa-lg fa-bullseye text-primary" slot="heading"></i>
+						<icon type="bullseye" size="lg" class="text-primary" slot="header"></icon>
 						董存瑞
 						<span slot="footer">炸暗堡</span>
 					</group-item>
@@ -64,7 +64,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Btn } from '../components/index.js';
+	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Btn, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -74,7 +74,8 @@
 		    GroupTitle,
 		    GroupItem,
 		    Navbar,
-		    Btn
+		    Btn,
+		    Icon
 		}
 	};
 </script>

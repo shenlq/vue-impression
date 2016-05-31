@@ -1,6 +1,6 @@
 <template>
 	<div class="droploading">
-    	<div class="droploading-heading">
+    	<div class="droploading-header">
     		<slot name="desc"></slot>
     	</div>
     	<div class="droploading-image">

@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>InputNumber</span>
 			</navbar>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, InputNumber } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, InputNumber, Icon } from '../components/index.js';
 	export default {
 		components: {
 			Container,
@@ -43,7 +43,8 @@
 			GroupTitle,
 			Group,
 			GroupItem,
-			InputNumber
+			InputNumber,
+			Icon
 		}
 	};
 </script>

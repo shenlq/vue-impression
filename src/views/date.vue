@@ -2,7 +2,7 @@
     <div>
         <container>
             <navbar>
-                <a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+                <a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
                 <span class="split"></span>
                 <span>DatePicker</span>
             </navbar>
@@ -18,7 +18,7 @@
 
 
 <script>
-    import { Container, Content, Navbar, Group, GroupItem, GroupTitle, InputSelect, DatePicker} from '../components/index.js';
+    import { Container, Content, Navbar, Group, GroupItem, GroupTitle, InputSelect, DatePicker, Icon } from '../components/index.js';
 
     export default {
         components: {
@@ -30,6 +30,7 @@
             GroupTitle,
             InputSelect,
             DatePicker,
+            Icon
         },
         data(){
             return {

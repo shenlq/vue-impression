@@ -2,14 +2,14 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Radio</span>
 			</navbar>
 			<content>
 				<group>
 					<group-item>
-						<span slot="heading">性别：</span>
+						<span slot="header">性别：</span>
 						<span>
 							<radio name="sex" checked>
 								<span>男</span>
@@ -23,7 +23,7 @@
 				<group-title>disabled</group-title>
 				<group>
 					<group-item>
-						<span slot="heading">已婚：</span>
+						<span slot="header">已婚：</span>
 						<span>
 							<radio name="merray" disabled checked>
 								<span>是</span>
@@ -41,7 +41,7 @@
 
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Radio } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Radio, Icon } from '../components/index.js';
 
 	export default {
 		  components: {
@@ -51,7 +51,8 @@
 		    GroupTitle,
 		    Group,
 		    GroupItem,
-		    Radio
+		    Radio,
+		    Icon
 		  }
 	};
 </script>

@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Toast</span>
 			</navbar>
@@ -17,15 +17,15 @@
 				</group>
 				<group>
 					<group-item @click="successTypeHandle">
-						<i class="fa fa-lg fa-check text-success" slot="heading"></i>
+					<icon type="check" size="lg" class="text-success" slot="header"></icon>
 						<span>成功</span>
 					</group-item>
 					<group-item @click="warningTypeHandle">
-						<i class="fa fa-lg fa-exclamation-triangle text-warning" slot="heading"></i>
+						<icon type="exclamation-triangle" size="lg" class="text-warning" slot="header"></icon>
 						<span>警告</span>
 					</group-item>
 					<group-item @click="errorTypeHandle">
-						<i class="fa fa-lg fa-exclamation-circle text-danger" slot="heading"></i>
+						<icon type="exclamation-circle" size="lg" class="text-danger" slot="header"></icon>
 						<span>失败</span>
 					</group-item>
 				</group>
@@ -37,7 +37,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupItem, Navbar, Switch, Toast } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Switch, Toast, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -47,7 +47,8 @@
 		    GroupItem,
 		    Navbar,
 		    Switch,
-		    Toast
+		    Toast,
+		    Icon
 		},
 		data(){
 			return {

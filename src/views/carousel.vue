@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Carousel</span>
 				<span class="pull-right">
@@ -17,7 +17,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Carousel } from '../components/index.js';
+	import { Container, Content, Group, GroupTitle, GroupItem, Navbar, Carousel, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -27,7 +27,8 @@
 		    GroupTitle,
 		    GroupItem,
 		    Navbar,
-		    Carousel
+		    Carousel,
+		    Icon
 		},
 		data(){
 			return {

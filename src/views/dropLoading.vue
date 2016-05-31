@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>DropLoading</span>
 			</navbar>
@@ -55,7 +55,7 @@
 </template>
 
 <script>
-	import { Container, Content, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, LiftLoading, Checkbox} from '../components/index.js';
+	import { Container, Content, Navbar, Group, GroupItem, GroupTitle, TabBottom, TabItem, DropLoading, LiftLoading, Checkbox, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -69,7 +69,8 @@
 		    TabItem,
 		    DropLoading,
 			LiftLoading,
-		    Checkbox
+		    Checkbox,
+		    Icon
 		},
 		methods: {
 			refresh(close){

@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name": "demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name": "demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Loading</span>
 			</navbar>
@@ -23,7 +23,7 @@
 
 
 <script>
-	import { Container, Content, Group, GroupItem, Navbar, Loading } from '../components/index.js';
+	import { Container, Content, Group, GroupItem, Navbar, Loading, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -32,7 +32,8 @@
 		    Group,
 		    GroupItem,
 		    Navbar,
-		    Loading
+		    Loading,
+		    Icon
 		},
 		data(){
 			return {

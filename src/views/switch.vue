@@ -2,19 +2,19 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Switch</span>
 			</navbar>
 			<content>
 				<group>
 					<group-item>
-						<i class="fa fa-microphone" slot="heading"></i>
+						<icon type="microphone" slot="header"></icon>
 						<span>话筒</span>
 						<switch slot="footer" checked></switch>
 					</group-item>
 					<group-item>
-						<i class="fa fa-plane text-warning" slot="heading"></i>
+						<icon type="plane" class="text-warning" slot="header"></icon>
 						<span>飞行模式</span>
 						<switch slot="footer"></switch>
 					</group-item>
@@ -22,12 +22,12 @@
 				<group-title>Disabled</group-title>
 				<group>
 					<group-item>
-						<i class="fa fa fa-bell-slash text-primary" slot="heading"></i>
+						<icon type="bell-slash" class="text-primary" slot="header"></icon>
 						<span>关闭通知</span>
 						<switch slot="footer" checked disabled></switch>
 					</group-item>
 					<group-item>
-						<i class="fa fa-clock-o text-danger" slot="heading"></i>
+						<icon type="clock-o" class="text-danger" slot="header"></icon>
 						<span>闹钟</span>
 						<switch slot="footer" disabled></switch>
 					</group-item>
@@ -39,7 +39,7 @@
 
 
 <script>
-	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Switch } from '../components/index.js';
+	import { Container, Content, Navbar, GroupTitle, Group, GroupItem, Switch, Icon } from '../components/index.js';
 
 	export default {
 		  components: {
@@ -49,7 +49,8 @@
 		    GroupTitle,
 		    Group,
 		    GroupItem,
-		    Switch
+		    Switch,
+		    Icon
 		  }
 	};
 </script>

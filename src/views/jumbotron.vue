@@ -2,7 +2,7 @@
     <div>
         <container>
             <navbar>
-                <a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+                <a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
                 <span class="split"></span>
                 <span>Jumbotron</span>
             </navbar>
@@ -26,7 +26,7 @@
 
 
 <script>
-    import { Container, Content, Navbar, Jumbotron, Flex, FlexItem } from '../components/index.js';
+    import { Container, Content, Navbar, Jumbotron, Flex, FlexItem, Icon } from '../components/index.js';
 
     export default {
         components: {
@@ -35,7 +35,8 @@
             Navbar,
             Jumbotron,
             Flex,
-            FlexItem
+            FlexItem,
+            Icon
         }
     }
 </script>

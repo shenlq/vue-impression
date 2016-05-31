@@ -1,6 +1,6 @@
 <template>
 	<div class="liftloading" v-show="display">
-    	<div class="liftloading-heading">
+    	<div class="liftloading-header">
     		<slot name="desc"></slot>
     	</div>
     	<div class="liftloading-image">

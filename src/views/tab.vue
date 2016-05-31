@@ -2,7 +2,7 @@
 	<div>
 		<container>
 			<navbar>
-				<a v-link='{"name":"demo"}'><i class="fa fa-arrow-left"></i></a>
+				<a v-link='{"name":"demo"}'><icon type="arrow-left"></icon></a>
 				<span class="split"></span>
 				<span>Tab</span>
 			</navbar>
@@ -21,9 +21,9 @@
 				</tab>
 				<group-title>Icon tab</group-title>
 				<tab :on-select="tabChangeHandle">
-					<tab-item event-key="1"><i class="fa fa-lg fa-qq text-primary"></i></tab-item>
-					<tab-item event-key="2"><i class="fa fa-lg fa-weixin text-success"></i></tab-item>
-					<tab-item event-key="3" selected><i class="fa fa-lg fa-weibo text-warning"></i></tab-item>
+					<tab-item event-key="1"><icon type="qq" size="lg" class="text-primary"></icon></tab-item>
+					<tab-item event-key="2"><icon type="weixin" size="lg" class="text-success"></icon></tab-item>
+					<tab-item event-key="3" selected><icon type="weibo" size="lg" class="text-warning"></icon></tab-item>
 				</tab>
 			</content>
 		</container>
@@ -32,7 +32,7 @@
 
 
 <script>
-	import { Container, Content, GroupTitle, Group, GroupItem, Tab, TabItem, Navbar } from '../components/index.js';
+	import { Container, Content, GroupTitle, Group, GroupItem, Tab, TabItem, Navbar, Icon } from '../components/index.js';
 
 	export default {
 		components: {
@@ -43,7 +43,8 @@
 		    GroupItem,
 		    Tab,
 		    TabItem,
-		    Navbar
+		    Navbar,
+		    Icon
 		},
 		methods: {
 			tabChangeHandle(key){

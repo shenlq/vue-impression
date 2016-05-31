@@ -1,8 +1,8 @@
 <template>
 	<div :class="['mask', show?'':'hidden']"  @click.self="hide"></div>
 	<div :class="['alert', show?'':'hidden']">
-		<slot name="heading" v-if="_slotContents && _slotContents.heading"></slot>
-		<div class="alert-heading" v-else>{{title}}</div>
+		<slot name="header" v-if="_slotContents && _slotContents.header"></slot>
+		<div class="alert-header" v-else>{{title}}</div>
 
 		<div class="alert-body" v-if="!message">
 			<slot></slot>
