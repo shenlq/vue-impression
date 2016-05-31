@@ -1,14 +1,14 @@
 <template>
 	<div :class="['mask', show?'':'hidden']" @click.self="hide">
-		<div class="slideup">
-			<div class="slideup-heading">
+		<div :class="['slide', direction]">
+			<div class="slide-header">
 				<group-item>
-					<slot name="heading"></slot>
+					<slot name="header"></slot>
 					<i class="fa fa-lg fa-times-circle-o text-muted" slot="footer" v-if="closeable" @click="hide"></i>
 				</group-item>
 			</div>
 
-			<div class="slideup-body">
+			<div class="slide-body">
 				<slot></slot>
 			</div>
 		</div>
@@ -34,6 +34,10 @@
 			closeable: {
 				type: Boolean,
 				default: false
+			},
+			direction: {
+	      		type: String,
+	      		default: "up"
 			}
 		},
 		methods: {

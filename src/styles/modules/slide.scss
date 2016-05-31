@@ -1,0 +1,50 @@
+//== Slide
+.slide{
+  max-height: 50%;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: $slide-bg;
+  z-index: $slide-zindex;
+}
+.up{
+  bottom: 0;
+  animation: slideInUp 0.36s;
+}
+
+.down{
+  top: 0;
+  animation: slideInDown 0.36s;
+}
+
+.slide-header{
+	position: relative;
+	font-weight: bold;
+	@include border-bottom-variant();
+}
+
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

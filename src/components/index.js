@@ -28,7 +28,7 @@ export Loading from './Loading';
 export Alert from './Alert';
 export Confirm from './Confirm';
 export ImageLazy from './ImageLazy';
-export Slideup from './Slideup';
+export Slide from './Slide';
 export Carousel from './Carousel';
 export Thumbnail from './Thumbnail';
 export Flex from './Flex';

@@ -49,7 +49,7 @@ $mask-zindex:               1210 !default;
 $alert-zindex:              1220 !default;
 $toast-zindex:              1220 !default;
 $confirm-zindex:            1220 !default;
-$slideup-zindex:            1220 !default;
+$slide-zindex:              1220 !default;
 $datepicker-zindex:         1220 !default;
 
 //== Body
@@ -151,11 +151,6 @@ $selector-item-padding:            $padding-base-vertical $padding-base-horizont
 //== InlineSelector
 $inline-selector-item-margin:      0.2rem 0.6rem 0.2rem 0 !default;
 
-
-//== Slideup
-$slideup-title-padding:        $padding-base-horizontal $padding-base-vertical !default;
-$slideup-item-padding:        $padding-base-horizontal $padding-base-vertical !default;
-
 //== Carousel
 $carousel-indicators-item-width:    6px !default;
 $carousel-indicators-item-height:   $carousel-indicators-item-width !default;
@@ -183,8 +178,10 @@ $label-border-radius:              2px !default;
 
 $label-sm-padding:                 0.15rem !default;
 
-//== Slideup
-$slideup-bg:                       #fff !default;
+//== Slide
+$slide-bg:                         #fff !default;
+$slide-title-padding:              $padding-base-horizontal $padding-base-vertical !default;
+$slide-item-padding:               $padding-base-horizontal $padding-base-vertical !default;
 
 //== DatePicker
 $datepicker-width:                          500px !default;

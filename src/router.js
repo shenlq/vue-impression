@@ -136,10 +136,10 @@ router.map({
         name: "inlineSelector",
         component: require('./views/inlineSelector.vue')
     },
-    // SlideUp页
-    '/slideup': {
-        name: "slideup",
-        component: require('./views/slideup.vue')
+    // SlideUp
+    '/slide': {
+        name: "slide",
+        component: require('./views/slide.vue')
     },
     // Carousel
     '/carousel': {
