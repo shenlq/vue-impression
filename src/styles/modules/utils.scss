@@ -128,3 +128,29 @@
 .text-lg{
 	font-size: 1.3rem;
 }
+
+.font-h1{ font-size: $font-size-h1 !important; }
+.font-h2{ font-size: $font-size-h2 !important; }
+.font-h3{ font-size: $font-size-h3 !important; }
+.font-h4{ font-size: $font-size-h4 !important; }
+.font-h5{ font-size: $font-size-h5 !important; }
+.font-h6{ font-size: $font-size-h6 !important; }
+
+
+//== Border
+.border-left{
+	border-left: 1px solid $border-color;
+}
+
+.border-right{
+	border-right: 1px solid $border-color;
+}
+
+.border-top{
+	border-top: 1px solid $border-color;
+}
+
+.border-bottom{
+	border-bottom: 1px solid $border-color;
+}
+

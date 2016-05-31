@@ -1,7 +1,7 @@
 <template>
     <a :class="className" :href="href" @click="vLinkClickHandle">
-        <span class="group-item-heading" v-if="_slotContents.heading">
-            <slot name="heading"></slot>
+        <span class="group-item-header" v-if="_slotContents.header">
+            <slot name="header"></slot>
         </span>
         <span class="group-item-body">
             <slot></slot>
@@ -34,6 +34,10 @@
             unclickable: {
                 type: Boolean,
                 default: false
+            },
+            related: {
+                type: Boolean,
+                default: false
             }
         },
         computed: {
@@ -41,6 +45,8 @@
                 let result = ['group-item', 'flexbox', 'flex-align-center'];
                 //自定义class
                 this.class && (result = result.concat(val.split(' ')));
+                //关联Item
+                this.related && (result.push('group-item-related'));
                 //不带样式
                 this.pure && result.push('group-item-pure');
                 return result;

@@ -37,3 +37,4 @@ export Stick from './Stick';
 export TextLabel from './TextLabel';
 export DropLoading from './DropLoading';
 export LiftLoading from './LiftLoading';
+export Jumbotron from './Jumbotron';

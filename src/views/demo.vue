@@ -34,6 +34,10 @@
 						<i class="fa fa-lg fa-inbox text-muted" slot="heading"></i>
 						<span>Drawer</span>
 					</group-item>
+					<group-item :v-link='{"name": "jumbotron"}'>
+						<i class="fa fa-lg fa-television text-muted" slot="heading"></i>
+						<span>Jumbotron</span>
+					</group-item>
 				</group>
 				<group-title>Form</group-title>
 				<group>

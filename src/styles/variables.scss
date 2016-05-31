@@ -26,23 +26,31 @@ $font-family-base:           "Microsoft YaHei","WenQuanYi Micro Hei","Open Sans"
 
 $line-height:                1.2 !default;
 
+//==font size
+$font-size-h1:               2.5rem !default;
+$font-size-h2:               2rem !default;
+$font-size-h3:               1.75rem !default;
+$font-size-h4:               1.5rem !default;
+$font-size-h5:               1.25rem !default;
+$font-size-h6:               1rem !default;
+
 //==base
-$margin-base-vertical:       1rem;
-$padding-base-vertical:      1rem;
-$padding-base-horizontal:    1rem;
+$margin-base-vertical:       1rem !default;
+$padding-base-vertical:      1rem !default;
+$padding-base-horizontal:    1rem !default;
 
 //== z-index
-$navbar-zindex:             1100;
-$tab-bottom-zindex:         1100;
+$navbar-zindex:             1100 !default;
+$tab-bottom-zindex:         1100 !default;
 
-$carousel-zindex:           1000;
-$mask-zindex:               1210;
+$carousel-zindex:           1000 !default;
+$mask-zindex:               1210 !default;
 
-$alert-zindex:         		1220;
-$toast-zindex:         		1220;
-$confirm-zindex:            1220;
-$slideup-zindex:            1220;
-$datepicker-zindex:         1220;
+$alert-zindex:              1220 !default;
+$toast-zindex:              1220 !default;
+$confirm-zindex:            1220 !default;
+$slideup-zindex:            1220 !default;
+$datepicker-zindex:         1220 !default;
 
 //== Body
 $body-bg:                    $gray-lightest !default;
@@ -57,31 +65,31 @@ $link-color:                 $brand-primary !default;
 $link-hover-color:           darken($link-color, 15%) !default;
 
 //== Border radius
-$border-radius-default:      2px;
+$border-radius-default:      2px !default;
 
-$split-margin:               0 $padding-base-horizontal;
+$split-margin:               0 $padding-base-horizontal !default;
 
 //== Navbar
-$navbar-height:                 40px;
-$navbar-padding:				0 $padding-base-horizontal;
-$navbar-font-size:              floor($font-size-root * 1.1);
+$navbar-height:                 40px !default;
+$navbar-padding:                0 $padding-base-horizontal !default;
+$navbar-font-size:              floor($font-size-root * 1.1) !default;
 
-$tab-bottom-height:             $navbar-height;
+$tab-bottom-height:             $navbar-height !default;
 
 //== Container
-$container-content-top:         $navbar-height;
-$container-content-bottom:      ($tab-bottom-height + 2);
+$container-content-top:         $navbar-height !default;
+$container-content-bottom:      ($tab-bottom-height + 2) !default;
 
 //== Group
-$group-title-padding:           0.4rem $padding-base-horizontal;
-$group-item-padding:            $padding-base-vertical $padding-base-horizontal;
-$group-item-heading-padding:    0.6rem;
-$group-item-footer-color:       $gray-light;
+$group-title-padding:           0.4rem $padding-base-horizontal !default;
+$group-item-padding:            $padding-base-vertical $padding-base-horizontal !default;
+$group-item-header-padding:     0.6rem !default;
+$group-item-footer-color:       $gray-light !default;
 
 //== Button
-$btn-padding:                    0.7rem 1.2rem;
-$btn-border-radius:              2px;
-$btn-block-padding:              1rem;
+$btn-padding:                    0.7rem 1.2rem !default;
+$btn-border-radius:              2px !default;
+$btn-block-padding:              1rem !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -95,7 +103,7 @@ $btn-default-color:              $gray-dark !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
-$btn-sm-padding:                 0.4rem 0.8rem;
+$btn-sm-padding:                 0.4rem 0.8rem !default;
 
 //== Form
 $input-item-bg:                 #fff !default;
@@ -112,92 +120,103 @@ $switch-toggle-bg:              #ccc !default;
 $switch-toggle-active-bg:       $brand-success;
 $switch-toggle-padding:         2px !default;
 
-$switch-toggle-addon-bg:        #fdfdfd;
-$switch-toggle-addon-width:     1rem;
-$switch-toggle-addon-height:    $switch-toggle-addon-width;
-$switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.4rem;
+$switch-toggle-addon-bg:        #fdfdfd !default;
+$switch-toggle-addon-width:     1rem !default;
+$switch-toggle-addon-height:    $switch-toggle-addon-width !default;
+$switch-toggle-addon-translateX: $switch-width - $switch-toggle-addon-width - 0.4rem !default;
 
-$checkbox-height:               round(1.4 * $font-size-root);
-$checkbox-width:                round(1.4 * $font-size-root);
+$checkbox-height:               round(1.4 * $font-size-root) !default;
+$checkbox-width:                round(1.4 * $font-size-root) !default;
 
-$radio-height:                	round(1.5 * $font-size-root);
-$radio-width:                 	round(1.5 * $font-size-root);
+$radio-height:                  round(1.5 * $font-size-root) !default;
+$radio-width:                   round(1.5 * $font-size-root) !default;
 
 //== Tab
-$tab-padding:            		$padding-base-vertical $padding-base-horizontal;
-$tab-bar-height:        		2px;
+$tab-padding:                   $padding-base-vertical $padding-base-horizontal !default;
+$tab-bar-height:                2px !default;
 
 //== Drawer
-$drawer-padding:            	$padding-base-vertical $padding-base-horizontal;
+$drawer-padding:                $padding-base-vertical $padding-base-horizontal !default;
 
 //== Toast
-$toast-width:           		10rem;
-$toast-height:          		10rem;
-$toast-bg: 						rgba(0, 0, 0, 0.42);
-$toast-border-radius:           8px;
-$toast-addon-margin-bottom:     2rem;
+$toast-width:                   10rem !default;
+$toast-height:                  10rem !default;
+$toast-bg:                      rgba(0, 0, 0, 0.42) !default;
+$toast-border-radius:           8px !default;
+$toast-addon-margin-bottom:     2rem !default;
 
 //== Selector
-$selector-item-padding:            $padding-base-vertical $padding-base-horizontal;
+$selector-item-padding:            $padding-base-vertical $padding-base-horizontal !default;
 
 //== InlineSelector
-$inline-selector-item-margin:      0.2rem 0.6rem 0.2rem 0;
+$inline-selector-item-margin:      0.2rem 0.6rem 0.2rem 0 !default;
 
 
 //== Slideup
-$slideup-title-padding:        $padding-base-horizontal $padding-base-vertical;
-$slideup-item-padding:        $padding-base-horizontal $padding-base-vertical;
+$slideup-title-padding:        $padding-base-horizontal $padding-base-vertical !default;
+$slideup-item-padding:        $padding-base-horizontal $padding-base-vertical !default;
 
 //== Carousel
-$carousel-indicators-item-width: 	6px;
-$carousel-indicators-item-height: 	$carousel-indicators-item-width;
-$carousel-indicator-bottom:         $carousel-indicators-item-height;
-$carousel-indicator-bg:             #fff;
-$carousel-indicator-border-color:   #fff;
+$carousel-indicators-item-width:    6px !default;
+$carousel-indicators-item-height:   $carousel-indicators-item-width !default;
+$carousel-indicator-bottom:         $carousel-indicators-item-height !default;
+$carousel-indicator-bg:             #fff !default;
+$carousel-indicator-border-color:   #fff !default;
 
 //== Thumbnail
-$thumbnail-bg:                      #fff;
-$thumbnail-margin-bottom:           1rem;
-$caption-padding:                   0.6rem;
+$thumbnail-bg:                      #fff !default;
+$thumbnail-margin-bottom:           1rem !default;
+$caption-padding:                   0.6rem !default;
 
 //== Stick
-$stick-padding:                    1.5rem 0;
-$stick-space:                      0 1.5rem;
-$stick-sider-width:                6rem;
-$stick-sider-bg:                   $gray-lighter;
-$stick-body-padding:               0 0.6rem;
+$stick-padding:                    1.5rem 0 !default;
+$stick-space:                      0 1.5rem !default;
+$stick-sider-width:                6rem !default;
+$stick-sider-bg:                   $gray-lighter !default;
+$stick-body-padding:               0 0.6rem !default;
 
 //== Label
-$label-color:                      #fff;
-$label-padding:                    0.25em 0.4em;
-$label-font-size:                  0.8rem;
-$label-border-radius:              2px;
+$label-color:                      #fff !default;
+$label-padding:                    0.25em 0.4em !default;
+$label-font-size:                  0.8rem !default;
+$label-border-radius:              2px !default;
 
-$label-sm-padding:                 0.15rem;
+$label-sm-padding:                 0.15rem !default;
 
 //== Slideup
-$slideup-bg:                       #fff;
+$slideup-bg:                       #fff !default;
 
 //== DatePicker
-$datepicker-width:                          500px;
-$datepicker-bg:                             #fff;
+$datepicker-width:                          500px !default;
+$datepicker-bg:                             #fff !default;
 
-$datepicker-heading-color:                  #fff;
-$datepicker-heading-height:                 $navbar-height;
-$datepicker-caption-font-size:              1.2rem;
+$datepicker-heading-color:                  #fff !default;
+$datepicker-heading-height:                 $navbar-height !default;
+$datepicker-caption-font-size:              1.2rem !default;
 
-$datepicker-body-padding:                   1rem;
+$datepicker-body-padding:                   1rem !default;
 
-$datepicker-weekgroup-item-font:            1.2rem;
+$datepicker-weekgroup-item-font:            1.2rem !default;
 
-$datepicker-yeargroup-height:               12rem;
-$datepicker-yeargroup-padding:              $datepicker-body-padding;
-$datepicker-yeargroup-item-padding:         0.6rem;
-$datepicker-yeargroup-item-font:            1.5rem;
+$datepicker-yeargroup-height:               12rem !default;
+$datepicker-yeargroup-padding:              $datepicker-body-padding !default;
+$datepicker-yeargroup-item-padding:         0.6rem !default;
+$datepicker-yeargroup-item-font:            1.5rem !default;
 
-$datepicker-daygroup-item-font:             1.1rem;
-$datepicker-daygroup-item-margin:           0.2rem 0;
-$datepicker-daygroup-item-addon-padding:    0.8rem 0;
+$datepicker-daygroup-item-font:             1.1rem !default;
+$datepicker-daygroup-item-margin:           0.2rem 0 !default;
+$datepicker-daygroup-item-addon-padding:    0.8rem 0 !default;
+
+//== Jumbotron
+$jumbotron-color:                           #fff !default;
+
+$jumbotron-body-padding:                    0.8rem !default;
+$jumbotron-body-line-height:                1.5 !default;
+$jumbotron-body-bg:                         linear-gradient(mix($brand-info, $brand-primary, 60%) 40%, mix($brand-info, $brand-primary, 30%) 70%, mix($brand-info, $brand-primary, 10%) 90%, $brand-primary) !default;
+
+
+$jumbotron-footer-padding:                  1rem 0 !default;
+
 
 
 

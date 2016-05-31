@@ -12,6 +12,7 @@
 }
 
 .group-title{
+	width: 125%;
 	padding: $group-title-padding;
 	color: $text-muted;
     transform: scale(0.8);
@@ -43,8 +44,14 @@
 	}
 }
 
-.group-item-heading{
-	padding-right: $group-item-heading-padding;
+.group-item-related{
+	&:not(.group-item-pure){
+    	@include border-top-variant(dashed);
+	}
+}
+
+.group-item-header{
+	padding-right: $group-item-header-padding;
 }
 
 

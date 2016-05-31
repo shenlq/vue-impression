@@ -161,10 +161,15 @@ router.map({
         name: "dropLoading",
         component: require('./views/dropLoading.vue')
     },
-   	// DatePicker
+    // DatePicker
     '/date': {
         name: "date",
         component: require('./views/date.vue')
+    },
+    // Jumbotron
+    '/jumbotron': {
+        name: "jumbotron",
+        component: require('./views/jumbotron.vue')
     },
 });
 

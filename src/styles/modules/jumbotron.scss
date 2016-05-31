@@ -1,0 +1,15 @@
+.jumbotron{
+    color: $jumbotron-color;
+    text-align: center;
+}
+
+.jumbotron-body{
+    padding: $jumbotron-body-padding;
+    line-height: $jumbotron-body-line-height;
+    background: $jumbotron-body-bg;
+}
+
+.jumbotron-footer{
+    padding: $jumbotron-footer-padding;
+    background: $brand-primary;
+}

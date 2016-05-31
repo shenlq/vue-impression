@@ -27,7 +27,9 @@
 						王昭君
 					</group-item>
 				</group>
-				<group-title>可点击</group-title>
+				<group-title>可点击
+					<a href="javascript:void(0)" slot="footer">真的可点击</a>
+				</group-title>
 				<group>
 					<group-item :v-link='{"name": "demo"}'>
 						赵云

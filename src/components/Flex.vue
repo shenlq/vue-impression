@@ -20,17 +20,28 @@
 				type: String,
 				default: ''
 			},
+			align: {
+				type: String,
+				default: 'center'
+			},
 			wrap: {
 				type: String,
 				default: ''
 			}
 		},
 		created(){
-			//对齐
+			//水平对齐
 			switch(this.justify){
 				case 'between':
 					this.class.push('flex-justify-between');
 					break;
+				case 'center':
+					this.class.push('flex-justify-center');
+					break;
+			}
+
+			//垂直对齐
+			switch(this.align){
 				case 'center':
 					this.class.push('flex-justify-center');
 					break;

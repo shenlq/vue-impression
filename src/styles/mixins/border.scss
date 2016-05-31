@@ -1,10 +1,10 @@
 //border top
-@mixin border-top-variant($ratio: 0.5){
+@mixin border-top-variant($border-style: solid, $ratio: 0.5){
 	&:before{
 		content: " ";
 		display: block;
 		width: 100%;
-		border-top: 1px solid $border-color;
+		border-top: 1px $border-style $border-color;
 		height: 2px;
 	    transform-origin: 0 0;
 	    transform: scaleY($ratio);
@@ -15,12 +15,12 @@
 }
 
 //border bottom
-@mixin border-bottom-variant($ratio: 0.5){
+@mixin border-bottom-variant($border-style: solid, $ratio: 0.5){
 	&:after{
 		content: " ";
 		display: block;
 		width: 100%;
-		border-top: 1px solid $border-color;
+		border-top: 1px $border-style $border-color;
 		height: 2px;
 	    transform-origin: 0 0;
 	    transform: scaleY($ratio);
@@ -31,12 +31,12 @@
 }
 
 //border left
-@mixin border-left-variant($ratio: 0.5){
+@mixin border-left-variant($border-style: solid, $ratio: 0.5){
 	&:before{
 		content: " ";
 		display: block;
 		width: 2px;
-		border-left: 1px solid $border-color;
+		border-left: 1px $border-style $border-color;
 		height: 100%;
 	    transform-origin: 0 0;
 	    transform: scaleX($ratio);
@@ -47,12 +47,12 @@
 }
 
 // border right
-@mixin border-right-variant($ratio: 0.5){
+@mixin border-right-variant($border-style: solid, $ratio: 0.5){
 	&:before{
 		content: " ";
 		display: block;
 		width: 2px;
-		border-right: 1px solid $border-color;
+		border-right: 1px $border-style $border-color;
 		height: 100%;
 	    transform-origin: 0 0;
 	    transform: scaleX($ratio);
