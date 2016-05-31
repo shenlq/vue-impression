@@ -1,5 +1,5 @@
 <template>
-	<a :class="class" @click="clickHandle()" :href="href">
+	<a :class="composeClass" @click="clickHandle()" :href="href">
 		<slot></slot>
 	</a>
 </template>
@@ -35,7 +35,7 @@
             },
 		},
 		computed: {
-			class(){
+			composeClass(){
 				let result = ['btn'];
 				//样式
 				result.push(`btn-${this.style}`);

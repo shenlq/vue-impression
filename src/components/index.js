@@ -8,6 +8,7 @@ export TabBottom from './TabBottom';
 export Group from './Group';
 export GroupItem from './GroupItem';
 export GroupTitle from './GroupTitle';
+export Icon from './Icon';
 export Btn from './Btn';
 export InputText from './InputText';
 export InputArea from './InputArea';
