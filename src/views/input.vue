@@ -7,12 +7,21 @@
 				<span>Input</span>
 			</navbar>
 			<content>
-				<group-title></group-title>
+				<group-title>text</group-title>
 				<input-text default-value="peter">
 					<label slot>username:</label>
 				</input-text>
+				<group-title>password</group-title>
 				<input-text type="password" placeholder="请输入密码">
 					<label slot>password:</label>
+				</input-text>
+				<group-title>number</group-title>
+				<input-text type="number" placeholder="请输入数字">
+					<label slot>数量:</label>
+				</input-text>
+				<group-title>phone</group-title>
+				<input-text type="phone" placeholder="电话号码">
+					<label slot>手机:</label>
 				</input-text>
 
 				<group-title>disabled</group-title>
