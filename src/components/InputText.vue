@@ -111,7 +111,7 @@
 
                     //自动分隔
                     if(value.length === 3 || value.length === 8){
-                        target.value = `${value}${divider}`;
+                        target.value = `${value}${this.divider}`;
                     }
                     break;
                 }
