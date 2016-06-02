@@ -43,7 +43,17 @@
                 type: Boolean,
                 default: false,
             },
+            divider: {
+                type: String,
+                default: '-'
+            },
             onChange: {
+                type: Function
+            },
+            onKeyup: {
+                type: Function
+            },
+            onKeypress: {
                 type: Function
             }
         },
@@ -56,7 +66,12 @@
         methods: {
             //取值
             getValue(){
-                return this.defaultValue;
+                switch(this.type){
+                case 'phone':
+                    return this.defaultValue.replace(this.divider, '');
+                default:
+                    return this.defaultValue;
+                }
             },
             //设值
             setValue(value){
@@ -96,10 +111,12 @@
 
                     //自动分隔
                     if(value.length === 3 || value.length === 8){
-                        target.value = `${value}-`;
+                        target.value = `${value}${divider}`;
                     }
                     break;
                 }
+
+                this.onKeyup && this.onKeyup(event);
             },
             //按键按下处理
             keypressHandle(event){
@@ -108,6 +125,8 @@
                     event.preventDefault();
                     break;
                 }
+
+                this.onKeypress && this.onKeypress(event);
             },
             //清空
             clear(){
