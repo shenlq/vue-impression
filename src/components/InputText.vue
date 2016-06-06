@@ -1,6 +1,6 @@
 <template>
 	<div class="input-item flexbox">
-  	    <div class="group-item-header" v-if="_slotContents.default">
+  	    <div class="group-item-header" v-if="_slotContents && _slotContents.default">
             <slot></slot>
        	</div>
       	<div class="group-item-body">
@@ -99,7 +99,7 @@
                         return false;
                     }
 
-                    if(!CodeUtils.NUMBER.hasOwnProperty(code) && !CodeUtils.ARROW.hasOwnProperty(code)){
+                    if(!CodeUtils.NUMBER.hasOwnProperty(code) && !CodeUtils.ARROW.hasOwnProperty(code) && !CodeUtils.ASSIST.hasOwnProperty(code)){
                         return false;
                     }
                     //非1开头

@@ -99,6 +99,7 @@ export const ARROW = {
  */
 export const ASSIST = {
     27: 'ESCAPE',
+     8: 'DELETE',
 };
 
 export const CODE = {
