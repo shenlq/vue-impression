@@ -14,6 +14,13 @@
 			disabled: {
 				type: Boolean
 			},
-        }
+        },
+		methods: {
+			//取值
+			getValue(){
+				let check = this.$el.querySelectorAll("input")[0];
+				return check.checked;
+			}
+		}
 	};
 </script>
