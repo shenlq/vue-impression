@@ -21,6 +21,13 @@
 			name: {
 				type: String
 			}
-        }
+        },
+		methods: {
+			//取值
+			getValue(){
+				let radio = this.$el.querySelectorAll("input")[0];
+				return radio.checked;
+			}
+		}
 	};
 </script>
