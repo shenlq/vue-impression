@@ -24,6 +24,13 @@
 			outline: {
 				type: Boolean
 			}
-        }
+        },
+		methods: {
+			//取值
+			getValue(){
+				let checkbox = this.$el.querySelectorAll("input")[0];
+				return checkbox.checked;
+			}
+		}
 	};
 </script>
