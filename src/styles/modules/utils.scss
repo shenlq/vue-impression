@@ -168,6 +168,11 @@
 	padding-bottom: $padding-base-vertical !important;
 }
 
+.padding-lg-vertical{
+	padding-top: $padding-base-vertical * 2 !important;
+	padding-bottom: $padding-base-vertical * 2 !important;
+}
+
 .padding-left{
 	padding-left: $padding-base-horizontal !important;
 }

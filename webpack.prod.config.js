@@ -19,17 +19,15 @@ module.exports = {
             loader: 'vue'
         },{
             test: /\.js$/,
-            loaders: ['babel'],
+            loader: 'babel',
+            include: path.join(__dirname, 'src'),
             exclude: /node_modules/
         }, {
             test: /\.scss$/,
             loader: 'style!css!sass'
         },{
-            test: /\.(png|jpg|gif|jpeg)$/,
+            test: /\.(jpe?g|png|gif|svg)$/i,
             loader: 'url'
-        }, {
-            test: /\.json$/,
-            loader: "json"
         }]
     }
 };

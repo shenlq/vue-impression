@@ -39,12 +39,9 @@ module.exports = {
 	        test: /\.html$/,
 	        loader: 'vue-html'
 	    },{
-	        test: /\.(jpe?g|png|gif|svg)$/i,
-	        loaders: [
-	            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-	            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-	        ]
-	    }]
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            loader: 'url'
+        }]
     },
     plugins: [
     	new webpack.optimize.OccurenceOrderPlugin(),

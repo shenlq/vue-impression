@@ -42,7 +42,20 @@ module.exports = function(grunt) {
                     src: ['*.*'],
                     dest: 'build/images'
                 }]
-            }
+            },
+            html: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['*.html'],
+                    dest: 'build/'
+                }],
+                options: {
+                    process: function(content, srcpath) {
+                        return content.replace(/<\/body>/, "<script src='scripts\/app.js'></script></body>");
+                    }
+                }
+            },
         },
         sass: {
             dist: {
@@ -90,5 +103,5 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['clean', 'copy:font', 'copy:animate', 'sass', 'autoprefixer', 'execute']);
-    grunt.registerTask('build', ['clean', 'copy:font', 'copy:animate', 'sass','copy:image', 'autoprefixer']);
+    grunt.registerTask('deploy', ['copy:font', 'copy:animate', 'copy:html', 'copy:image','sass', 'autoprefixer']);
 };
