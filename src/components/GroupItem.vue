@@ -44,7 +44,7 @@
             className(){
                 let result = ['group-item', 'flexbox', 'flex-align-center'];
                 //自定义class
-                this.class && (result = result.concat(val.split(' ')));
+                this.class && (result = result.concat(this.class.split(' ')));
                 //关联Item
                 this.related && (result.push('group-item-related'));
                 //不带样式
