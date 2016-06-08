@@ -90,12 +90,12 @@
 				}, this.interval));
 			},
 			touchstart(event){
-				event.preventDefault();
+//				event.preventDefault();
 				this._touchStartX = event.targetTouches[0].pageX;
 				this.intervalCarousel && clearInterval(this.intervalCarousel);
 			},
 			touchend(event){
-				event.preventDefault();
+//				event.preventDefault();
 				let touchStartX = event.changedTouches[0].pageX;
 				if(touchStartX > this._touchStartX){
 					this.prev();
