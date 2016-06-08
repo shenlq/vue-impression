@@ -102,6 +102,6 @@ module.exports = function(grunt) {
     });
 
 
-    grunt.registerTask('default', ['clean', 'copy:font', 'copy:animate', 'sass', 'autoprefixer', 'execute']);
+    grunt.registerTask('default', ['clean', 'copy:font', 'copy:image', 'copy:animate', 'sass', 'autoprefixer', 'execute']);
     grunt.registerTask('deploy', ['copy:font', 'copy:animate', 'copy:html', 'copy:image','sass', 'autoprefixer']);
 };
