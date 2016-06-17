@@ -38,7 +38,7 @@
 	&:not(.group-item-pure){
 		background: $gray-end;
     	@include border-top-variant();
-		&:last-child{
+		&:last-of-type{
 	    	@include border-bottom-variant();
 		}
 	}

@@ -13,7 +13,14 @@
 				default: false
 			},
 			//下拉阶梯
-			touchStage: {
+			dropStage: {
+				type: Array,
+				default(){
+					return [110, 172];
+				}
+			},
+			//上拉阶梯
+			liftStage: {
 				type: Array,
 				default(){
 					return [110, 172];
@@ -25,33 +32,41 @@
 			this.floor = false;   //是否触底
 		},
 		methods: {
+			// 开始touch
 			touchstart(event){
 				if(!this.touch){
 					return false;
 				}
+
+				//起触点Y坐标
 				this._touchStartY = event.touches[0].screenY;
 			},
+			// touch过程中
 			touchmove(event){
 				if(!this.touch){
 					return false;
 				}
+
 				this._scrollTop = getScrollTop(this.$el);
 				let touchY = event.touches[0].screenY;
 				this._touchRange = touchY - this._touchStartY;
-				if(this._scrollTop == 0 && this._touchRange > 0){
-					event.preventDefault();
-					if(!this.ceiling){
-						this._touchStartY = touchY;
-						this._touchRange = 0;
-						this.ceiling = true;
-					}
-					this.$el.style.overflow = 'visible';
-					this._touchRange >= this.touchStage[0] && (this.dropBroadcast(1));
-					this._touchRange <= this.touchStage[1] && (this.$el.style.marginTop = this._touchRange);
-				}else if (this.ceiling && this._touchRange <= 0){
-					this.ceiling = false;
-					this.$el.style.overflow = 'scroll';
-				}
+				// 下拉
+				// if(this._scrollTop == 0 && this._touchRange > 0){
+				// 	event.preventDefault();
+				// 	if(!this.ceiling){
+				// 		this._touchStartY = touchY;
+				// 		this._touchRange = 0;
+				// 		this.ceiling = true;
+				// 	}
+				// 	// this.$el.style.overflow = 'visible';
+				// 	this._touchRange >= this.dropStage[0] && (this.dropBroadcast(1));
+				// 	this._touchRange <= this.dropStage[1] && (this.$el.style.marginTop = this._touchRange);
+				// }else if (this.ceiling && this._touchRange <= 0){
+				// 	this.ceiling = false;
+				// 	// this.$el.style.overflow = 'auto';
+				// }
+
+				//上拉
 				if(isTouchFloor(this.$el) && this._touchRange < 0){
 					event.preventDefault();
 					if(!this.floor){
@@ -59,9 +74,8 @@
 						this._touchRange = 0;
 						this.floor = true;
 					}
-					-this._touchRange >= this.touchStage[0] && (this.liftBroadcast(1));
-					(-this._touchRange <= this.touchStage[1]&&this._scrollTop!=0) && (this.$el.style.paddingBottom = -this._touchRange);
-					(-this._touchRange <= this.touchStage[1]&&this._scrollTop==0) && (this.$el.style.marginTop = this._touchRange);
+					this.liftStageBroadcast(-this._touchRange);
+					this.$el.style.top = this._touchRange;
 				}else if (this.floor && this._touchRange >= 0){
 					this.floor = false;
 				}
@@ -70,28 +84,18 @@
 				if(!this.touch){
 					return false;
 				}
-				if(this.ceiling){
-					this._touchRange > this.touchStage[0] && (this.$el.style.marginTop = this.touchStage[0]);
-					if(this._touchRange < this.touchStage[0] && this._touchRange > 0){
-						this.$el.style.overflow = 'scroll';
-						this.$el.style.marginTop = 0;
-						this.ceiling = false;
-						return false;
-					}
-					this.dropBroadcast(2);
-					this.ceiling = false;
-				}
+				// 下拉
+				// if(this.ceiling){
+				// 	this.$el.style.marginTop = 0;
+				// 	// this.dropBroadcast(2);
+				// 	this.ceiling = false;
+				// }
+
+				//上拉
 				if(this.floor){
-					(-this._touchRange > this.touchStage[0]&&this._scrollTop!=0) && (this.$el.style.paddingBottom = this.touchStage[0]);
-					(-this._touchRange > this.touchStage[0]&&this._scrollTop==0) && (this.$el.style.marginTop = -this.touchStage[0]);
-					if(-this._touchRange < this.touchStage[0] && this._touchRange < 0){
-						this._scrollTop!=0 && (this.$el.style.paddingBottom = 0);
-						this._scrollTop==0 && (this.$el.style.marginTop = 0);
-						this.floor = false;
-						return false;
-					}
-					this.liftBroadcast(2);
+					this.$el.style.top = 0;
 					this.floor = false;
+					this.liftRefreshBroadcast();
 				}
 			},
 			//通知dropLoading组件
@@ -99,9 +103,13 @@
 				this.$broadcast("DropLoading:stage", index);
 			},
 			//通知dropLoading组件
-			liftBroadcast(index){
-				this.$broadcast("LiftLoading:stage", index);
-			}
+			liftStageBroadcast(distance){
+				this.$broadcast("LiftLoading:stage", distance);
+			},
+			//通知dropLoading组件
+			liftRefreshBroadcast(){
+				this.$broadcast("LiftLoading:refresh");
+			},
 		},
 		events: {
 			['DropLoading:end'](){
@@ -110,26 +118,19 @@
 					this.$el.style.overflow = 'scroll';
 					this.$el.style.marginTop = 0;
 				}
-
 			},
-			['LiftLoading:end'](){
-				this.liftBroadcast(0);
-				if(this.$el){
-					this._scrollTop!=0 && (this.$el.style.paddingBottom = 0);
-					this._scrollTop==0 && (this.$el.style.marginTop = 0);
-				}
-
-			}
 		}
 	};
-	var getScrollTop = function (element) {
+	//滚动条位置
+	let getScrollTop = element => {
 		if (element === window) {
 			return Math.max(window.pageYOffset || 0, document.documentElement.scrollTop);
 		}
 
 		return element.scrollTop;
 	};
-	var isTouchFloor = function (element){
+	//是否上拉到底部
+	let isTouchFloor = element => {
 		return element.offsetHeight + element.scrollTop == element.scrollHeight
 	};
 </script>

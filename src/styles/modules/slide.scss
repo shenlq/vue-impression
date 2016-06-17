@@ -1,12 +1,13 @@
 //== Slide
 .slide{
   max-height: 50%;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
   left: 0;
   width: 100%;
   background: $slide-bg;
   z-index: $slide-zindex;
+  -webkit-overflow-scrolling: touch;
 }
 .up{
   bottom: 0;

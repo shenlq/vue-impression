@@ -1,6 +1,7 @@
 .content{
 	flex: 1;
 	background: $body-bg;
-	overflow: scroll;
+	overflow: auto;
 	position: relative;
+    -webkit-overflow-scrolling: touch;
 }

@@ -43,7 +43,7 @@
 			//垂直对齐
 			switch(this.align){
 				case 'center':
-					this.class.push('flex-justify-center');
+					this.class.push('flex-align-center');
 					break;
 			}
 			//换行
