@@ -97,9 +97,9 @@
 			touchend(event){
 //				event.preventDefault();
 				let touchStartX = event.changedTouches[0].pageX;
-				if(touchStartX > this._touchStartX){
+				if(touchStartX > this._touchStartX + 10){
 					this.prev();
-				}else{
+				}else if(touchStartX < this._touchStartX - 10){
 					this.next();
 				}
 				this.addInterval();

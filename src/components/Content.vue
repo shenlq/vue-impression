@@ -19,13 +19,6 @@
 					return [110, 172];
 				}
 			},
-			//上拉阶梯
-			liftStage: {
-				type: Array,
-				default(){
-					return [110, 172];
-				}
-			}
 		},
 		ready(){
 			this.ceiling = false; //是否触顶
@@ -51,22 +44,9 @@
 				let touchY = event.touches[0].screenY;
 				this._touchRange = touchY - this._touchStartY;
 				// 下拉
-				// if(this._scrollTop == 0 && this._touchRange > 0){
-				// 	event.preventDefault();
-				// 	if(!this.ceiling){
-				// 		this._touchStartY = touchY;
-				// 		this._touchRange = 0;
-				// 		this.ceiling = true;
-				// 	}
-				// 	// this.$el.style.overflow = 'visible';
-				// 	this._touchRange >= this.dropStage[0] && (this.dropBroadcast(1));
-				// 	this._touchRange <= this.dropStage[1] && (this.$el.style.marginTop = this._touchRange);
-				// }else if (this.ceiling && this._touchRange <= 0){
-				// 	this.ceiling = false;
-				// 	// this.$el.style.overflow = 'auto';
-				// }
 
 				//上拉
+				console.log(isTouchFloor(this.$el) , this._touchRange < 0);
 				if(isTouchFloor(this.$el) && this._touchRange < 0){
 					event.preventDefault();
 					if(!this.floor){
@@ -74,8 +54,8 @@
 						this._touchRange = 0;
 						this.floor = true;
 					}
-					this.liftStageBroadcast(-this._touchRange);
 					this.$el.style.top = this._touchRange;
+					this.liftStageBroadcast(-this._touchRange);
 				}else if (this.floor && this._touchRange >= 0){
 					this.floor = false;
 				}
@@ -131,6 +111,6 @@
 	};
 	//是否上拉到底部
 	let isTouchFloor = element => {
-		return element.offsetHeight + element.scrollTop == element.scrollHeight
+		return element.scrollHeight - (element.offsetHeight + element.scrollTop) < 5;
 	};
 </script>
