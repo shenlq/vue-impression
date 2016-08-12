@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import router from './router';
 import app from './containers/app';
-import transition from './transition';
+import './transition';
 
 
 //路由配置
