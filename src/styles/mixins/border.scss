@@ -6,7 +6,7 @@
 		width: 100%;
 		border-top: 1px $border-style $border-color;
 		height: 2px;
-	    transform-origin: 0 0;
+	    transform-origin: top;
 	    transform: scaleY($ratio);
 	    position: absolute;
 	    left: 0;
@@ -22,7 +22,7 @@
 		width: 100%;
 		border-top: 1px $border-style $border-color;
 		height: 2px;
-	    transform-origin: 0 0;
+	    transform-origin: bottom;
 	    transform: scaleY($ratio);
 	    position: absolute;
 	    left: 0;
@@ -38,7 +38,7 @@
 		width: 2px;
 		border-left: 1px $border-style $border-color;
 		height: 100%;
-	    transform-origin: 0 0;
+	    transform-origin: left;
 	    transform: scaleX($ratio);
 	    position: absolute;
 	    left: 0;
@@ -54,7 +54,7 @@
 		width: 2px;
 		border-right: 1px $border-style $border-color;
 		height: 100%;
-	    transform-origin: 0 0;
+	    transform-origin: right;
 	    transform: scaleX($ratio);
 	    position: absolute;
 	    right: 0;
